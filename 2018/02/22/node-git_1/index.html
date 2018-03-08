@@ -88,7 +88,7 @@
 <meta property="og:description" content="Git 中常用的命令以及一些基础配置">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/yuchen352416/blog/master/_posts/assets/git.png">
-<meta property="og:updated_time" content="2018-03-07T09:11:43.000Z">
+<meta property="og:updated_time" content="2018-03-08T01:56:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 初体验">
 <meta name="twitter:description" content="Git 中常用的命令以及一些基础配置">
@@ -664,6 +664,11 @@
 <p>生成一个可供发布的压缩包</p>
 </blockquote>
 <p>$ git archive</p>
+<blockquote>
+<p>配置全局的过滤文件</p>
+</blockquote>
+<p><code>$ git config --global core.excludesfile ~/development/workspace/.gitignore</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*.class</span><br><span class="line">target/</span><br><span class="line">*.iml</span><br><span class="line">.settings/</span><br><span class="line">bin/</span><br><span class="line">.idea/</span><br></pre></td></tr></table></figure>
 
       
     </div>
