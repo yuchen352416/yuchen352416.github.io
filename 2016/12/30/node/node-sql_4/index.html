@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Docker," />
+  <meta name="keywords" content="SQL,Oracle," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Docker 日常使用命令">
-<meta name="keywords" content="Docker">
+<meta name="description" content="关于Oracle 的NULL">
+<meta name="keywords" content="SQL,Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker 笔记">
-<meta property="og:url" content="http://yoursite.com/2018/02/13/node/node-docker_1/index.html">
+<meta property="og:title" content="关于Oracle 的NULL">
+<meta property="og:url" content="http://yoursite.com/2016/12/30/node/node-sql_4/index.html">
 <meta property="og:site_name" content="何时, 枫叶红">
-<meta property="og:description" content="Docker 日常使用命令">
+<meta property="og:description" content="关于Oracle 的NULL">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-30T03:27:43.000Z">
+<meta property="og:updated_time" content="2018-04-01T10:07:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker 笔记">
-<meta name="twitter:description" content="Docker 日常使用命令">
+<meta name="twitter:title" content="关于Oracle 的NULL">
+<meta name="twitter:description" content="关于Oracle 的NULL">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/13/node/node-docker_1/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/30/node/node-sql_4/"/>
 
 
 
 
 
-  <title>Docker 笔记 | 何时, 枫叶红</title>
+  <title>关于Oracle 的NULL | 何时, 枫叶红</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/13/node/node-docker_1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/30/node/node-sql_4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Li">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Docker 笔记</h1>
+          <h1 class="post-title" itemprop="name headline">关于Oracle 的NULL</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-13T00:00:23+08:00">
-                2018-02-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-30T10:22:54+08:00">
+                2016-12-30
               </time>
             
 
@@ -295,8 +295,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
+                  <a href="/categories/SQL/" itemprop="url" rel="index">
+                    <span itemprop="name">SQL</span>
                   </a>
                 </span>
 
@@ -332,59 +332,26 @@
       
 
       
-        <p>Docker 日常使用命令</p>
+        <p>关于Oracle 的NULL</p>
 <a id="more"></a>
-<h2 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h2><h4 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a><strong>下载镜像</strong></h4><blockquote>
-<p>docker pull centos</p>
-</blockquote>
-<h4 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a><strong>查看镜像</strong></h4><blockquote>
-<p> docker images</p>
-</blockquote>
-<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a><strong>删除镜像</strong></h4><blockquote>
-<p>docker rmi <image id=""></image></p>
-</blockquote>
-<h4 id="备份镜像"><a href="#备份镜像" class="headerlink" title="备份镜像"></a><strong>备份镜像</strong></h4><blockquote>
-<p>docker commit -p 36b7b593a0e2 hbase-backup</p>
-</blockquote>
-<ul>
-<li><p><em>36b7b593a0e2</em> 为<strong>容器id</strong>, </p>
-</li>
-<li><p><em>hbase-backup</em> 为 <strong>备份名</strong></p>
-</li>
-</ul>
-<h4 id="备份镜像到文件"><a href="#备份镜像到文件" class="headerlink" title="备份镜像到文件"></a><strong>备份镜像到文件</strong></h4><blockquote>
-<p>docker save -o ~/hbase-backup.tar hbase-backup</p>
-</blockquote>
-<h4 id="恢复镜像文件"><a href="#恢复镜像文件" class="headerlink" title="恢复镜像文件"></a><strong>恢复镜像文件</strong></h4><blockquote>
-<p>docker load -i ~/Downloads/hbase-backup.tar</p>
-</blockquote>
-<h4 id="创建并启动交互型容器"><a href="#创建并启动交互型容器" class="headerlink" title="创建并启动交互型容器"></a><strong>创建并启动交互型容器</strong></h4><blockquote>
-<p>docker run -ti –name=docker_centos centos:latest /bin/bash</p>
-</blockquote>
-<ul>
-<li>t: 告诉docker为容器建立一个命令行终端</li>
-<li>i: 打开容器的标准输入</li>
-<li>name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理</li>
-<li><code>/bin/bash</code>:告诉docker要在容器里面执行此命令</li>
-</ul>
-<h4 id="创建并启动后台型容器"><a href="#创建并启动后台型容器" class="headerlink" title="创建并启动后台型容器"></a><strong>创建并启动后台型容器</strong></h4><blockquote>
-<p>docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done”</p>
-</blockquote>
-<ul>
-<li>d:使用-d参数，使容器在后台运行</li>
-<li>c: 通过-c可以调整容器的CPU优先级</li>
-<li>-c后的命令是循环，从而保持容器的运行</li>
-</ul>
-<h4 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a><strong>进入容器</strong></h4><blockquote>
-<p>docker exec -ti CentOS /bin/bash</p>
-</blockquote>
-<h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a><strong>退出容器</strong></h4><blockquote>
-<p>先按，ctrl+p;  再按，ctrl+q</p>
-</blockquote>
-<h4 id="平时进入HBase的命令"><a href="#平时进入HBase的命令" class="headerlink" title="平时进入HBase的命令"></a><strong>平时进入HBase的命令</strong></h4><blockquote>
-<p>$ docker start hbase</p>
-<p>$ docker exec -ti hbase /bin/bash</p>
-</blockquote>
+<p>原本设想 两数相加</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a+b <span class="keyword">from</span> (</span><br><span class="line">  <span class="keyword">select</span> <span class="number">11</span> A, <span class="number">22</span> B <span class="keyword">from</span> dual</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>结果: 33</p>
+<p>但是如果其中一个数为NULL时</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a+b <span class="keyword">from</span> (</span><br><span class="line">  <span class="keyword">select</span> <span class="literal">null</span> A, <span class="number">22</span> B <span class="keyword">from</span> dual</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>结果: null<br>没有得到我们预期的结果: 22</p>
+<p>正确的写法:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> nvl(a,<span class="number">0</span>)+nvl(b,<span class="number">0</span>) <span class="keyword">from</span> (</span><br><span class="line">  <span class="keyword">select</span> <span class="literal">null</span> A, <span class="number">22</span> B <span class="keyword">from</span> dual</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>结果: 22</p>
+<p>NULL参加统计</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(A) <span class="keyword">from</span> (</span><br><span class="line">  <span class="keyword">select</span> <span class="number">1</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">2</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">3</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">4</span> A <span class="keyword">from</span> dual</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>结果: 4</p>
+<p>如果统计的数据中有NULL值：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(A) <span class="keyword">from</span> (</span><br><span class="line">  <span class="keyword">select</span> <span class="number">1</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">2</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="literal">null</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">4</span> A <span class="keyword">from</span> dual</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>结果: 3</p>
+<p>显然没有达到我们计数统计的需求<br>应该写成这样:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(<span class="keyword">decode</span>(A, <span class="literal">null</span>, <span class="number">1</span>, <span class="number">1</span>)) <span class="keyword">from</span> (</span><br><span class="line">  <span class="keyword">select</span> <span class="number">1</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">2</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="literal">null</span> A <span class="keyword">from</span> dual</span><br><span class="line">  <span class="keyword">union</span></span><br><span class="line">  <span class="keyword">select</span> <span class="number">4</span> A <span class="keyword">from</span> dual</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>结果: 4</p>
 
       
     </div>
@@ -402,7 +369,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Docker/" rel="tag"># Docker</a>
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
+          
+            <a href="/tags/Oracle/" rel="tag"># Oracle</a>
           
         </div>
       
@@ -415,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/12/node/node-hbase_1/" rel="next" title="HBase 笔记">
-                <i class="fa fa-chevron-left"></i> HBase 笔记
+              <a href="/2016/09/22/node/node-vba_1/" rel="next" title="VBA 操作 Excel 数据筛查">
+                <i class="fa fa-chevron-left"></i> VBA 操作 Excel 数据筛查
               </a>
             
           </div>
@@ -425,8 +394,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/13/node/node-hbase_2/" rel="prev" title="HBase 常用命令">
-                HBase 常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/23/article/python/article-python_01/" rel="prev" title="Python入门学习(一)">
+                Python入门学习(一) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -479,17 +448,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,22 +525,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-常用命令"><span class="nav-number">1.</span> <span class="nav-text">Docker 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载镜像"><span class="nav-number">1.0.1.</span> <span class="nav-text">下载镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看镜像"><span class="nav-number">1.0.2.</span> <span class="nav-text">查看镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除镜像"><span class="nav-number">1.0.3.</span> <span class="nav-text">删除镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#备份镜像"><span class="nav-number">1.0.4.</span> <span class="nav-text">备份镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#备份镜像到文件"><span class="nav-number">1.0.5.</span> <span class="nav-text">备份镜像到文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#恢复镜像文件"><span class="nav-number">1.0.6.</span> <span class="nav-text">恢复镜像文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建并启动交互型容器"><span class="nav-number">1.0.7.</span> <span class="nav-text">创建并启动交互型容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建并启动后台型容器"><span class="nav-number">1.0.8.</span> <span class="nav-text">创建并启动后台型容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进入容器"><span class="nav-number">1.0.9.</span> <span class="nav-text">进入容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#退出容器"><span class="nav-number">1.0.10.</span> <span class="nav-text">退出容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平时进入HBase的命令"><span class="nav-number">1.0.11.</span> <span class="nav-text">平时进入HBase的命令</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
