@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JDBC,Java," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,13 @@
 
 
 
-<meta name="description" content="关于 JDBC 自动提交">
-<meta name="keywords" content="JDBC,Java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="关于 JDBC 自动提交">
-<meta property="og:url" content="http://yoursite.com/2015/10/13/node/node-jdbc_1/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="何时, 枫叶红">
+<meta property="og:url" content="http://yoursite.com/tags/JavaScript/page/2/index.html">
 <meta property="og:site_name" content="何时, 枫叶红">
-<meta property="og:description" content="关于 JDBC 自动提交">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T06:30:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于 JDBC 自动提交">
-<meta name="twitter:description" content="关于 JDBC 自动提交">
+<meta name="twitter:title" content="何时, 枫叶红">
 
 
 
@@ -120,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/10/13/node/node-jdbc_1/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/JavaScript/page/2/"/>
 
 
 
 
 
-  <title>关于 JDBC 自动提交 | 何时, 枫叶红</title>
+  <title>标签: JavaScript | 何时, 枫叶红</title>
   
 
 
@@ -145,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -229,183 +224,198 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>JavaScript<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/13/node/node-jdbc_1/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="何时, 枫叶红">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2016/03/07/node/node-html_1/" itemprop="url">
+              
+                <span itemprop="name">HTML5 data-* 自定义属性</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">关于 JDBC 自动提交</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-13T09:13:01+08:00">
-                2015-10-13
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-03-07T10:40:57+08:00"
+              content="2016-03-07" >
+          03-07
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>关于 JDBC 自动提交</p>
-<a id="more"></a>
-<p>设置 JDBC 连接对象关闭 自动提交 <code>conn.setAutoCommit(false);</code></p>
-<p>在执行完SQL后, 要提交一下, <code>conn.commit();</code></p>
-<p>记得这个连接对象, 一定要是公共的一个连接对象, 关闭自动提交, 一定是要在初始化连接对象时设置的.</p>
-<p><code>conn.rollback();</code> 是在SQL语句执行错误时，做数据回滚用的</p>
-<p>在执行完你的逻辑算法后, 提交一下</p>
-<p>在一个处理逻辑中，打开一个数据库连接，处理结束时，关闭这个连接</p>
-<p><code>conn.setAutoCommit(true);</code> 是控制是否每条SQL执行完后自动提交</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/JDBC/" rel="tag"># JDBC</a>
-          
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/09/11/node/database/node-oracle_13/" rel="next" title="解决 Oracle 描述乱码问题">
-                <i class="fa fa-chevron-left"></i> 解决 Oracle 描述乱码问题
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/03/node/database/node-oracle_12/" rel="prev" title="Oracle &符号如何插入（转义）">
-                Oracle &符号如何插入（转义） <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
+      
+        
 
-    <div class="post-spread">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/01/31/node/javascript/node-javascript_10/" itemprop="url">
+              
+                <span itemprop="name">JavaScript 树</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-31T18:34:21+08:00"
+              content="2016-01-31" >
+          01-31
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/01/27/node/javascript/node-javascript_12/" itemprop="url">
+              
+                <span itemprop="name">下拉列表 读写操作</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-27T11:44:09+08:00"
+              content="2016-01-27" >
+          01-27
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/01/27/node/javascript/node-javascript_13/" itemprop="url">
+              
+                <span itemprop="name">JavaScript 关于Select和CheckBox的一些操作</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-27T11:05:30+08:00"
+              content="2016-01-27" >
+          01-27
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2015/12/02/node/javascript/node-javascript_14/" itemprop="url">
+              
+                <span itemprop="name">iframe 的js变量值</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2015-12-02T09:33:03+08:00"
+              content="2015-12-02" >
+          12-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2015/03/01/node/javascript/node-javascript_15/" itemprop="url">
+              
+                <span itemprop="name">jQuery 拼图实例</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2015-03-01T13:39:44+08:00"
+              content="2015-03-01" >
+          03-01
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
+
   </div>
+  
+  
+  
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/tags/JavaScript/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/tags/JavaScript/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -413,10 +423,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -453,7 +459,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -464,7 +470,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -475,7 +481,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -649,10 +655,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

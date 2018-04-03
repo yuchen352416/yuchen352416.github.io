@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Docker,MySQL," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Docker 安装 MySQL容器">
-<meta name="keywords" content="Docker,MySQL">
+<meta name="description" content="自定义对象, 绑定get, set 方法">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker 安装 MySQL容器">
-<meta property="og:url" content="http://yoursite.com/2018/03/31/node/node-docker_2/index.html">
+<meta property="og:title" content="自定义对象, 绑定get, set 方法">
+<meta property="og:url" content="http://yoursite.com/2016/09/11/node/javascript/node-javascript_03/index.html">
 <meta property="og:site_name" content="何时, 枫叶红">
-<meta property="og:description" content="Docker 安装 MySQL容器">
+<meta property="og:description" content="自定义对象, 绑定get, set 方法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T23:53:10.000Z">
+<meta property="og:updated_time" content="2018-04-02T07:27:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker 安装 MySQL容器">
-<meta name="twitter:description" content="Docker 安装 MySQL容器">
+<meta name="twitter:title" content="自定义对象, 绑定get, set 方法">
+<meta name="twitter:description" content="自定义对象, 绑定get, set 方法">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/31/node/node-docker_2/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/11/node/javascript/node-javascript_03/"/>
 
 
 
 
 
-  <title>Docker 安装 MySQL容器 | 何时, 枫叶红</title>
+  <title>自定义对象, 绑定get, set 方法 | 何时, 枫叶红</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/node/node-docker_2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/11/node/javascript/node-javascript_03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Li">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Docker 安装 MySQL容器</h1>
+          <h1 class="post-title" itemprop="name headline">自定义对象, 绑定get, set 方法</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T00:00:23+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-11T18:25:23+08:00">
+                2016-09-11
               </time>
             
 
@@ -295,8 +295,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -332,14 +332,10 @@
       
 
       
-        <p>Docker 安装 MySQL容器</p>
+        <p>自定义对象, 绑定get, set 方法</p>
 <a id="more"></a>
-<h4 id="1-下载-MySQL镜像"><a href="#1-下载-MySQL镜像" class="headerlink" title="1. 下载 MySQL镜像"></a>1. 下载 MySQL镜像</h4><blockquote>
-<p><code>docker pull mysql/mysql-server</code></p>
-</blockquote>
-<h4 id="2-启动容器"><a href="#2-启动容器" class="headerlink" title="2. 启动容器"></a>2. 启动容器</h4><h4 id="3-查看容器IP"><a href="#3-查看容器IP" class="headerlink" title="3. 查看容器IP"></a>3. 查看容器IP</h4><blockquote>
-<p><code>docker inspect mysql1|grep -i addr</code></p>
-</blockquote>
+<p>自定义对象, 通过 <strong><em>defineSetter</em></strong> 与 <strong><em>defineGetter</em></strong> 绑定get, set 方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c = &#123;<span class="attr">sum</span>:<span class="string">""</span>, <span class="attr">show</span>:<span class="function"><span class="keyword">function</span>(<span class="params">num, num1</span>) </span>&#123;</span><br><span class="line">    sum = num + num1;</span><br><span class="line">&#125;&#125;;</span><br><span class="line"></span><br><span class="line">c.__defineSetter__(<span class="string">'scum'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sum = sum + <span class="string">"..."</span> + y;</span><br><span class="line">&#125;);</span><br><span class="line">c.__defineGetter__(<span class="string">'scum'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"sum = "</span> + sum;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">c.show(<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line">c.scum = <span class="string">"1"</span>;</span><br><span class="line"></span><br><span class="line">alert(c.sum);</span><br><span class="line">alert(c.scum);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -357,9 +353,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Docker/" rel="tag"># Docker</a>
-          
-            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -372,8 +366,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/22/article/springboot/article-spring-boot_10/" rel="next" title="Spring Boot 学习(十)">
-                <i class="fa fa-chevron-left"></i> Spring Boot 学习(十)
+              <a href="/2016/09/11/node/javascript/node-javascript_04/" rel="next" title="JavaScript 格式化时间类型">
+                <i class="fa fa-chevron-left"></i> JavaScript 格式化时间类型
               </a>
             
           </div>
@@ -381,6 +375,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/13/node/database/node-oracle_07/" rel="prev" title="Oracle 字段内容转行">
+                Oracle 字段内容转行 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -432,17 +430,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,7 +446,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -468,7 +457,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -479,7 +468,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -518,22 +507,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-下载-MySQL镜像"><span class="nav-number">1.</span> <span class="nav-text">1. 下载 MySQL镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-启动容器"><span class="nav-number">2.</span> <span class="nav-text">2. 启动容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-查看容器IP"><span class="nav-number">3.</span> <span class="nav-text">3. 查看容器IP</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
