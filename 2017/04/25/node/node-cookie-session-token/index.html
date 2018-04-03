@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="何时, 枫叶红">
 <meta property="og:description" content="Cookie, Session, Token的区别与联系">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-03T15:41:29.000Z">
+<meta property="og:updated_time" content="2018-04-03T16:06:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cookie, Session, Token">
 <meta name="twitter:description" content="Cookie, Session, Token的区别与联系">
@@ -368,6 +368,12 @@
 <li><p>服务端收到请求，然后去验证客户端请求里面带着的 Token，如果验证成功，就向客户端返回请求的数据</p>
 </li>
 </ul>
+<h2 id="打破误解"><a href="#打破误解" class="headerlink" title="打破误解"></a>打破误解</h2><blockquote>
+<p>只要关闭浏览器 ，session就消失了？</p>
+</blockquote>
+<p>不对。对Session来说，除非程序通知服务器删除一个 Session，否则服务器会一直保留，程序一般都是在用户做log off的时候发个指令去删除Session。</p>
+<p>然而浏览器从来不会主动在关闭之前通知服务器它将要关闭，因此服务器根本不会有机会知道浏览器已经关闭，之所以会有这种错觉，是大部分Session机制都使用会话Cookie来保存session id，而关闭浏览器后这个session id就消失了，再次连接服务器时也就无法找到原来的Session。如果服务器设置的Cookie被保存在硬盘上，或者使用某种手段改写浏览器发出的HTTP请求头，把原来的session id发送给服务器，则再次打开浏览器仍然能够打开原来的Session.</p>
+<p>恰恰是由于关闭浏览器不会导致Session被删除，迫使服务器为Session设置了一个失效时间，当距离客户端上一次使用Session的时间超过这个失效时间时，服务器就可以以为客户端已经停止了活动，才会把Session删除以节省存储空间。</p>
 
       
     </div>
@@ -562,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie机制"><span class="nav-number">1.</span> <span class="nav-text">Cookie机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-机制"><span class="nav-number">2.</span> <span class="nav-text">Session 机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Token机制"><span class="nav-number">3.</span> <span class="nav-text">Token机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie-与-Session-传统身份验证的方法"><span class="nav-number">4.</span> <span class="nav-text">Cookie 与 Session 传统身份验证的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于-Token-的身份验证方法"><span class="nav-number">5.</span> <span class="nav-text">基于 Token 的身份验证方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie机制"><span class="nav-number">1.</span> <span class="nav-text">Cookie机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-机制"><span class="nav-number">2.</span> <span class="nav-text">Session 机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Token机制"><span class="nav-number">3.</span> <span class="nav-text">Token机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie-与-Session-传统身份验证的方法"><span class="nav-number">4.</span> <span class="nav-text">Cookie 与 Session 传统身份验证的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于-Token-的身份验证方法"><span class="nav-number">5.</span> <span class="nav-text">基于 Token 的身份验证方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打破误解"><span class="nav-number">6.</span> <span class="nav-text">打破误解</span></a></li></ol></div>
             
 
           </div>
