@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[当 Gson 遇到字段不匹配]]></title>
+    <url>%2F2018%2F09%2F17%2Fnode%2Fjava%2Fnode-j2se_06%2F</url>
+    <content type="text"><![CDATA[最近项目里需要对接淘宝API, 淘宝API的返回结果(json), 与我们项目中定义Bean字段不符. 那就看看Gson 是怎么优雅的解决这个问题的吧. JSON12345678910&#123; "contactor": &#123; "name": "陈***轩", "phone": "1391071****", "post_address": "(北京)(北京市)(海淀区)(**园*街道 北三环中路**号**号楼7**号)(13910717799)(陈轩)", "post_area": "海淀区", "post_city": "北京市", "post_province": "北京" &#125;&#125; Bean123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118import java.io.Serializable;import java.util.Date;/** * 联系人信息 */public class ContactorInfo implements Serializable &#123; private static final long serialVersionUID = 1L; private Integer id; /** * 订单号 */ private String orderId; /** * 创建日期 */ private Date createDate; /** * 姓名 */ private String name; /** * 姓名-拼音 */ private String namePinyin; /** * 性别。0-男，1-女 */ private String sex; /** * 出生日期 */ private Date birthday; /** * 国籍 */ private String nationality; /** * 姓（拼音） */ private String surnamePinyin; /** * 名（拼音） */ private String givenNamePinyin; /** * 手机号 */ private String phone; /** * 邮箱 */ private String email; /** * 证件号 */ private String credentialNo; /** * 证件类型 */ private String credentialType; /** * 证件签发国 */ private String issueCountry; /** * 证件签发地 */ private String issuePlace; /** * 证件有效期 */ private String validDate; /** * 收件省 */ private String postProvince; /** * 收件市 */ private String postCity; /** * 收件区 */ private String postArea; /** * 具体收件地址 */ private String postAddress; /** * 个性化信息 */ private String extendAttributes; &#125; 解决方案一:在要转换的字段上, 添加@SerializedName注解. 比如:12345/** * 具体收件地址 */@SerializedName("post_address")private String postAddress; 这种方式, 适用于 只是个别需要转换的情况 解决方案二:如上的例子中, 所有都的Java字段, 都采用驼峰命名, 而JSON却都是用下划线分割的. 这种有规律的就用 FieldNamingPolicy. 比如:1Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create(); Gson提供的枚举类FieldNamingPolicy，该枚举类提供了5种实现方式分别为： FieldNamingPolicy 结果 IDENTITY {“emailAddress”:”yuchen352416@163.com”} LOWER_CASE_WITH_DASHES {“email-address”:”yuchen352416@163.com”} LOWER_CASE_WITH_UNDERSCORES {“email_address”:”yuchen352416@163.com”} UPPER_CAMEL_CASE {“EmailAddress”:”yuchen352416@163.com”} UPPER_CAMEL_CASE_WITH_SPACES {“Email Address”:”yuchen352416@163.com”}]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Gson</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一道常见的面试题]]></title>
     <url>%2F2018%2F09%2F14%2Fnode%2Fjava%2Fnode-j2se_05%2F</url>
     <content type="text"><![CDATA[今天在师兄弟的群里面看到一师弟, 在问面试时, 常常会问到的一题 题目12345678910@Testpublic void test() &#123; Integer a1 = 128; Integer a2 = 128; log.info("&#123;&#125;", a1 == a2); // false Integer b1 = 127; Integer b2 = 127; log.info("&#123;&#125;", b1 == b2); // true&#125; 解释1234567891011121314151617181920/** * Returns an &#123;@code Integer&#125; instance representing the specified * &#123;@code int&#125; value. If a new &#123;@code Integer&#125; instance is not * required, this method should generally be used in preference to * the constructor &#123;@link #Integer(int)&#125;, as this method is likely * to yield significantly better space and time performance by * caching frequently requested values. * * This method will always cache values in the range -128 to 127, * inclusive, and may cache other values outside of this range. * * @param i an &#123;@code int&#125; value. * @return an &#123;@code Integer&#125; instance representing &#123;@code i&#125;. * @since 1.5 */public static Integer valueOf(int i) &#123; if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high) return IntegerCache.cache[i + (-IntegerCache.low)]; return new Integer(i);&#125; high 可以使用系统属性将值配置为其他值, 默认却是 127 -Djava.lang.Integer.IntegerCache.high = 999 因为比较的是封装类型, 所以 == 比较的是两个对象的引用. b1 与 b2 因为满足 (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high) 条件, 所以对象的引用相同的. a1与a2 不满足 (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high) 条件, 所以对象是新产生的, 引用不同.]]></content>
@@ -48,6 +60,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
+    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
+    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一次SQL调优的经历]]></title>
     <url>%2F2018%2F09%2F07%2Fnode%2Fdatabase%2Fnode-mysql_02%2F</url>
     <content type="text"><![CDATA[系统随着数据量的增长, 变得越来越慢. 慢到了不能忍受的地步, 故有了这次调优. 查找问题点 从日志里拿出SQL, 执行了一下 10.8s.有点惊呆 开始端详SQL… 将SQL拆开, 一部分一部分的执行. 找到慢的点 影响速度是是一个判断订单状态的子SQL. 执行耗时竟然占用了 7.8s. 处理慢SQL先创建关联条件的联合索引, 试试水. 从 7.8s 减到了 6.3s 又创建了判断条件的联合索引, 这次减到 0.24s. 大喜…. 整体执行 0.37s 创建索引1create index 索引名 on 表名(字段名,字段名);]]></content>
@@ -57,17 +80,6 @@
       <tags>
         <tag>MySQL</tag>
         <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
-    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
-    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -256,17 +268,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MacOS上一些软件的激活]]></title>
-    <url>%2F2018%2F06%2F21%2Fnode%2Fnode-tools-crack%2F</url>
-    <content type="text"><![CDATA[MacOS上一些软件的激活 DataGrip:选择License server License service address: http://xidea.online]]></content>
-      <categories>
-        <category>ToolsCrack</category>
-      </categories>
-      <tags>
-        <tag>ToolsCrack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Edraw for Mac 注册码]]></title>
     <url>%2F2018%2F06%2F21%2Fnode%2Fnode-edraw-sn%2F</url>
     <content type="text"><![CDATA[Edraw9.1 for Mac 注册码 注意： 请断网情况下激活！选择 手动激活 ！ 用户名：GUANTAO2008 产品密钥：0711-8621-3000-8217-5433]]></content>
@@ -275,6 +276,17 @@
       </categories>
       <tags>
         <tag>Edraw</tag>
+        <tag>ToolsCrack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MacOS上一些软件的激活]]></title>
+    <url>%2F2018%2F06%2F21%2Fnode%2Fnode-tools-crack%2F</url>
+    <content type="text"><![CDATA[MacOS上一些软件的激活 DataGrip:选择License server License service address: http://xidea.online]]></content>
+      <categories>
+        <category>ToolsCrack</category>
+      </categories>
+      <tags>
         <tag>ToolsCrack</tag>
       </tags>
   </entry>
@@ -573,17 +585,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[HBase 常用命令]]></title>
-    <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fnode-hbase_2%2F</url>
-    <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
-      <categories>
-        <category>HBase</category>
-      </categories>
-      <tags>
-        <tag>HBase</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Docker 笔记]]></title>
     <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
     <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
@@ -592,6 +593,17 @@
       </categories>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HBase 常用命令]]></title>
+    <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fnode-hbase_2%2F</url>
+    <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
+      <categories>
+        <category>HBase</category>
+      </categories>
+      <tags>
+        <tag>HBase</tag>
       </tags>
   </entry>
   <entry>
@@ -866,8 +878,8 @@
   </entry>
   <entry>
     <title><![CDATA[JavaScript 定义对象的两种方式]]></title>
-    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_05%2F</url>
-    <content type="text"><![CDATA[JavaScript 定义对象的两种方式 方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
+    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_16%2F</url>
+    <content type="text"><![CDATA[方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -877,8 +889,8 @@
   </entry>
   <entry>
     <title><![CDATA[JavaScript 定义对象的两种方式]]></title>
-    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_16%2F</url>
-    <content type="text"><![CDATA[方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
+    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_05%2F</url>
+    <content type="text"><![CDATA[JavaScript 定义对象的两种方式 方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -952,8 +964,8 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>JSTL</tag>
         <tag>JavaWeb</tag>
+        <tag>JSTL</tag>
       </tags>
   </entry>
   <entry>
@@ -1082,9 +1094,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Oracle 创建序列]]></title>
-    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_02%2F</url>
-    <content type="text"><![CDATA[Oracle 创建序列 1234567CREATE SEQUENCE SEQ_FJHHZDJB --序列名 INCREMENT BY 1 -- 每次加几个 START WITH 1 -- 从1开始计数 NOMAXVALUE -- 不设置最大值 NOCYCLE -- 一直累加，不循环 CACHE 20 NOORDER;]]></content>
+    <title><![CDATA[Oracle 替换字段中的内容]]></title>
+    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_01%2F</url>
+    <content type="text"><![CDATA[Oracle 替换字段中的内容 12update statsfielddefine t set t.showname = REPLACE(t.showname ,substr(t.showname ,7,2) ,'随访') where t.showname like '重性精神疾病访视%' commit; substr(字符串,截取开始位置,截取长度) //返回截取的字 substr(‘Hello World’,0,1) //返回结果为 ‘H’ *从字符串第一个字符开始截取长度为1的字符串 substr(‘Hello World’,1,1) //返回结果为 ‘H’ *0和1都是表示截取的开始位置为第一个字符 substr(‘Hello World’,2,4) //返回结果为 ‘ello’ substr(‘Hello World’,-3,3)//返回结果为 ‘rld’ *负数(-i)表示截取的开始位置为字符串右端向左数第i个字符 replace 函数用法如下： replace（’将要更改的字符串’,’被替换掉的字符串’,’替换字符串’）]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -1094,9 +1106,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Oracle 替换字段中的内容]]></title>
-    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_01%2F</url>
-    <content type="text"><![CDATA[Oracle 替换字段中的内容 12update statsfielddefine t set t.showname = REPLACE(t.showname ,substr(t.showname ,7,2) ,'随访') where t.showname like '重性精神疾病访视%' commit; substr(字符串,截取开始位置,截取长度) //返回截取的字 substr(‘Hello World’,0,1) //返回结果为 ‘H’ *从字符串第一个字符开始截取长度为1的字符串 substr(‘Hello World’,1,1) //返回结果为 ‘H’ *0和1都是表示截取的开始位置为第一个字符 substr(‘Hello World’,2,4) //返回结果为 ‘ello’ substr(‘Hello World’,-3,3)//返回结果为 ‘rld’ *负数(-i)表示截取的开始位置为字符串右端向左数第i个字符 replace 函数用法如下： replace（’将要更改的字符串’,’被替换掉的字符串’,’替换字符串’）]]></content>
+    <title><![CDATA[Oracle 创建序列]]></title>
+    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_02%2F</url>
+    <content type="text"><![CDATA[Oracle 创建序列 1234567CREATE SEQUENCE SEQ_FJHHZDJB --序列名 INCREMENT BY 1 -- 每次加几个 START WITH 1 -- 从1开始计数 NOMAXVALUE -- 不设置最大值 NOCYCLE -- 一直累加，不循环 CACHE 20 NOORDER;]]></content>
       <categories>
         <category>SQL</category>
       </categories>
