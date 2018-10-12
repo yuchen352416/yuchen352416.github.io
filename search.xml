@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux 下安装Redis]]></title>
+    <url>%2F2018%2F10%2F12%2Fnode%2Flinux%2Fnode-linux_08%2F</url>
+    <content type="text"><![CDATA[在CentOS7.3下, 安装 Redis 3.2.9 下载Redis wget http://download.redis.io/releases/redis-3.2.9.tar.gz 解压Redis tar -zxvf redis-3.2.9.tar.gz 进入目录, 进行编译测试 cd redis-3.2.9make test 安装到指定目录 make PREFIX=/usr/local/redis install 复制配置文件到安装目录下 cp redis.conf /usr/local/redis/bin 查看目录下的文件列表123456789101112[root@jstu7y7f2y8et7 ~]# cd /usr/local/redis/bin/[root@jstu7y7f2y8et7 bin]# lltotal 15160-rw-r--r-- 1 root root 76 Oct 12 10:27 dump.rdb-rwxr-xr-x 1 root root 2431824 Oct 11 18:01 redis-benchmark-rwxr-xr-x 1 root root 25168 Oct 11 18:01 redis-check-aof-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-check-rdb-rwxr-xr-x 1 root root 2584848 Oct 11 18:01 redis-cli-rw-r--r-- 1 root root 46753 Apr 23 16:09 redis.conf-rw-r--r-- 1 root root 46696 Oct 12 10:29 redis.conf.baklrwxrwxrwx 1 root root 12 Oct 11 18:01 redis-sentinel -&gt; redis-server-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-server redis-benchmark redis性能测试工具redis-check-aof AOF文件修复工具redis-check-rdb RDB文件修复工具redis-cli redis命令行客户端redis.conf redis配置文件redis-sentinal redis集群管理工具redis-server redis服务进程 配置启动方式 vim /usr/local/redis/bin/redis.conf修改 daemonize no –&gt; daemonize yes 启动服务 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf 使用 redis-cli 测试123456789[root@jstu7y7f2y8et7 ~]# redis-cli127.0.0.1:6379&gt; set test aaaa(error) NOAUTH Authentication required.127.0.0.1:6379&gt; auth 123456OK127.0.0.1:6379&gt; set test kkkkOK127.0.0.1:6379&gt; get test&quot;kkkk&quot; auth 输入密码, 进行授权登录]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一些惆怅]]></title>
     <url>%2F2018%2F10%2F11%2Fdiary%2Fdiary_0005%2F</url>
     <content type="text"><![CDATA[这几天, 工作强度有点加大. 工作中的一些汹涌的念头, 在工作之余, 再拿出来回味, 却只剩下了几个晦涩的词汇.]]></content>
@@ -9,18 +21,6 @@
       </categories>
       <tags>
         <tag>Diary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Linux 下安装Redis]]></title>
-    <url>%2F2018%2F10%2F11%2Fnode%2Flinux%2Fnode-linux_08%2F</url>
-    <content type="text"><![CDATA[在CentOS7.3下, 安装 Redis 3.2.9 下载Redis wget http://download.redis.io/releases/redis-3.2.9.tar.gz 解压Redis tar -zxvf redis-3.2.9.tar.gz 进入目录, 进行编译测试 cd redis-3.2.9make test 安装到指定目录 make PREFIX=/usr/local/redis install 复制配置文件到安装目录下 cp redis.conf /usr/local/redis/bin 查看目录下的文件列表123456789101112[root@jstu7y7f2y8et7 ~]# cd /usr/local/redis/bin/[root@jstu7y7f2y8et7 bin]# lltotal 15160-rw-r--r-- 1 root root 76 Oct 12 10:27 dump.rdb-rwxr-xr-x 1 root root 2431824 Oct 11 18:01 redis-benchmark-rwxr-xr-x 1 root root 25168 Oct 11 18:01 redis-check-aof-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-check-rdb-rwxr-xr-x 1 root root 2584848 Oct 11 18:01 redis-cli-rw-r--r-- 1 root root 46753 Apr 23 16:09 redis.conf-rw-r--r-- 1 root root 46696 Oct 12 10:29 redis.conf.baklrwxrwxrwx 1 root root 12 Oct 11 18:01 redis-sentinel -&gt; redis-server-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-server redis-benchmark redis性能测试工具redis-check-aof AOF文件修复工具redis-check-rdb RDB文件修复工具redis-cli redis命令行客户端redis.conf redis配置文件redis-sentinal redis集群管理工具redis-server redis服务进程 配置启动方式 vim /usr/local/redis/bin/redis.conf修改 daemonize no –&gt; daemonize yes 启动服务 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf 使用 redis-cli 测试123456789[root@jstu7y7f2y8et7 ~]# redis-cli127.0.0.1:6379&gt; set test aaaa(error) NOAUTH Authentication required.127.0.0.1:6379&gt; auth 123456OK127.0.0.1:6379&gt; set test kkkkOK127.0.0.1:6379&gt; get test&quot;kkkk&quot; auth 输入密码, 进行授权登录]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -154,17 +154,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
-    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
-    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[一次SQL调优的经历]]></title>
     <url>%2F2018%2F09%2F07%2Fnode%2Fdatabase%2Fnode-mysql_02%2F</url>
     <content type="text"><![CDATA[系统随着数据量的增长, 变得越来越慢. 慢到了不能忍受的地步, 故有了这次调优. 查找问题点 从日志里拿出SQL, 执行了一下 10.8s.有点惊呆 开始端详SQL… 将SQL拆开, 一部分一部分的执行. 找到慢的点 影响速度是是一个判断订单状态的子SQL. 执行耗时竟然占用了 7.8s. 处理慢SQL先创建关联条件的联合索引, 试试水. 从 7.8s 减到了 6.3s 又创建了判断条件的联合索引, 这次减到 0.24s. 大喜…. 整体执行 0.37s 创建索引1create index 索引名 on 表名(字段名,字段名);]]></content>
@@ -174,6 +163,17 @@
       <tags>
         <tag>SQL</tag>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
+    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
+    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -339,17 +339,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[远程测试mysql数据库3306端口报错]]></title>
-    <url>%2F2018%2F06%2F26%2Fnode%2Fdatabase%2Fnode-mysql_01%2F</url>
-    <content type="text"><![CDATA[远程测试mysql数据库3306端口报错 错误现象：12345[root@localhost ~]# telnet 192.168.10.130 3306Trying 192.168.10.130...Connected to 192.168.10.130.Escape character is '^]'.GHost '192.168.10.120' is not allowed to connect to this MySQL serverConnection closed by foreign host 解决方法：具体原因是权限问题，需要重新设置外部登陆用户权限12345mysql&gt; grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;Query OK, 0 rows affected (0.01 sec)mysql&gt; flush privileges; Query OK, 0 rows affected (0.00 sec)mysql&gt; exit]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[激活 Navicat Premium for Mac]]></title>
     <url>%2F2018%2F06%2F26%2Fnode%2Fnode-navicat-sn%2F</url>
     <content type="text"><![CDATA[激活 Navicat Premium for Mac 1. 准备 ‘公钥/私钥’ 1234567891011121314151617181920212223242526272829303132333435363738-----BEGIN PUBLIC KEY-----MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB8vXG0ImYhLHvHhpi5FS3gd2QhxSQiU6dQ04F1OHB0yRRQ3NXF5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJXHtQVLXMRms+chomsQCwkDi2jbgUa4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEFh0N89FV4yGLyDLr+TLqpRecg9pkPnOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZSI69sPD9xZRt+EciXVQfybI/2SYeAdXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd+03NU3wvEmLBvGOmNGudocWIF/y3VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/pAgMBAAE=-----END PUBLIC KEY----------BEGIN RSA PRIVATE KEY-----MIIEogIBAAKCAQB8vXG0ImYhLHvHhpi5FS3gd2QhxSQiU6dQ04F1OHB0yRRQ3NXF5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJXHtQVLXMRms+chomsQCwkDi2jbgUa4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEFh0N89FV4yGLyDLr+TLqpRecg9pkPnOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZSI69sPD9xZRt+EciXVQfybI/2SYeAdXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd+03NU3wvEmLBvGOmNGudocWIF/y3VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/pAgMBAAECggEAK5qZbYt8wenn1uZg6onRwJ5bfUaJjApL+YAFx/ETtm83z9ByVbx4WWT7CNC7fK1nINy20/mJrOTZkgIxx6otiNC4+DIsACJqol+RLoo8I9pk77Ucybn65ZteOz7hVZIU+8j6LzW0KDt6yowXe75r7G/NEpfibNc3Zz81+oDd2x+bHyGbzc9QcePIVuEzkof6jgpbWrQZU14itx9lVxEgj/fbMccvBx8brR/l9ClmDZd9Y6TWsF1rfJpF3+DPeqFkKCiD7PGz3bs4O/ZdZrfV21ZNVusBW49G6bU63gQVKsOf1qGo3efbAW1HVxgTQ/lExVdcMvdenZm+ADKpL4/wUQKBgQDOfBjn3OC2IerUFu18EgCS7pSjTSibXw+TeX3D5zwszLC091G2rGlT5DihBUhMfesNdpoZynrs4YB6Sz9C3wSGAB8AM/tNvPhtSVtbMHmrdT2DEEKCvLkORNBnt+8aTu2hGRanw9aL1189gzwrmXK5ZuuURfgLrB9ihrvjo4VznQKBgQCapx13dEA1MwapBiIa3k8hVBCoGPsEPWqM33RBdUqUsP33f9/PCx00j/akwmjgQNnBlAJoY7LOqPCyiwOkEf40T4IlHdzYntWQQvHhfBwqSgdkTE9tKj43Ddr7JVFRL6yMSbW39qAp5UX/+VzOLGAlfzJ8CBnkXwGrnKPCVbnZvQKBgQCd+iof80jlcCu3GteVrjxMLkcAbb8cqG1FWpVTNe4/JFgqDHKzPVPUgG6nG2CGTWxxv4UFKHpGE/11E28SHYjbcOpHAH5LqsGy84X2za649JkcVmtclUFMXm/Ietxvl2WNdKF1t4rFMQFIEckOXnd8y/Z/Wcz+OTFF82l7L5ehrQKBgFXl9m7v6e3ijpN5LZ5A1jDL0Yicf2fmePUP9DGbZTZbbGR46SXFpY4ZXEQ9GyVbv9dOT1wN7DXvDeoNXpNVzxzdAIt/H7hN2I8NL+4vEjHG9n4WCJO4v9+yWWvfWWA/m5Y8JqusV1+N0iiQJ6T4btrE4JSVp1P6FSJtmWOKW/T9AoGAcMhPMCL+N+AvWcYt4Y4mhelvDG8e/Jj4U+lwS3g7YmuQuYx7h5tjrS33w4o20g/3XudPMJHhA3z+d8b3GaVM3ZtcRM3+Rvk+zSOcGSwn3yDy4NYlv9bdUj/4H+aU1Qu1ZYojFM1Gmbe4HeYDOzRsJ5BhNrrV12h27JWkiRJ4F/Q=-----END RSA PRIVATE KEY----- Ps: RSA 是一种非对称的加密方式, 用公钥加密的文本, 要用私钥解密. 用私钥加密的文本, 要用公钥解密. 2. 安装 Navicat Premium安装后不要着急打开 Navicat, 先进到 /Applications/Navicat Premium.app/Contents/Resources 目录, 将rpk文件内容, 换为上面我们自己的公钥. 然后断网, 手动激活 , 输入序列号NAVH-T4PX-WT8W-QBL5 现在会拿到 请求码, 用私钥解密后, 会得到 12345&#123; "K" : "NAVHT4PXWT8WQBL5", "P" : "Mac 10.13", "DI" : "ODQ2Yjg2ZDBjMTEzMjhh"&#125; “K”代表激活密钥 “DI”代表设备码 要根据请求码, 拼装自己的激活码 {&quot;K&quot;:&quot;NAVHT4PXWT8WQBL5&quot;, &quot;N&quot;:&quot;Selfimpr&quot;, &quot;O&quot;:&quot;yuchen.pro&quot;, &quot;DI&quot;:&quot;ODQ2Yjg2ZDBjMTEzMjhh&quot;, &quot;T&quot;:1516280990} ​ 激活码的”K”和”DI”必须和请求码一致. ​ “N”代表名称，填写任意字符; ​ “O”代表组织，填写任意字符; ​ “T”代表注册时间，必须是UNIX时间格式的整数形式; *注意: 上面的激活码, 多一个空格, 都不行* 用私钥加密激活码, 粘到 Navicat中, 就可激活了 附: RSA在线加密解密工具 http://tool.chacuo.net/cryptrsapubkey]]></content>
@@ -359,6 +348,17 @@
       <tags>
         <tag>Edraw</tag>
         <tag>ToolsCrack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[远程测试mysql数据库3306端口报错]]></title>
+    <url>%2F2018%2F06%2F26%2Fnode%2Fdatabase%2Fnode-mysql_01%2F</url>
+    <content type="text"><![CDATA[远程测试mysql数据库3306端口报错 错误现象：12345[root@localhost ~]# telnet 192.168.10.130 3306Trying 192.168.10.130...Connected to 192.168.10.130.Escape character is '^]'.GHost '192.168.10.120' is not allowed to connect to this MySQL serverConnection closed by foreign host 解决方法：具体原因是权限问题，需要重新设置外部登陆用户权限12345mysql&gt; grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;Query OK, 0 rows affected (0.01 sec)mysql&gt; flush privileges; Query OK, 0 rows affected (0.00 sec)mysql&gt; exit]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -525,17 +525,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Spring Boot Hibernate]]></title>
-    <url>%2F2018%2F03%2F20%2Farticle%2FSpringBoot%2Farticle-spring-boot_09%2F</url>
-    <content type="text"><![CDATA[SpringBoot 中使用 Hibernate操作数据库 1. 添加pom.xml依赖12345678&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&lt;/dependency&gt; 2. 修改配置文件application.yml123456789101112spring: datasource: # 数据库连接参数 driverClassName: com.mysql.jdbc.Driver url: jdbc:mysql://localhost:3306/base_db?useUnicode=true&amp;characterEncoding=utf-8 username: root password: root jpa: database: MYSQL hibernate: ddl-auto: update dialect: org.hibernate.dialect.MySQL5InnoDBDialect show-sql: true 3. 新建表1234567891011121314USE base_db;CREATE TABLE BLOG ( id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(30) NOT NULL, content VARCHAR(4000))ENGINE=InnoDB DEFAULT CHARSET=utf8;ALTER TABLE BLOG COMMENT = '博客表';CREATE TABLE COMMENT ( id BIGINT PRIMARY KEY AUTO_INCREMENT, content VARCHAR(4000), blog_id INT NOT NULL)ENGINE=InnoDB DEFAULT CHARSET=utf8;ALTER TABLE COMMENT COMMENT = '评论表'; 4. 添加Entity实体4.1. Blog 类123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263package pro.yuchen.demo.spring_demo.entity;import org.hibernate.annotations.Fetch;import org.hibernate.annotations.FetchMode;import java.io.Serializable;import java.util.List;import javax.persistence.*;@Entity@Table(name="blog")public class Blog implements Serializable &#123; @Id @GeneratedValue(strategy=GenerationType.AUTO) private Integer id; @Column private String title; @Column private String content; @OneToMany(targetEntity=Comment.class,cascade=CascadeType.ALL) @Fetch(FetchMode.JOIN) //updatable=false很关键，如果没有它，在级联删除的时候就会报错(反转的问题) @JoinColumn(name="blog_id",updatable=false) private List&lt;Comment&gt; comments; public Integer getId() &#123; return id; &#125; public void setId(Integer id) &#123; this.id = id; &#125; public String getTitle() &#123; return title; &#125; public void setTitle(String title) &#123; this.title = title; &#125; public String getContent() &#123; return content; &#125; public void setContent(String content) &#123; this.content = content; &#125; public List&lt;Comment&gt; getComments() &#123; return comments; &#125; public void setComments(List&lt;Comment&gt; comments) &#123; this.comments = comments; &#125;&#125; 4.2. Comment 类1234567891011121314151617181920212223242526272829303132333435363738394041424344package pro.yuchen.demo.spring_demo.entity;import javax.persistence.*;@Entity@Table(name="comment")public class Comment &#123; @Id @GeneratedValue(strategy= GenerationType.AUTO) private Integer id; @Column private String content; //多对一，@JoinColumn与@column类似，指定映射的数据库字段 @ManyToOne(targetEntity = Blog.class) @JoinColumn(name="blog_id",updatable=false) private Blog blog; public Integer getId() &#123; return id; &#125; public void setId(Integer id) &#123; this.id = id; &#125; public String getContent() &#123; return content; &#125; public void setContent(String content) &#123; this.content = content; &#125; public Blog getBlog() &#123; return blog; &#125; public void setBlog(Blog blog) &#123; this.blog = blog; &#125;&#125; 附: “一对多”, “多对一” 关系, 是针对两个实体说的 5. 新建 JPA操作类5.1. Blog 操作类12345678package pro.yuchen.demo.spring_demo.dao;import org.springframework.data.jpa.repository.JpaRepository;import pro.yuchen.demo.spring_demo.entity.Blog;public interface BlogRepository extends JpaRepository&lt;Blog, Integer&gt; &#123;&#125; 5.2.Comment 操作类12345678package pro.yuchen.demo.spring_demo.dao;import org.springframework.data.jpa.repository.JpaRepository;import pro.yuchen.demo.spring_demo.entity.Comment;public interface CommentRepository extends JpaRepository&lt;Comment, Integer&gt; &#123;&#125; 6. 测试用例6.1. 测试 BlogRepository12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667package pro.yuchen.demo.spring_demo.dao;import org.junit.Test;import org.junit.runner.RunWith;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.test.context.SpringBootTest;import org.springframework.data.domain.Page;import org.springframework.data.domain.PageRequest;import org.springframework.data.domain.Pageable;import org.springframework.data.domain.Sort;import org.springframework.mock.web.MockServletContext;import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;import org.springframework.test.context.web.WebAppConfiguration;import pro.yuchen.demo.spring_demo.Application;import pro.yuchen.demo.spring_demo.entity.Blog;import pro.yuchen.demo.spring_demo.entity.Comment;@RunWith(SpringJUnit4ClassRunner.class)@SpringBootTest(classes = &#123;MockServletContext.class, Application.class&#125;)@WebAppConfigurationpublic class BlogRepositoryTest &#123; @Autowired private BlogRepository repository; @Test public void insert() throws Exception &#123; Blog blog = new Blog(); String title = "TEST......."; blog.setTitle(title); blog.setContent("jjjjkkkkjjsfjseoijqksahbfgoyhujikldfghjklsdfgesdrtfgzxrdcfvgbnazesxdcfvgbhnjklaWzesxdcfvgbhjklazsdfghjkazesxdcfghj"); repository.save(blog); &#125; @Test public void delete() &#123; repository.delete(10); &#125; @Test public void update() &#123; Blog blog = repository.findOne(12); blog.setTitle("花一样的人生...."); repository.save(blog); System.out.println(repository.findOne(12).getTitle()); &#125; @Test public void findOne() &#123; Blog result = repository.findOne(45); System.out.println(result.getTitle()); for (Comment comment:result.getComments()) &#123; System.out.println(comment.getContent()); &#125; &#125; @Test public void findAllByPage() &#123; Sort sort = new Sort(Sort.Direction.DESC, "title"); Pageable pageable = new PageRequest(1,10, sort); Page&lt;Blog&gt; list = repository.findAll(pageable); for (Blog blog : list) &#123; System.out.println(blog.getTitle()); &#125; &#125;&#125; 6.2 测试 CommentRepository123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566package pro.yuchen.demo.spring_demo.dao;import org.junit.Test;import org.junit.runner.RunWith;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.test.context.SpringBootTest;import org.springframework.data.domain.Page;import org.springframework.data.domain.PageRequest;import org.springframework.data.domain.Pageable;import org.springframework.data.domain.Sort;import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;import pro.yuchen.demo.spring_demo.Application;import pro.yuchen.demo.spring_demo.entity.Blog;import pro.yuchen.demo.spring_demo.entity.Comment;@RunWith(SpringJUnit4ClassRunner.class)@SpringBootTest(classes = &#123;Application.class&#125;)public class CommentRepositoryTest &#123; @Autowired private CommentRepository repository; @Test public void insert() &#123; Blog blog = new Blog(); for (int i = 30; i &lt; 100; i++) &#123; blog.setId(i); for(int j = 0; j &lt; 10; j++) &#123; Comment comment = new Comment(); comment.setBlog(blog); comment.setContent("评论...." + j); repository.save(comment); &#125; &#125; &#125; @Test public void delete() &#123; repository.delete(23); &#125; @Test public void update() &#123; Comment comment = repository.findOne(10); comment.setContent("lll"); repository.save(comment); &#125; @Test public void findOne() &#123; Comment comment = repository.findOne(10); System.out.println(comment.getContent()); &#125; @Test public void findAllByPage() &#123; Sort sort = new Sort(Sort.Direction.ASC, "blog_id", "id"); Pageable pageable = new PageRequest(23,10, sort); Page&lt;Comment&gt; list = repository.findAll(pageable); for (Comment comment : list) &#123; System.out.println(comment.getContent() + " " + comment.getId()); &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>SpringBoot</category>
-      </categories>
-      <tags>
-        <tag>SpringBoot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[ProtoBuf 学习(一)]]></title>
     <url>%2F2018%2F03%2F20%2Fnode%2Fnode-protobuf_1%2F</url>
     <content type="text"><![CDATA[ProtoBuf 环境的安装与HelloWord 1. 安装 ProtoBuf brew install protobuf@2.5.0 2. 新建 person.proto 文件1234567891011121314151617181920212223242526272829syntax = "proto2";package tutorial;option java_package = "pro.yuchen.demo.spring_demo.proto";option java_outer_classname = "AddressBookProtos";message Person &#123; required string name = 1; // 非空属性 required int32 id = 2; // 非空属性 optional string email = 3; // 可空属性 enum PhoneType &#123; // 枚举类型 MOBILE = 0; HOME = 1; WORK = 2; &#125; message PhoneNumber &#123; // 子类(可多个, JSON表现为数组形式) required string number = 1; optional PhoneType type = 2 [default = HOME]; &#125; repeated PhoneNumber phones = 4;&#125;message AddressBook &#123; repeated Person people = 1;&#125; 3. 生成 Java源文件protoc --java_out . person.proto 4. 导入pom.xml依赖12345678910&lt;dependency&gt; &lt;groupId&gt;com.google.protobuf&lt;/groupId&gt; &lt;artifactId&gt;protobuf-java&lt;/artifactId&gt; &lt;version&gt;2.5.0&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;com.googlecode.protobuf-java-format&lt;/groupId&gt; &lt;artifactId&gt;protobuf-java-format&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt;&lt;/dependency&gt; ps: 将刚刚根据.proto生成的 java文件, 导入项目中 5. 测试123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124package pro.yuchen.demo.spring_demo.proto;import com.google.protobuf.ByteString;import com.google.protobuf.Descriptors;import com.google.protobuf.Descriptors.FieldDescriptor;import com.google.protobuf.Message;import com.googlecode.protobuf.format.JsonFormat;import org.junit.Test;import pro.yuchen.demo.spring_demo.proto.Protos.Person;import java.util.Iterator;import java.util.List;import java.util.Map;public class ProtoBufTest &#123; @Test public void testProtoBuf() throws Exception &#123; Person person = Person.newBuilder() .setId(1) .setName("Tom") .setEmail("yuchen352416@163.com") .addPhones(Person.PhoneNumber.newBuilder() .setNumber("18733775865") .setType(Person.PhoneType.MOBILE)) .build(); // ProtoBuf -&gt; JSON String jsonFormat = JsonFormat.printToString(person); System.out.println(jsonFormat); // JSON -&gt; ProtoBuf String json = "&#123;\"name\": \"Tom\", \"id\": 1, \"email\": \"yuchen352416@163.com\", \"phones\": [&#123;\"number\": \"18733775865\", \"type\": 1 &#125;, &#123;\"number\": \"13463170232\", \"type\": 0 &#125; ] &#125;"; Message.Builder message = Person.newBuilder(); JsonFormat.merge(json, message); System.out.println(message.build()); byte[] bytes = person.toByteArray(); // 序列化 Person result = Person.parseFrom(bytes); // 反序列化 // 遍历输出 for (Iterator&lt;Map.Entry&lt;FieldDescriptor, Object&gt;&gt; iter = result.getAllFields().entrySet().iterator(); iter.hasNext();) &#123; Map.Entry&lt;FieldDescriptor, Object&gt; field = iter.next(); System.out.println("Number: " + field.getKey().getNumber()); System.out.println("Type: " + field.getKey().getType()); System.out.println("Name: " + field.getKey().getName()); System.out.println("FullName: " + field.getKey().getFullName()); System.out.println("FileName: " + field.getKey().getFile().getName()); printFieldValue(field); System.out.println("-------------------------------------------"); System.out.println(); &#125; &#125; private void printFieldValue(Map.Entry&lt;FieldDescriptor, Object&gt; field) &#123; switch (field.getKey().getType())&#123; case INT32: case INT64: case SINT32: case SINT64: case SFIXED32: case SFIXED64: case FLOAT: case DOUBLE: case BOOL: // Good old toString() does what we want for these types. System.out.println("Value: " + field.getValue().toString()); break; case UINT32: case FIXED32: System.out.println("Value: " + (Integer) field.getValue()); break; case UINT64: case FIXED64: System.out.println("Value: " + (Long) field.getValue()); break; case STRING: &#123; System.out.println("Value: " + (String) field.getValue()); break; &#125; case BYTES: &#123; System.out.println("Value: " + (ByteString) field.getValue()); break; &#125; case ENUM: &#123; System.out.println("Value: " + ((Descriptors.EnumValueDescriptor) field.getValue()).getName()); break; &#125; case MESSAGE: case GROUP: System.out.println("Size: " + ((List&lt;?&gt;) field.getValue()).size()); System.out.println("Value: ["); List&lt;?&gt; list = (List&lt;?&gt;) field.getValue(); for (Object o : list) &#123; Message message = (Message) o; for (Iterator&lt;Map.Entry&lt;FieldDescriptor, Object&gt;&gt; iters = message.getAllFields().entrySet().iterator(); iters.hasNext();) &#123; Map.Entry&lt;FieldDescriptor, Object&gt; iter = iters.next(); System.out.println("\t-----Number: " + iter.getKey().getNumber()); System.out.println("\t-----Type: " + iter.getKey().getType()); System.out.println("\t-----Name: " + iter.getKey().getName()); System.out.println("\t-----FullName: " + iter.getKey().getFullName()); System.out.println("\t-----FileName: " + iter.getKey().getFile().getName()); System.out.print("\t-----"); printFieldValue(iter); System.out.println("\t--------------------------------------------"); &#125; System.out.println(); &#125; System.out.println("]"); break; &#125; &#125;&#125; 输出结果: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061&#123;&quot;name&quot;: &quot;Tom&quot;,&quot;id&quot;: 1,&quot;email&quot;: &quot;yuchen352416@163.com&quot;,&quot;phones&quot;: [&#123;&quot;number&quot;: &quot;18733775865&quot;,&quot;type&quot;: &quot;MOBILE&quot;&#125;]&#125;name: &quot;Tom&quot;id: 1email: &quot;yuchen352416@163.com&quot;phones &#123; number: &quot;18733775865&quot; type: HOME&#125;phones &#123; number: &quot;13463170232&quot; type: MOBILE&#125;Number: 1Type: STRINGName: nameFullName: Person.nameFileName: person.protoValue: Tom-------------------------------------------Number: 2Type: INT32Name: idFullName: Person.idFileName: person.protoValue: 1-------------------------------------------Number: 3Type: STRINGName: emailFullName: Person.emailFileName: person.protoValue: yuchen352416@163.com-------------------------------------------Number: 4Type: MESSAGEName: phonesFullName: Person.phonesFileName: person.protoSize: 1Value: [ -----Number: 1 -----Type: STRING -----Name: number -----FullName: Person.PhoneNumber.number -----FileName: person.proto -----Value: 18733775865 -------------------------------------------- -----Number: 2 -----Type: ENUM -----Name: type -----FullName: Person.PhoneNumber.type -----FileName: person.proto -----Value: MOBILE --------------------------------------------]-------------------------------------------]]></content>
@@ -544,6 +533,17 @@
       </categories>
       <tags>
         <tag>ProtoBuf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring Boot Hibernate]]></title>
+    <url>%2F2018%2F03%2F20%2Farticle%2FSpringBoot%2Farticle-spring-boot_09%2F</url>
+    <content type="text"><![CDATA[SpringBoot 中使用 Hibernate操作数据库 1. 添加pom.xml依赖12345678&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&lt;/dependency&gt; 2. 修改配置文件application.yml123456789101112spring: datasource: # 数据库连接参数 driverClassName: com.mysql.jdbc.Driver url: jdbc:mysql://localhost:3306/base_db?useUnicode=true&amp;characterEncoding=utf-8 username: root password: root jpa: database: MYSQL hibernate: ddl-auto: update dialect: org.hibernate.dialect.MySQL5InnoDBDialect show-sql: true 3. 新建表1234567891011121314USE base_db;CREATE TABLE BLOG ( id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(30) NOT NULL, content VARCHAR(4000))ENGINE=InnoDB DEFAULT CHARSET=utf8;ALTER TABLE BLOG COMMENT = '博客表';CREATE TABLE COMMENT ( id BIGINT PRIMARY KEY AUTO_INCREMENT, content VARCHAR(4000), blog_id INT NOT NULL)ENGINE=InnoDB DEFAULT CHARSET=utf8;ALTER TABLE COMMENT COMMENT = '评论表'; 4. 添加Entity实体4.1. Blog 类123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263package pro.yuchen.demo.spring_demo.entity;import org.hibernate.annotations.Fetch;import org.hibernate.annotations.FetchMode;import java.io.Serializable;import java.util.List;import javax.persistence.*;@Entity@Table(name="blog")public class Blog implements Serializable &#123; @Id @GeneratedValue(strategy=GenerationType.AUTO) private Integer id; @Column private String title; @Column private String content; @OneToMany(targetEntity=Comment.class,cascade=CascadeType.ALL) @Fetch(FetchMode.JOIN) //updatable=false很关键，如果没有它，在级联删除的时候就会报错(反转的问题) @JoinColumn(name="blog_id",updatable=false) private List&lt;Comment&gt; comments; public Integer getId() &#123; return id; &#125; public void setId(Integer id) &#123; this.id = id; &#125; public String getTitle() &#123; return title; &#125; public void setTitle(String title) &#123; this.title = title; &#125; public String getContent() &#123; return content; &#125; public void setContent(String content) &#123; this.content = content; &#125; public List&lt;Comment&gt; getComments() &#123; return comments; &#125; public void setComments(List&lt;Comment&gt; comments) &#123; this.comments = comments; &#125;&#125; 4.2. Comment 类1234567891011121314151617181920212223242526272829303132333435363738394041424344package pro.yuchen.demo.spring_demo.entity;import javax.persistence.*;@Entity@Table(name="comment")public class Comment &#123; @Id @GeneratedValue(strategy= GenerationType.AUTO) private Integer id; @Column private String content; //多对一，@JoinColumn与@column类似，指定映射的数据库字段 @ManyToOne(targetEntity = Blog.class) @JoinColumn(name="blog_id",updatable=false) private Blog blog; public Integer getId() &#123; return id; &#125; public void setId(Integer id) &#123; this.id = id; &#125; public String getContent() &#123; return content; &#125; public void setContent(String content) &#123; this.content = content; &#125; public Blog getBlog() &#123; return blog; &#125; public void setBlog(Blog blog) &#123; this.blog = blog; &#125;&#125; 附: “一对多”, “多对一” 关系, 是针对两个实体说的 5. 新建 JPA操作类5.1. Blog 操作类12345678package pro.yuchen.demo.spring_demo.dao;import org.springframework.data.jpa.repository.JpaRepository;import pro.yuchen.demo.spring_demo.entity.Blog;public interface BlogRepository extends JpaRepository&lt;Blog, Integer&gt; &#123;&#125; 5.2.Comment 操作类12345678package pro.yuchen.demo.spring_demo.dao;import org.springframework.data.jpa.repository.JpaRepository;import pro.yuchen.demo.spring_demo.entity.Comment;public interface CommentRepository extends JpaRepository&lt;Comment, Integer&gt; &#123;&#125; 6. 测试用例6.1. 测试 BlogRepository12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667package pro.yuchen.demo.spring_demo.dao;import org.junit.Test;import org.junit.runner.RunWith;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.test.context.SpringBootTest;import org.springframework.data.domain.Page;import org.springframework.data.domain.PageRequest;import org.springframework.data.domain.Pageable;import org.springframework.data.domain.Sort;import org.springframework.mock.web.MockServletContext;import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;import org.springframework.test.context.web.WebAppConfiguration;import pro.yuchen.demo.spring_demo.Application;import pro.yuchen.demo.spring_demo.entity.Blog;import pro.yuchen.demo.spring_demo.entity.Comment;@RunWith(SpringJUnit4ClassRunner.class)@SpringBootTest(classes = &#123;MockServletContext.class, Application.class&#125;)@WebAppConfigurationpublic class BlogRepositoryTest &#123; @Autowired private BlogRepository repository; @Test public void insert() throws Exception &#123; Blog blog = new Blog(); String title = "TEST......."; blog.setTitle(title); blog.setContent("jjjjkkkkjjsfjseoijqksahbfgoyhujikldfghjklsdfgesdrtfgzxrdcfvgbnazesxdcfvgbhnjklaWzesxdcfvgbhjklazsdfghjkazesxdcfghj"); repository.save(blog); &#125; @Test public void delete() &#123; repository.delete(10); &#125; @Test public void update() &#123; Blog blog = repository.findOne(12); blog.setTitle("花一样的人生...."); repository.save(blog); System.out.println(repository.findOne(12).getTitle()); &#125; @Test public void findOne() &#123; Blog result = repository.findOne(45); System.out.println(result.getTitle()); for (Comment comment:result.getComments()) &#123; System.out.println(comment.getContent()); &#125; &#125; @Test public void findAllByPage() &#123; Sort sort = new Sort(Sort.Direction.DESC, "title"); Pageable pageable = new PageRequest(1,10, sort); Page&lt;Blog&gt; list = repository.findAll(pageable); for (Blog blog : list) &#123; System.out.println(blog.getTitle()); &#125; &#125;&#125; 6.2 测试 CommentRepository123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566package pro.yuchen.demo.spring_demo.dao;import org.junit.Test;import org.junit.runner.RunWith;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.test.context.SpringBootTest;import org.springframework.data.domain.Page;import org.springframework.data.domain.PageRequest;import org.springframework.data.domain.Pageable;import org.springframework.data.domain.Sort;import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;import pro.yuchen.demo.spring_demo.Application;import pro.yuchen.demo.spring_demo.entity.Blog;import pro.yuchen.demo.spring_demo.entity.Comment;@RunWith(SpringJUnit4ClassRunner.class)@SpringBootTest(classes = &#123;Application.class&#125;)public class CommentRepositoryTest &#123; @Autowired private CommentRepository repository; @Test public void insert() &#123; Blog blog = new Blog(); for (int i = 30; i &lt; 100; i++) &#123; blog.setId(i); for(int j = 0; j &lt; 10; j++) &#123; Comment comment = new Comment(); comment.setBlog(blog); comment.setContent("评论...." + j); repository.save(comment); &#125; &#125; &#125; @Test public void delete() &#123; repository.delete(23); &#125; @Test public void update() &#123; Comment comment = repository.findOne(10); comment.setContent("lll"); repository.save(comment); &#125; @Test public void findOne() &#123; Comment comment = repository.findOne(10); System.out.println(comment.getContent()); &#125; @Test public void findAllByPage() &#123; Sort sort = new Sort(Sort.Direction.ASC, "blog_id", "id"); Pageable pageable = new PageRequest(23,10, sort); Page&lt;Comment&gt; list = repository.findAll(pageable); for (Comment comment : list) &#123; System.out.println(comment.getContent() + " " + comment.getId()); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>SpringBoot</category>
+      </categories>
+      <tags>
+        <tag>SpringBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -679,17 +679,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[HBase 常用命令]]></title>
-    <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fnode-hbase_2%2F</url>
-    <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
-      <categories>
-        <category>HBase</category>
-      </categories>
-      <tags>
-        <tag>HBase</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Docker 笔记]]></title>
     <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
     <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
@@ -698,6 +687,17 @@
       </categories>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HBase 常用命令]]></title>
+    <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fnode-hbase_2%2F</url>
+    <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
+      <categories>
+        <category>HBase</category>
+      </categories>
+      <tags>
+        <tag>HBase</tag>
       </tags>
   </entry>
   <entry>
@@ -972,8 +972,8 @@
   </entry>
   <entry>
     <title><![CDATA[JavaScript 定义对象的两种方式]]></title>
-    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_16%2F</url>
-    <content type="text"><![CDATA[方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
+    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_05%2F</url>
+    <content type="text"><![CDATA[JavaScript 定义对象的两种方式 方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -983,8 +983,8 @@
   </entry>
   <entry>
     <title><![CDATA[JavaScript 定义对象的两种方式]]></title>
-    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_05%2F</url>
-    <content type="text"><![CDATA[JavaScript 定义对象的两种方式 方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
+    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_16%2F</url>
+    <content type="text"><![CDATA[方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -1058,8 +1058,8 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>JSTL</tag>
         <tag>JavaWeb</tag>
+        <tag>JSTL</tag>
       </tags>
   </entry>
   <entry>
