@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="何时, 枫叶红">
 <meta property="og:description" content="源于我想知道Docker当前运行的容器的IP">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-12T02:57:17.000Z">
+<meta property="og:updated_time" content="2018-10-12T03:01:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义命令与命令别名">
 <meta name="twitter:description" content="源于我想知道Docker当前运行的容器的IP">
@@ -378,9 +378,7 @@
       
         <p>源于我想知道Docker当前运行的容器的IP</p>
 <a id="more"></a>
-<h4 id="首先获取Docker容器IP的命令"><a href="#首先获取Docker容器IP的命令" class="headerlink" title="首先获取Docker容器IP的命令"></a>首先获取Docker容器IP的命令</h4><blockquote>
-<p><code>sudo docker inspect --format &#39;\{\{ .NetworkSettings.IPAddress \}\}&#39; 1f7d8f36523c</code></p>
-</blockquote>
+<h4 id="首先获取Docker容器IP的命令"><a href="#首先获取Docker容器IP的命令" class="headerlink" title="首先获取Docker容器IP的命令"></a>首先获取Docker容器IP的命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker inspect --format '&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;' 1f7d8f36523c</span><br></pre></td></tr></table></figure>
 <h4 id="方法的扩展"><a href="#方法的扩展" class="headerlink" title="方法的扩展"></a>方法的扩展</h4><p>在 ~/.bashrc 中写一个 bash 函数：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function docker_ip() &#123;</span><br><span class="line">    sudo docker inspect --format '&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;' $1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>source ~/.bashrc</code> 生效, 然后:</p>
