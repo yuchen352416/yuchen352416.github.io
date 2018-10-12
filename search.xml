@@ -12,6 +12,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Linux 下安装Redis]]></title>
+    <url>%2F2018%2F10%2F11%2Fnode%2Flinux%2Fnode-linux_08%2F</url>
+    <content type="text"><![CDATA[在CentOS7.3下, 安装 Redis 3.2.9 下载Redis wget http://download.redis.io/releases/redis-3.2.9.tar.gz 解压Redis tar -zxvf redis-3.2.9.tar.gz 进入目录, 进行编译测试 cd redis-3.2.9make test 安装到指定目录 make PREFIX=/usr/local/redis install 复制配置文件到安装目录下 cp redis.conf /usr/local/redis/bin 查看目录下的文件列表123456789101112[root@jstu7y7f2y8et7 ~]# cd /usr/local/redis/bin/[root@jstu7y7f2y8et7 bin]# lltotal 15160-rw-r--r-- 1 root root 76 Oct 12 10:27 dump.rdb-rwxr-xr-x 1 root root 2431824 Oct 11 18:01 redis-benchmark-rwxr-xr-x 1 root root 25168 Oct 11 18:01 redis-check-aof-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-check-rdb-rwxr-xr-x 1 root root 2584848 Oct 11 18:01 redis-cli-rw-r--r-- 1 root root 46753 Apr 23 16:09 redis.conf-rw-r--r-- 1 root root 46696 Oct 12 10:29 redis.conf.baklrwxrwxrwx 1 root root 12 Oct 11 18:01 redis-sentinel -&gt; redis-server-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-server redis-benchmark redis性能测试工具redis-check-aof AOF文件修复工具redis-check-rdb RDB文件修复工具redis-cli redis命令行客户端redis.conf redis配置文件redis-sentinal redis集群管理工具redis-server redis服务进程 配置启动方式 vim /usr/local/redis/bin/redis.conf修改 daemonize no –&gt; daemonize yes 启动服务 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf 使用 redis-cli 测试123456789[root@jstu7y7f2y8et7 ~]# redis-cli127.0.0.1:6379&gt; set test aaaa(error) NOAUTH Authentication required.127.0.0.1:6379&gt; auth 123456OK127.0.0.1:6379&gt; set test kkkkOK127.0.0.1:6379&gt; get test&quot;kkkk&quot; auth 输入密码, 进行授权登录]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[自定义命令与命令别名]]></title>
     <url>%2F2018%2F10%2F11%2Fnode%2Flinux%2Fnode-linux_07%2F</url>
     <content type="text"><![CDATA[源于我想知道Docker当前运行的容器的IP 首先获取Docker容器IP的命令1sudo docker inspect --format '&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;' 1f7d8f36523c 方法的扩展在 ~/.bashrc 中写一个 bash 函数： 123function docker_ip() &#123; sudo docker inspect --format '&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;' $1&#125; source ~/.bashrc 生效, 然后: docker_ip 1f7d8f36523c 由此之后, 继续的想象因为在Linux下用命令时查看文件列表时用习惯了ll, 换到MacOS后, 却没有ll命令. 经此法, 想试试, 又是好一番寻觅. 编辑 .bash_profile 文件： 1vim ~/.bash_profile 若没有该文件请手动创建。 添加内容 12alias ll='ls -la'alias vi='vim' 立即生效source ~/.bash_profile]]></content>
@@ -199,17 +211,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Linux 上安装个小工具]]></title>
-    <url>%2F2018%2F08%2F29%2Fnode%2Flinux%2Fnode-linux_05%2F</url>
-    <content type="text"><![CDATA[安装个文件上传下载的工具 安装文件上传下载工具 yum install lrzsz sz：将选定的文件发送（send）到本地机器 rz：运行该命令会弹出一个文件选择窗口，从本地选择文件上传到服务器(receive)]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[我的百度云服务器上的Docker]]></title>
     <url>%2F2018%2F08%2F29%2Fnode%2Flinux%2Fnode-linux_04%2F</url>
     <content type="text"><![CDATA[今天释怀了我的服务器端口问题之后, 开始搞一些常用的软件 1. 安装Docker因为我的系统是 CentOS 7, Docker 要求 CentOS 系统的内核版本高于 3.10. 所以先查看一下内核版本uname -r满足条件后, 直接安装yum -y install docker . 安装完后, 启动服务…….. 在CentOS 7下, 启动服务不再是 service docker start 这样的方式的.而是: systemctl start docker.service. 设置开机启动: systemctl enable docker.service 2. 下载镜像, 创建容器下载镜像: docker pull centos:6.7 创建容器: docker run --name=linux -d centos:6.7 /bin/bash -c &quot;while true; do echo hello; sleep 1; done&quot; 3. 容器里的事故进入容器: docker exec -ti linux /bin/bash 进入之后本来是想在容器里, 再运行起一个Docker 来玩玩的, 结果发现这条路行不通.原因和解决办法: http://www.wangtianyi.top/blog/2017/01/29/docker-in-docker/ , 我在这找到了答案. 玩不了, 就中规中矩的安装些软件吧. 下载个JDK来玩玩. 先ping 下, 结果 -bash: ping: command not found 我去..心里一万只草泥马, 在奔腾…….还要另安装 yum -y install iputils 看了一下时间, 那边的任务, 估计快执行完了, 这边只能晚上回去继续搞了, 就先记到这…..]]></content>
@@ -219,6 +220,17 @@
       <tags>
         <tag>Linux</tag>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 上安装个小工具]]></title>
+    <url>%2F2018%2F08%2F29%2Fnode%2Flinux%2Fnode-linux_05%2F</url>
+    <content type="text"><![CDATA[安装个文件上传下载的工具 安装文件上传下载工具 yum install lrzsz sz：将选定的文件发送（send）到本地机器 rz：运行该命令会弹出一个文件选择窗口，从本地选择文件上传到服务器(receive)]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -667,17 +679,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Docker 笔记]]></title>
-    <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
-    <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[HBase 常用命令]]></title>
     <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fnode-hbase_2%2F</url>
     <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
@@ -686,6 +687,17 @@
       </categories>
       <tags>
         <tag>HBase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker 笔记]]></title>
+    <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
+    <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
