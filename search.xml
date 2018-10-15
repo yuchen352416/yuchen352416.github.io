@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[香山之旅]]></title>
+    <url>%2F2018%2F10%2F13%2Fdiary%2Fdiary_0006%2F</url>
+    <content type="text"><![CDATA[一直都想去香山去看红叶的, 这次也算是得偿所愿了. 但终归还是有些小遗憾….世间事, 哪有那么多的尽如人意. 想到这, 感觉有些遗憾, 未尝也不是一种美. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 近来京都, 秋意正浓, 香山红叶, 心向往之. 顾择佳日, 约佳人共赴之. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佳日已至, 却佳人未至. 虽少佳人在旁, 景色入眸 却也美哉. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好吧, 我编不下去了. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自己一个人, 背着包, 兴致勃勃的就去了, 根本就没有妹子好吧. 前面的遗憾, 是真的有的. 不过不是妹子这个梗. 而是我TM去的早了点, 满山都还绿聪聪的呢, 我TM这是去看红叶去了吗? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俗话说: 既来之, 则安之. 好好享受美景吧. 从山脚开始爬…. 相机曝光度, 调的有点高….尴尬…(可以只看上半部分哈….) 一样的毛病, 瞻前不顾后, 想问题不够全面 手不点都, 画面有点糊….我为什么要走这条野路呢…. 当树叶, 随风落下, 捡起它, 放在手里, 端详… 神说要有光…. 半山腰 祈福…. 俯瞰… 许愿… 道出心声… 香炉峰… 不知为何, 看到这一处时, 让我想起了龙泉寺后, 也有这样一口井的….]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux 下安装Redis]]></title>
     <url>%2F2018%2F10%2F12%2Fnode%2Flinux%2Fnode-linux_08%2F</url>
     <content type="text"><![CDATA[在CentOS7.3下, 安装 Redis 3.2.9 下载Redis wget http://download.redis.io/releases/redis-3.2.9.tar.gz 解压Redis tar -zxvf redis-3.2.9.tar.gz 进入目录, 进行编译测试 cd redis-3.2.9make test 安装到指定目录 make PREFIX=/usr/local/redis install 复制配置文件到安装目录下 cp redis.conf /usr/local/redis/bin 查看目录下的文件列表123456789101112[root@jstu7y7f2y8et7 ~]# cd /usr/local/redis/bin/[root@jstu7y7f2y8et7 bin]# lltotal 15160-rw-r--r-- 1 root root 76 Oct 12 10:27 dump.rdb-rwxr-xr-x 1 root root 2431824 Oct 11 18:01 redis-benchmark-rwxr-xr-x 1 root root 25168 Oct 11 18:01 redis-check-aof-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-check-rdb-rwxr-xr-x 1 root root 2584848 Oct 11 18:01 redis-cli-rw-r--r-- 1 root root 46753 Apr 23 16:09 redis.conf-rw-r--r-- 1 root root 46696 Oct 12 10:29 redis.conf.baklrwxrwxrwx 1 root root 12 Oct 11 18:01 redis-sentinel -&gt; redis-server-rwxr-xr-x 1 root root 5181840 Oct 11 18:01 redis-server redis-benchmark redis性能测试工具redis-check-aof AOF文件修复工具redis-check-rdb RDB文件修复工具redis-cli redis命令行客户端redis.conf redis配置文件redis-sentinal redis集群管理工具redis-server redis服务进程 配置启动方式 vim /usr/local/redis/bin/redis.conf修改 daemonize no –&gt; daemonize yes 启动服务 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf 使用 redis-cli 测试123456789[root@jstu7y7f2y8et7 ~]# redis-cli127.0.0.1:6379&gt; set test aaaa(error) NOAUTH Authentication required.127.0.0.1:6379&gt; auth 123456OK127.0.0.1:6379&gt; set test kkkkOK127.0.0.1:6379&gt; get test&quot;kkkk&quot; auth 输入密码, 进行授权登录]]></content>
@@ -362,17 +373,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MacOS上一些软件的激活]]></title>
-    <url>%2F2018%2F06%2F21%2Fnode%2Fnode-tools-crack%2F</url>
-    <content type="text"><![CDATA[MacOS上一些软件的激活 DataGrip:选择License server License service address: http://xidea.online]]></content>
-      <categories>
-        <category>ToolsCrack</category>
-      </categories>
-      <tags>
-        <tag>ToolsCrack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Edraw for Mac 注册码]]></title>
     <url>%2F2018%2F06%2F21%2Fnode%2Fnode-edraw-sn%2F</url>
     <content type="text"><![CDATA[Edraw9.1 for Mac 注册码 注意： 请断网情况下激活！选择 手动激活 ！ 用户名：GUANTAO2008 产品密钥：0711-8621-3000-8217-5433]]></content>
@@ -381,6 +381,17 @@
       </categories>
       <tags>
         <tag>Edraw</tag>
+        <tag>ToolsCrack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MacOS上一些软件的激活]]></title>
+    <url>%2F2018%2F06%2F21%2Fnode%2Fnode-tools-crack%2F</url>
+    <content type="text"><![CDATA[MacOS上一些软件的激活 DataGrip:选择License server License service address: http://xidea.online]]></content>
+      <categories>
+        <category>ToolsCrack</category>
+      </categories>
+      <tags>
         <tag>ToolsCrack</tag>
       </tags>
   </entry>
@@ -415,8 +426,8 @@
         <category>Redis</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>Redis</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -508,8 +519,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>MySQL</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -679,17 +690,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Docker 笔记]]></title>
-    <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
-    <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[HBase 常用命令]]></title>
     <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fnode-hbase_2%2F</url>
     <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
@@ -698,6 +698,17 @@
       </categories>
       <tags>
         <tag>HBase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker 笔记]]></title>
+    <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
+    <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -972,8 +983,8 @@
   </entry>
   <entry>
     <title><![CDATA[JavaScript 定义对象的两种方式]]></title>
-    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_05%2F</url>
-    <content type="text"><![CDATA[JavaScript 定义对象的两种方式 方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
+    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_16%2F</url>
+    <content type="text"><![CDATA[方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -983,8 +994,8 @@
   </entry>
   <entry>
     <title><![CDATA[JavaScript 定义对象的两种方式]]></title>
-    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_16%2F</url>
-    <content type="text"><![CDATA[方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
+    <url>%2F2016%2F09%2F11%2Fnode%2Fjavascript%2Fnode-javascript_05%2F</url>
+    <content type="text"><![CDATA[JavaScript 定义对象的两种方式 方法一: 12345678var Cat = function() &#123; var sum = "" this.show = function(num, num1) &#123; sum = num + num1; alert("sum = " + sum); &#125;&#125;var c = new Cat(); 方法二: 123var c = &#123;sum:"", show:function(num, num1) &#123;sum = num + num1; alert("sum = " + sum);&#125;&#125;;c.show(1,1);alert(t);]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
@@ -1035,8 +1046,8 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>JavaWeb</tag>
         <tag>WebService</tag>
+        <tag>JavaWeb</tag>
       </tags>
   </entry>
   <entry>
@@ -1188,9 +1199,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Oracle 替换字段中的内容]]></title>
-    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_01%2F</url>
-    <content type="text"><![CDATA[Oracle 替换字段中的内容 12update statsfielddefine t set t.showname = REPLACE(t.showname ,substr(t.showname ,7,2) ,'随访') where t.showname like '重性精神疾病访视%' commit; substr(字符串,截取开始位置,截取长度) //返回截取的字 substr(‘Hello World’,0,1) //返回结果为 ‘H’ *从字符串第一个字符开始截取长度为1的字符串 substr(‘Hello World’,1,1) //返回结果为 ‘H’ *0和1都是表示截取的开始位置为第一个字符 substr(‘Hello World’,2,4) //返回结果为 ‘ello’ substr(‘Hello World’,-3,3)//返回结果为 ‘rld’ *负数(-i)表示截取的开始位置为字符串右端向左数第i个字符 replace 函数用法如下： replace（’将要更改的字符串’,’被替换掉的字符串’,’替换字符串’）]]></content>
+    <title><![CDATA[Oracle 创建序列]]></title>
+    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_02%2F</url>
+    <content type="text"><![CDATA[Oracle 创建序列 1234567CREATE SEQUENCE SEQ_FJHHZDJB --序列名 INCREMENT BY 1 -- 每次加几个 START WITH 1 -- 从1开始计数 NOMAXVALUE -- 不设置最大值 NOCYCLE -- 一直累加，不循环 CACHE 20 NOORDER;]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -1200,9 +1211,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Oracle 创建序列]]></title>
-    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_02%2F</url>
-    <content type="text"><![CDATA[Oracle 创建序列 1234567CREATE SEQUENCE SEQ_FJHHZDJB --序列名 INCREMENT BY 1 -- 每次加几个 START WITH 1 -- 从1开始计数 NOMAXVALUE -- 不设置最大值 NOCYCLE -- 一直累加，不循环 CACHE 20 NOORDER;]]></content>
+    <title><![CDATA[Oracle 替换字段中的内容]]></title>
+    <url>%2F2015%2F11%2F10%2Fnode%2Fdatabase%2Fnode-oracle_01%2F</url>
+    <content type="text"><![CDATA[Oracle 替换字段中的内容 12update statsfielddefine t set t.showname = REPLACE(t.showname ,substr(t.showname ,7,2) ,'随访') where t.showname like '重性精神疾病访视%' commit; substr(字符串,截取开始位置,截取长度) //返回截取的字 substr(‘Hello World’,0,1) //返回结果为 ‘H’ *从字符串第一个字符开始截取长度为1的字符串 substr(‘Hello World’,1,1) //返回结果为 ‘H’ *0和1都是表示截取的开始位置为第一个字符 substr(‘Hello World’,2,4) //返回结果为 ‘ello’ substr(‘Hello World’,-3,3)//返回结果为 ‘rld’ *负数(-i)表示截取的开始位置为字符串右端向左数第i个字符 replace 函数用法如下： replace（’将要更改的字符串’,’被替换掉的字符串’,’替换字符串’）]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -1224,18 +1235,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[关于 JDBC 自动提交]]></title>
-    <url>%2F2015%2F10%2F13%2Fnode%2Fjava%2Fnode-jdbc_01%2F</url>
-    <content type="text"><![CDATA[关于 JDBC 自动提交 设置 JDBC 连接对象关闭 自动提交 conn.setAutoCommit(false); 在执行完SQL后, 要提交一下, conn.commit(); 记得这个连接对象, 一定要是公共的一个连接对象, 关闭自动提交, 一定是要在初始化连接对象时设置的. conn.rollback(); 是在SQL语句执行错误时，做数据回滚用的 在执行完你的逻辑算法后, 提交一下 在一个处理逻辑中，打开一个数据库连接，处理结束时，关闭这个连接 conn.setAutoCommit(true); 是控制是否每条SQL执行完后自动提交]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>JDBC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Java 对称加密算法(DES)]]></title>
     <url>%2F2015%2F10%2F13%2Fnode%2Fjava%2Fnode-j2se_01%2F</url>
     <content type="text"><![CDATA[Java 中的对称加密算法 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188package com.yuchen352416.example;import java.io.FileInputStream;import java.io.FileOutputStream;import java.io.ObjectInputStream;import java.io.ObjectOutputStream;import java.io.UnsupportedEncodingException;import java.security.InvalidKeyException;import java.security.Key;import java.security.NoSuchAlgorithmException;import javax.crypto.BadPaddingException;import javax.crypto.Cipher;import javax.crypto.IllegalBlockSizeException;import javax.crypto.KeyGenerator;import javax.crypto.NoSuchPaddingException;import javax.security.auth.kerberos.KerberosKey;import javax.security.auth.kerberos.KerberosPrincipal;import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;public class EncryptData &#123; // 用于产生指定key的常量定义---开始 private static String PRINCIPAL_NAME = "yuchen352416@163.com";// 产生key的主体名称 private static String KEY_PASSWORD = "yuchen352416@163.com";// key的密码 private static final String ALGORITHM_NAME = "DES";// 算法名称 // 用于产生指定的key的常量定义---结束 // 字符串转16 public static String toHexString(String s) &#123; String str = ""; for (int i = 0; i &lt; s.length(); i++) &#123; int ch = (int) s.charAt(i); String s4 = Integer.toHexString(ch); str = str + s4; &#125; return str; &#125; // 16转字符串 public static String toStringHex(String s) &#123; byte[] baKeyword = new byte[s.length() / 2]; for (int i = 0; i &lt; baKeyword.length; i++) &#123; try &#123; baKeyword[i] = (byte) (0xff &amp; Integer.parseInt( s.substring(i * 2, i * 2 + 2), 16)); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; &#125; try &#123; s = new String(baKeyword, "utf-8");// UTF-16le:Not &#125; catch (Exception e1) &#123; e1.printStackTrace(); &#125; return s; &#125; /** * DES加密字符串，返回加密后的字符串 * * @param encryptString * 要加密的字符串 * @param strings * 不传此参数按默认生成密钥 参数数组，[0]=加密主体名称，[1]=key的密码 * @return 返回base64转码后的字符串 * @throws InvalidKeyException * @throws NoSuchAlgorithmException * @throws NoSuchPaddingException * @throws UnsupportedEncodingException * @throws IllegalBlockSizeException * @throws BadPaddingException */ public static String encrypt(String encryptString, String... strings) &#123; try &#123; Key key = createKey(strings); Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding"); byte[] by = encryptString.getBytes("utf8"); cipher.init(Cipher.ENCRYPT_MODE, key);// 使用私鈅加密 byte[] cipherText = cipher.doFinal(by); return Base64.encode(cipherText).replaceAll("\n", ""); &#125; catch (Exception e) &#123; //Log.error(e); return encryptString; &#125; &#125; /** * DES解密字符串 * * @param decryptString要解密的字符串 * @param strings生成密鑰的參數 * 不传此参数按默认生成密钥 参数数组，[0]=加密主体名称，[1]=key的密码 * @return * @throws NoSuchAlgorithmException * @throws NoSuchPaddingException * @throws UnsupportedEncodingException * @throws InvalidKeyException * @throws IllegalBlockSizeException * @throws BadPaddingException */ public static String decrypt(String decryptString, String... strings) &#123; try &#123; Key key = createKey(strings); Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding"); byte[] by = Base64.decode(decryptString); cipher.init(Cipher.DECRYPT_MODE, key);// 使用私鈅加密 byte[] cipherText = cipher.doFinal(by); return new String(cipherText, "utf-8"); &#125; catch (Exception e) &#123; return decryptString; &#125; &#125; /** * 创建指定的key，参数数组含义： strings[0]=生成key的主体名称 * strings[1]=key的密码（参考命名格式xxx@xx.xxx其他命名格式参考Java Cryptography Architecture * API Specification &amp; Reference 中的附录 A） strings[2]=算法名称如果不传参数按默认值 * * @param strings * @return */ public static Key createKey(String... strings) &#123; String algorithm = ALGORITHM_NAME; String name = PRINCIPAL_NAME; String password = KEY_PASSWORD; switch (strings.length) &#123; case 1: name = strings[0]; break; case 2: name = strings[0]; password = strings[1]; break; case 3: name = strings[0]; password = strings[1]; algorithm = strings[2]; break; &#125; KerberosPrincipal kerberosPrincipal = new KerberosPrincipal(name); Key key = new KerberosKey(kerberosPrincipal, password.toCharArray(), algorithm); return key; &#125; /** * 产生一个随机key，并保存到文件中 * * @param file */ public static void setPriveKey(String file) &#123; FileOutputStream fos; try &#123; fos = new FileOutputStream(file); KeyGenerator keyGen = KeyGenerator.getInstance("DES"); keyGen.init(56); Key key = keyGen.generateKey();// 生成私钥Key ObjectOutputStream oos = new ObjectOutputStream(fos); oos.writeObject(key); oos.close(); &#125; catch (Exception e1) &#123; e1.printStackTrace(); &#125; &#125; /** * 从文件中获取key * * @param file * @return * @throws Exception */ @SuppressWarnings("resource") public static Key getPriveKey(String file) throws Exception &#123; FileInputStream fis = new FileInputStream(file); ObjectInputStream ois = new ObjectInputStream(fis); Key key = (Key) ois.readObject(); return key; &#125;&#125; 使用加密类 1234567891011121314151617181920package com.yuchen352416.example;public class Test &#123; public static void main(String args[]) &#123; try &#123; // 需要加密的字符串 String str = "yuchen352416"; // 加密后的字符串 String eStr = EncryptData.encrypt(str); // 解密已经加密的字符串 String dStr = EncryptData.decrypt(eStr); System.out.println(eStr); System.out.println(dStr); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; &#125;&#125;]]></content>
@@ -1245,6 +1244,18 @@
       <tags>
         <tag>Java</tag>
         <tag>DES</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于 JDBC 自动提交]]></title>
+    <url>%2F2015%2F10%2F13%2Fnode%2Fjava%2Fnode-jdbc_01%2F</url>
+    <content type="text"><![CDATA[关于 JDBC 自动提交 设置 JDBC 连接对象关闭 自动提交 conn.setAutoCommit(false); 在执行完SQL后, 要提交一下, conn.commit(); 记得这个连接对象, 一定要是公共的一个连接对象, 关闭自动提交, 一定是要在初始化连接对象时设置的. conn.rollback(); 是在SQL语句执行错误时，做数据回滚用的 在执行完你的逻辑算法后, 提交一下 在一个处理逻辑中，打开一个数据库连接，处理结束时，关闭这个连接 conn.setAutoCommit(true); 是控制是否每条SQL执行完后自动提交]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JDBC</tag>
       </tags>
   </entry>
   <entry>
