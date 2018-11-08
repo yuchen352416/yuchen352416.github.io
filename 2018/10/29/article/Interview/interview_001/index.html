@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="何时, 枫叶红">
 <meta property="og:description" content="靠谱点儿…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-29T14:12:49.000Z">
+<meta property="og:updated_time" content="2018-11-02T10:33:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="靠谱点儿">
 <meta name="twitter:description" content="靠谱点儿…">
@@ -378,7 +378,7 @@
       
         <p>靠谱点儿…</p>
 <a id="more"></a>
-<h3 id="1-数据库事务-视图-数据库建模-SQL语法"><a href="#1-数据库事务-视图-数据库建模-SQL语法" class="headerlink" title="1. 数据库事务, 视图,  数据库建模, SQL语法"></a>1. 数据库事务, 视图,  数据库建模, SQL语法</h3><h5 id="事务"><a href="#事务" class="headerlink" title="事务:"></a>事务:</h5><p><strong>数据库事务(Transanction)</strong> 正确执行的四个基本要素。ACID,原子性(Atomicity)、一致性(Correspondence)、隔离性(Isolation)、持久性(Durability)。<br><strong>原子性:</strong>整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。<br><strong>一致性:</strong>在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。<br><strong>隔离性:</strong>隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请 求，使得在同一时间仅有一个请求用于同一数据。<br><strong>持久性:</strong>在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。</p>
+<h3 id="1-数据库事务-视图-数据库建模-SQL语法"><a href="#1-数据库事务-视图-数据库建模-SQL语法" class="headerlink" title="1. 数据库事务, 视图,  数据库建模, SQL语法"></a>1. 数据库事务, 视图,  数据库建模, SQL语法</h3><h5 id="事务"><a href="#事务" class="headerlink" title="事务:"></a>事务:</h5><p><strong>数据库事务(Transanction)</strong> 正确执行的四个基本要素。ACID,原子性(Atomicity)、一致性(Correspondence)、隔离性(Isolation)、持久性(Durability)。<br><strong>原子性:</strong>整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。<br><strong>一致性:</strong>在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。<br><strong>隔离性:</strong>隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请求，使得在同一时间仅有一个请求用于同一数据。<br><strong>持久性:</strong>在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。</p>
 <h5 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h5><p><strong>视图:</strong>是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询；不包含任何列或数据。使用视图可以简化复杂的SQL操作，隐藏具体的细节，保护数据；视图创建后，可以使用与表相同的方式利用它们。</p>
 <p><strong>视图</strong>不能被索引，也不能有关联的触发器或默认值，如果视图本身内有order by 则对视图再次order by将被覆盖。</p>
 <p><strong>关于更新视图:</strong> 对于未使用联结子查询分组聚集函数Distinct Union等的视图, 是可以对其更新的. 但是视图主要用于简化检索, 保护数据, 并不用于更新.</p>
@@ -420,7 +420,34 @@
 <li>处理结果</li>
 <li>关闭连接</li>
 </ol>
-<h3 id="5-Spring-SpringMVC-MyBatis"><a href="#5-Spring-SpringMVC-MyBatis" class="headerlink" title="5. Spring + SpringMVC, MyBatis"></a>5. Spring + SpringMVC, MyBatis</h3><h3 id="6-jQuery"><a href="#6-jQuery" class="headerlink" title="6. jQuery"></a>6. jQuery</h3><h3 id="7-理解Redis缓存"><a href="#7-理解Redis缓存" class="headerlink" title="7. 理解Redis缓存"></a>7. 理解Redis缓存</h3><h3 id="8-MQ"><a href="#8-MQ" class="headerlink" title="8. MQ"></a>8. MQ</h3><h3 id="9-任务调度-Worker"><a href="#9-任务调度-Worker" class="headerlink" title="9. 任务调度(Worker)"></a>9. 任务调度(Worker)</h3><h3 id="10-单元测试"><a href="#10-单元测试" class="headerlink" title="10. 单元测试"></a>10. 单元测试</h3><h3 id="11-常见设计模式-理解面向对象设计思想-数据结构-算法有一定认知"><a href="#11-常见设计模式-理解面向对象设计思想-数据结构-算法有一定认知" class="headerlink" title="11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知"></a>11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知</h3><h3 id="12-Git"><a href="#12-Git" class="headerlink" title="12. Git"></a>12. Git</h3><h3 id="13-设计和开发分布式-支持热部署-热备份-热恢复"><a href="#13-设计和开发分布式-支持热部署-热备份-热恢复" class="headerlink" title="13. 设计和开发分布式, 支持热部署, 热备份, 热恢复"></a>13. 设计和开发分布式, 支持热部署, 热备份, 热恢复</h3>
+<h3 id="5-Spring-SpringMVC-MyBatis"><a href="#5-Spring-SpringMVC-MyBatis" class="headerlink" title="5. Spring + SpringMVC, MyBatis"></a>5. Spring + SpringMVC, MyBatis</h3><p><strong>(1). 什么是Spring?</strong></p>
+<blockquote>
+<p>Spring 是 Java EE 的是一个轻量级的开源框架. 使 J2EE 开发更容易, 通过实现基于POJO的编程模型, Spring 的核心是 IOC</p>
+</blockquote>
+<p><strong>(2)Spring框架支持以下五种bean的作用域：</strong></p>
+<ul>
+<li><p><strong>singleton :</strong> bean在每个Spring ioc 容器中只有一个实例。</p>
+</li>
+<li><p><strong>prototype</strong>：一个bean的定义可以有多个实例。</p>
+</li>
+<li><p><strong>request</strong>：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。</p>
+</li>
+<li><p><strong>session</strong>：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。</p>
+</li>
+<li><p><strong>global-session</strong>：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。</p>
+</li>
+</ul>
+<p><strong>(3)使用Spring框架的好处是什么?</strong></p>
+<ul>
+<li><strong>轻量：</strong>Spring 是轻量的，基本的版本大约2MB。</li>
+<li><strong>控制反转：</strong>Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们。</li>
+<li><strong>面向切面的编程(AOP)：</strong>Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。</li>
+<li><strong>容器：</strong>Spring 包含并管理应用中对象的生命周期和配置。</li>
+<li><strong>MVC框架</strong>：Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品。</li>
+<li><strong>事务管理：</strong>Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）。</li>
+<li><strong>异常处理：</strong>Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or JDO抛出的）转化为一致的unchecked 异常。</li>
+</ul>
+<h3 id="6-jQuery"><a href="#6-jQuery" class="headerlink" title="6. jQuery"></a>6. jQuery</h3><h3 id="7-理解Redis缓存"><a href="#7-理解Redis缓存" class="headerlink" title="7. 理解Redis缓存"></a>7. 理解Redis缓存</h3><h3 id="8-MQ"><a href="#8-MQ" class="headerlink" title="8. MQ"></a>8. MQ</h3><h3 id="9-任务调度-Worker"><a href="#9-任务调度-Worker" class="headerlink" title="9. 任务调度(Worker)"></a>9. 任务调度(Worker)</h3><h3 id="10-单元测试"><a href="#10-单元测试" class="headerlink" title="10. 单元测试"></a>10. 单元测试</h3><h3 id="11-常见设计模式-理解面向对象设计思想-数据结构-算法有一定认知"><a href="#11-常见设计模式-理解面向对象设计思想-数据结构-算法有一定认知" class="headerlink" title="11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知"></a>11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知</h3><h3 id="12-Git"><a href="#12-Git" class="headerlink" title="12. Git"></a>12. Git</h3><h3 id="13-设计和开发分布式-支持热部署-热备份-热恢复"><a href="#13-设计和开发分布式-支持热部署-热备份-热恢复" class="headerlink" title="13. 设计和开发分布式, 支持热部署, 热备份, 热恢复"></a>13. 设计和开发分布式, 支持热部署, 热备份, 热恢复</h3>
       
     </div>
     
@@ -539,7 +566,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">127</span>
+                  <span class="site-state-item-count">131</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
