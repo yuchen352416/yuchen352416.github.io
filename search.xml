@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[18年的双12呀]]></title>
+    <url>%2F2018%2F12%2F12%2Fdiary%2Fdiary_0009%2F</url>
+    <content type="text"><![CDATA[中午有同事在办公室庆祝他们的结婚纪念日………………… 不禁让我想起了 给 999 和 99 的结婚祝福记得知道 999 结婚消息时, 那是15年7月份, 刚找到第一份工作. 当时在电话里说:”祝你幸福.”99 结婚是 17年12月份, 当时刚辞了第一份工作, 当时在微信里, 发出的消息: “祝你们幸福.”. 还推了一首&lt;&lt;给你们&gt;&gt;的歌.我现在想, 当我哪天知道966结婚的消息时, 我会发什么祝福消息呢?“桃之夭夭, 灼灼其华. 之子于归, 宜其窒家”或是”一定要过的比我好, 只是再也不要让我知道”我在这假设, 有意义么…………….?]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL导出指定数据库]]></title>
     <url>%2F2018%2F11%2F27%2Fnode%2Fdatabase%2Fnode-mysql_07%2F</url>
     <content type="text"><![CDATA[修改系统架构,需要挪一下数据库 1234# 导出RDS数据mysqldump -h yes517-erp.mysql.rds.aliyuncs.com -u yes517_erp -p yslx_erp &gt; yslx_erp.sqlmysqldump -h yes517-erp.mysql.rds.aliyuncs.com -u yes517_erp -p stgl &gt; stgl.sql 包括表结构(含索引)和数据]]></content>
@@ -83,7 +94,7 @@
   <entry>
     <title><![CDATA[无意中, 看到的一句话]]></title>
     <url>%2F2018%2F10%2F31%2Fdiary%2Fdiary_0008%2F</url>
-    <content type="text"><![CDATA[无意中, 看到的一句话 林夕说过这样一段话: “很多人结婚只是为了找个跟自己一起看电影的，而不是能够分享看电影心得的人。如果为了只是找个伴，我不愿意结婚，我自己一个人都能够去看电影。” 未曾遇到过能与我分享过电影心得之人, 也没有陪我看电影的人, 所以我也一个人看电影.]]></content>
+    <content type="text"><![CDATA[无意中, 看到的一句话 林夕说过这样一段话: “很多人结婚只是为了找个跟自己一起看电影的，而不是能够分享看电影心得的人。如果为了只是找个伴，我不愿意结婚，我自己一个人都能够去看电影。” 未曾遇到过能与我分享过电影心得之人, 现在也没有陪我看电影的人, 一个人看电影, 也不错…]]></content>
       <categories>
         <category>Diary</category>
       </categories>
@@ -92,9 +103,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[靠谱点儿]]></title>
-    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_001%2F</url>
-    <content type="text"><![CDATA[靠谱点儿… 1. 数据库事务, 视图, 数据库建模, SQL语法事务:数据库事务(Transanction) 正确执行的四个基本要素。ACID,原子性(Atomicity)、一致性(Correspondence)、隔离性(Isolation)、持久性(Durability)。原子性:整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。一致性:在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。隔离性:隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请求，使得在同一时间仅有一个请求用于同一数据。持久性:在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。 视图视图:是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询；不包含任何列或数据。使用视图可以简化复杂的SQL操作，隐藏具体的细节，保护数据；视图创建后，可以使用与表相同的方式利用它们。 视图不能被索引，也不能有关联的触发器或默认值，如果视图本身内有order by 则对视图再次order by将被覆盖。 关于更新视图: 对于未使用联结子查询分组聚集函数Distinct Union等的视图, 是可以对其更新的. 但是视图主要用于简化检索, 保护数据, 并不用于更新. 数据库建模设计数据库时, 应尽可能遵循三范式设计 第一范式(1NF)：字段值具有原子性,不能再分(所有关系型数据库系统都满足第一范式);如：姓名字段,其中姓和名是一个整体,如果区分姓和名那么必须设立两个独立字段; 第二范式(2NF)：一个表必须有主键,即每行数据都能被唯一的区分;备注：必须先满足第一范式; 第三范式(3NF)：一个表中不能包涵其他相关表中非关键字段的信息,即数据表不能有沉余字段;备注：必须先满足第二范式;(可能会存在空间换时间的情况, 有些时候, 是不满足第三范式的) 2. MySQL特点, 正确使用索引MySQL特点 功能强大: MySQL支持事务、视图、存储过程和触发器等. 支持跨平台 运行速度快, 高速是MySQL的显著特性。 成本低: MySQL数据库是一种完全免费的产品 数据库存储容量大 MySQL, HBase, ElasticSearch 的区别互联网时代各种存储框架层出不穷, 传统的关系型数据库：Oracle、MySQL；新兴的NoSQL：HBase、Cassandra、Redis；全文检索框架：ElasticSearch、Solr等。 MySQL：关系型数据库，主要面向OLTP，支持事务，支持二级索引，支持sql，支持主从、Group Replication架构模型（本文全部以Innodb为例，不涉及别的存储引擎）。 HBase：基于HDFS，支持海量数据读写（尤其是写），支持上亿行、上百万列的，面向列的分布式NoSql数据库。天然分布式，主从架构，不支持事务，不支持二级索引，不支持sql。 ElasticSearch：ES是一款分布式的全文检索框架，底层基于Lucene实现，虽然ES也提供存储，检索功能，但我一直不认为ES是一款数据库，但是随着ES功能越来越强大，与数据库的界限也越来越模糊。天然分布式，p2p架构，不支持事务，采用倒排索引提供全文检索。 3. 常见SQL优化技巧我说一下从自己的一些优化SQL的经历, 总结的技巧. 拿到慢SQL后, 先改SQL中存在的问题. 比如条件里套件中存在的 &lt;&gt;, in, 过多的SQL嵌套, 修改后,拆分执行具体哪一句, 影响了速度. 根据具体情况, 加联合索引, 拆表, 加冗余表(空间换时间的手段). 技术论坛里, 很多用 EXPLAIN (查看索引是否起作用)语句的, 也是很好用的. 4. JDBC 使用步骤 加载驱动 创建连接 执行SQL语句 Statement 执行静态SQL语句。 PreparedStatement 执行动态SQL语句。 CallableStatement 执行数据库存储过程。 处理结果 关闭连接 5. Spring + SpringMVC, MyBatis(1). 什么是Spring? Spring 是 Java EE 的是一个轻量级的开源框架. 使 J2EE 开发更容易, 通过实现基于POJO的编程模型, Spring 的核心是 IOC (2)Spring框架支持以下五种bean的作用域： singleton : bean在每个Spring ioc 容器中只有一个实例。 prototype：一个bean的定义可以有多个实例。 request：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。 session：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 global-session：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 (3)使用Spring框架的好处是什么? 轻量：Spring 是轻量的，基本的版本大约2MB。 控制反转：Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们。 面向切面的编程(AOP)：Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。 容器：Spring 包含并管理应用中对象的生命周期和配置。 MVC框架：Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品。 事务管理：Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）。 异常处理：Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or JDO抛出的）转化为一致的unchecked 异常。 6. jQuery7. 理解Redis缓存8. MQ9. 任务调度(Worker)10. 单元测试11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知12. Git13. 设计和开发分布式, 支持热部署, 热备份, 热恢复]]></content>
+    <title><![CDATA[面试时的自我介绍]]></title>
+    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_000%2F</url>
+    <content type="text"><![CDATA[面试时的自我介绍 我叫李述昱, 希望谋得一份Java开发的工作. 从入行到现在已经有3年多了. 在过去的时间里, 维护过旧项目, 也写过独立模块, 也独立设计并完成过一整个项目. 与前端同事做过对接, 也与其他公司对接过接口. 我的经历, 算不上丰富, 但也有对代码的一些理解. 觉得写过的代码, 是在给别人讲故事. 给与你协作的同事讲, 给你对接的同事讲, 给日后维护代码的人讲. 告诉他们, 我在解决的问题和我解决问题的思路和方法. 要把这个故事讲好, 讲的精彩, 需要解决问题的思路, 解决问题所需的技术. 思路与技术是相辅相成的. 技术不够会局限思路的发散, 思路不够会影响技术的使用. 当然技术会扩展思路, 思路会促进技术. 我技术还需要磨练, 还需要见识其他人的思路. 希望能在贵公司, 见识新的解决问题的思路, 磨练技术. 同样也希望我能给贵公司带来新鲜的活力.]]></content>
       <categories>
         <category>Interview</category>
       </categories>
@@ -103,9 +114,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[面试时的自我介绍]]></title>
-    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_000%2F</url>
-    <content type="text"><![CDATA[面试时的自我介绍 我叫李述昱, 希望谋得一份Java开发的工作. 从入行到现在已经有3年多了. 在过去的时间里, 维护过旧项目, 也写过独立模块, 也独立设计并完成过一整个项目. 与前端同事做过对接, 也与其他公司对接过接口. 我的经历, 算不上丰富, 但也有对代码的一些理解. 觉得写过的代码, 是在给别人讲故事. 给与你协作的同事讲, 给你对接的同事讲, 给日后维护代码的人讲. 告诉他们, 我在解决的问题和我解决问题的思路和方法. 要把这个故事讲好, 讲的精彩, 需要解决问题的思路, 解决问题所需的技术. 思路与技术是相辅相成的. 技术不够会局限思路的发散, 思路不够会影响技术的使用. 当然技术会扩展思路, 思路会促进技术. 我技术还需要磨练, 还需要见识其他人的思路. 希望能在贵公司, 见识新的解决问题的思路, 磨练技术. 同样也希望我能给贵公司带来新鲜的活力.]]></content>
+    <title><![CDATA[靠谱点儿]]></title>
+    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_001%2F</url>
+    <content type="text"><![CDATA[靠谱点儿… 1. 数据库事务, 视图, 数据库建模, SQL语法事务:数据库事务(Transanction) 正确执行的四个基本要素。ACID,原子性(Atomicity)、一致性(Correspondence)、隔离性(Isolation)、持久性(Durability)。原子性:整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。一致性:在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。隔离性:隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请求，使得在同一时间仅有一个请求用于同一数据。持久性:在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。 视图视图:是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询；不包含任何列或数据。使用视图可以简化复杂的SQL操作，隐藏具体的细节，保护数据；视图创建后，可以使用与表相同的方式利用它们。 视图不能被索引，也不能有关联的触发器或默认值，如果视图本身内有order by 则对视图再次order by将被覆盖。 关于更新视图: 对于未使用联结子查询分组聚集函数Distinct Union等的视图, 是可以对其更新的. 但是视图主要用于简化检索, 保护数据, 并不用于更新. 数据库建模设计数据库时, 应尽可能遵循三范式设计 第一范式(1NF)：字段值具有原子性,不能再分(所有关系型数据库系统都满足第一范式);如：姓名字段,其中姓和名是一个整体,如果区分姓和名那么必须设立两个独立字段; 第二范式(2NF)：一个表必须有主键,即每行数据都能被唯一的区分;备注：必须先满足第一范式; 第三范式(3NF)：一个表中不能包涵其他相关表中非关键字段的信息,即数据表不能有沉余字段;备注：必须先满足第二范式;(可能会存在空间换时间的情况, 有些时候, 是不满足第三范式的) 2. MySQL特点, 正确使用索引MySQL特点 功能强大: MySQL支持事务、视图、存储过程和触发器等. 支持跨平台 运行速度快, 高速是MySQL的显著特性。 成本低: MySQL数据库是一种完全免费的产品 数据库存储容量大 MySQL, HBase, ElasticSearch 的区别互联网时代各种存储框架层出不穷, 传统的关系型数据库：Oracle、MySQL；新兴的NoSQL：HBase、Cassandra、Redis；全文检索框架：ElasticSearch、Solr等。 MySQL：关系型数据库，主要面向OLTP，支持事务，支持二级索引，支持sql，支持主从、Group Replication架构模型（本文全部以Innodb为例，不涉及别的存储引擎）。 HBase：基于HDFS，支持海量数据读写（尤其是写），支持上亿行、上百万列的，面向列的分布式NoSql数据库。天然分布式，主从架构，不支持事务，不支持二级索引，不支持sql。 ElasticSearch：ES是一款分布式的全文检索框架，底层基于Lucene实现，虽然ES也提供存储，检索功能，但我一直不认为ES是一款数据库，但是随着ES功能越来越强大，与数据库的界限也越来越模糊。天然分布式，p2p架构，不支持事务，采用倒排索引提供全文检索。 3. 常见SQL优化技巧我说一下从自己的一些优化SQL的经历, 总结的技巧. 拿到慢SQL后, 先改SQL中存在的问题. 比如条件里套件中存在的 &lt;&gt;, in, 过多的SQL嵌套, 修改后,拆分执行具体哪一句, 影响了速度. 根据具体情况, 加联合索引, 拆表, 加冗余表(空间换时间的手段). 技术论坛里, 很多用 EXPLAIN (查看索引是否起作用)语句的, 也是很好用的. 4. JDBC 使用步骤 加载驱动 创建连接 执行SQL语句 Statement 执行静态SQL语句。 PreparedStatement 执行动态SQL语句。 CallableStatement 执行数据库存储过程。 处理结果 关闭连接 5. Spring + SpringMVC, MyBatis(1). 什么是Spring? Spring 是 Java EE 的是一个轻量级的开源框架. 使 J2EE 开发更容易, 通过实现基于POJO的编程模型, Spring 的核心是 IOC (2)Spring框架支持以下五种bean的作用域： singleton : bean在每个Spring ioc 容器中只有一个实例。 prototype：一个bean的定义可以有多个实例。 request：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。 session：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 global-session：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 (3)使用Spring框架的好处是什么? 轻量：Spring 是轻量的，基本的版本大约2MB。 控制反转：Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们。 面向切面的编程(AOP)：Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。 容器：Spring 包含并管理应用中对象的生命周期和配置。 MVC框架：Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品。 事务管理：Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）。 异常处理：Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or JDO抛出的）转化为一致的unchecked 异常。 6. jQuery7. 理解Redis缓存8. MQ9. 任务调度(Worker)10. 单元测试11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知12. Git13. 设计和开发分布式, 支持热部署, 热备份, 热恢复]]></content>
       <categories>
         <category>Interview</category>
       </categories>
@@ -359,6 +370,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
+    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
+    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一次SQL调优的经历]]></title>
     <url>%2F2018%2F09%2F07%2Fnode%2Fdatabase%2Fnode-mysql_02%2F</url>
     <content type="text"><![CDATA[系统随着数据量的增长, 变得越来越慢. 慢到了不能忍受的地步, 故有了这次调优. 查找问题点 从日志里拿出SQL, 执行了一下 10.8s.有点惊呆 开始端详SQL… 将SQL拆开, 一部分一部分的执行. 找到慢的点 影响速度是是一个判断订单状态的子SQL. 执行耗时竟然占用了 7.8s. 处理慢SQL先创建关联条件的联合索引, 试试水. 从 7.8s 减到了 6.3s 又创建了判断条件的联合索引, 这次减到 0.24s. 大喜…. 整体执行 0.37s 创建索引1create index 索引名 on 表名(字段名,字段名);]]></content>
@@ -368,17 +390,6 @@
       <tags>
         <tag>SQL</tag>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
-    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
-    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -1429,18 +1440,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Java 对称加密算法(DES)]]></title>
-    <url>%2F2015%2F10%2F13%2Fnode%2Fjava%2Fnode-j2se_01%2F</url>
-    <content type="text"><![CDATA[Java 中的对称加密算法 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188package com.yuchen352416.example;import java.io.FileInputStream;import java.io.FileOutputStream;import java.io.ObjectInputStream;import java.io.ObjectOutputStream;import java.io.UnsupportedEncodingException;import java.security.InvalidKeyException;import java.security.Key;import java.security.NoSuchAlgorithmException;import javax.crypto.BadPaddingException;import javax.crypto.Cipher;import javax.crypto.IllegalBlockSizeException;import javax.crypto.KeyGenerator;import javax.crypto.NoSuchPaddingException;import javax.security.auth.kerberos.KerberosKey;import javax.security.auth.kerberos.KerberosPrincipal;import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;public class EncryptData &#123; // 用于产生指定key的常量定义---开始 private static String PRINCIPAL_NAME = "yuchen352416@163.com";// 产生key的主体名称 private static String KEY_PASSWORD = "yuchen352416@163.com";// key的密码 private static final String ALGORITHM_NAME = "DES";// 算法名称 // 用于产生指定的key的常量定义---结束 // 字符串转16 public static String toHexString(String s) &#123; String str = ""; for (int i = 0; i &lt; s.length(); i++) &#123; int ch = (int) s.charAt(i); String s4 = Integer.toHexString(ch); str = str + s4; &#125; return str; &#125; // 16转字符串 public static String toStringHex(String s) &#123; byte[] baKeyword = new byte[s.length() / 2]; for (int i = 0; i &lt; baKeyword.length; i++) &#123; try &#123; baKeyword[i] = (byte) (0xff &amp; Integer.parseInt( s.substring(i * 2, i * 2 + 2), 16)); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; &#125; try &#123; s = new String(baKeyword, "utf-8");// UTF-16le:Not &#125; catch (Exception e1) &#123; e1.printStackTrace(); &#125; return s; &#125; /** * DES加密字符串，返回加密后的字符串 * * @param encryptString * 要加密的字符串 * @param strings * 不传此参数按默认生成密钥 参数数组，[0]=加密主体名称，[1]=key的密码 * @return 返回base64转码后的字符串 * @throws InvalidKeyException * @throws NoSuchAlgorithmException * @throws NoSuchPaddingException * @throws UnsupportedEncodingException * @throws IllegalBlockSizeException * @throws BadPaddingException */ public static String encrypt(String encryptString, String... strings) &#123; try &#123; Key key = createKey(strings); Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding"); byte[] by = encryptString.getBytes("utf8"); cipher.init(Cipher.ENCRYPT_MODE, key);// 使用私鈅加密 byte[] cipherText = cipher.doFinal(by); return Base64.encode(cipherText).replaceAll("\n", ""); &#125; catch (Exception e) &#123; //Log.error(e); return encryptString; &#125; &#125; /** * DES解密字符串 * * @param decryptString要解密的字符串 * @param strings生成密鑰的參數 * 不传此参数按默认生成密钥 参数数组，[0]=加密主体名称，[1]=key的密码 * @return * @throws NoSuchAlgorithmException * @throws NoSuchPaddingException * @throws UnsupportedEncodingException * @throws InvalidKeyException * @throws IllegalBlockSizeException * @throws BadPaddingException */ public static String decrypt(String decryptString, String... strings) &#123; try &#123; Key key = createKey(strings); Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding"); byte[] by = Base64.decode(decryptString); cipher.init(Cipher.DECRYPT_MODE, key);// 使用私鈅加密 byte[] cipherText = cipher.doFinal(by); return new String(cipherText, "utf-8"); &#125; catch (Exception e) &#123; return decryptString; &#125; &#125; /** * 创建指定的key，参数数组含义： strings[0]=生成key的主体名称 * strings[1]=key的密码（参考命名格式xxx@xx.xxx其他命名格式参考Java Cryptography Architecture * API Specification &amp; Reference 中的附录 A） strings[2]=算法名称如果不传参数按默认值 * * @param strings * @return */ public static Key createKey(String... strings) &#123; String algorithm = ALGORITHM_NAME; String name = PRINCIPAL_NAME; String password = KEY_PASSWORD; switch (strings.length) &#123; case 1: name = strings[0]; break; case 2: name = strings[0]; password = strings[1]; break; case 3: name = strings[0]; password = strings[1]; algorithm = strings[2]; break; &#125; KerberosPrincipal kerberosPrincipal = new KerberosPrincipal(name); Key key = new KerberosKey(kerberosPrincipal, password.toCharArray(), algorithm); return key; &#125; /** * 产生一个随机key，并保存到文件中 * * @param file */ public static void setPriveKey(String file) &#123; FileOutputStream fos; try &#123; fos = new FileOutputStream(file); KeyGenerator keyGen = KeyGenerator.getInstance("DES"); keyGen.init(56); Key key = keyGen.generateKey();// 生成私钥Key ObjectOutputStream oos = new ObjectOutputStream(fos); oos.writeObject(key); oos.close(); &#125; catch (Exception e1) &#123; e1.printStackTrace(); &#125; &#125; /** * 从文件中获取key * * @param file * @return * @throws Exception */ @SuppressWarnings("resource") public static Key getPriveKey(String file) throws Exception &#123; FileInputStream fis = new FileInputStream(file); ObjectInputStream ois = new ObjectInputStream(fis); Key key = (Key) ois.readObject(); return key; &#125;&#125; 使用加密类 1234567891011121314151617181920package com.yuchen352416.example;public class Test &#123; public static void main(String args[]) &#123; try &#123; // 需要加密的字符串 String str = "yuchen352416"; // 加密后的字符串 String eStr = EncryptData.encrypt(str); // 解密已经加密的字符串 String dStr = EncryptData.decrypt(eStr); System.out.println(eStr); System.out.println(dStr); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>DES</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[关于 JDBC 自动提交]]></title>
     <url>%2F2015%2F10%2F13%2Fnode%2Fjava%2Fnode-jdbc_01%2F</url>
     <content type="text"><![CDATA[关于 JDBC 自动提交 设置 JDBC 连接对象关闭 自动提交 conn.setAutoCommit(false); 在执行完SQL后, 要提交一下, conn.commit(); 记得这个连接对象, 一定要是公共的一个连接对象, 关闭自动提交, 一定是要在初始化连接对象时设置的. conn.rollback(); 是在SQL语句执行错误时，做数据回滚用的 在执行完你的逻辑算法后, 提交一下 在一个处理逻辑中，打开一个数据库连接，处理结束时，关闭这个连接 conn.setAutoCommit(true); 是控制是否每条SQL执行完后自动提交]]></content>
@@ -1450,6 +1449,18 @@
       <tags>
         <tag>Java</tag>
         <tag>JDBC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java 对称加密算法(DES)]]></title>
+    <url>%2F2015%2F10%2F13%2Fnode%2Fjava%2Fnode-j2se_01%2F</url>
+    <content type="text"><![CDATA[Java 中的对称加密算法 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188package com.yuchen352416.example;import java.io.FileInputStream;import java.io.FileOutputStream;import java.io.ObjectInputStream;import java.io.ObjectOutputStream;import java.io.UnsupportedEncodingException;import java.security.InvalidKeyException;import java.security.Key;import java.security.NoSuchAlgorithmException;import javax.crypto.BadPaddingException;import javax.crypto.Cipher;import javax.crypto.IllegalBlockSizeException;import javax.crypto.KeyGenerator;import javax.crypto.NoSuchPaddingException;import javax.security.auth.kerberos.KerberosKey;import javax.security.auth.kerberos.KerberosPrincipal;import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;public class EncryptData &#123; // 用于产生指定key的常量定义---开始 private static String PRINCIPAL_NAME = "yuchen352416@163.com";// 产生key的主体名称 private static String KEY_PASSWORD = "yuchen352416@163.com";// key的密码 private static final String ALGORITHM_NAME = "DES";// 算法名称 // 用于产生指定的key的常量定义---结束 // 字符串转16 public static String toHexString(String s) &#123; String str = ""; for (int i = 0; i &lt; s.length(); i++) &#123; int ch = (int) s.charAt(i); String s4 = Integer.toHexString(ch); str = str + s4; &#125; return str; &#125; // 16转字符串 public static String toStringHex(String s) &#123; byte[] baKeyword = new byte[s.length() / 2]; for (int i = 0; i &lt; baKeyword.length; i++) &#123; try &#123; baKeyword[i] = (byte) (0xff &amp; Integer.parseInt( s.substring(i * 2, i * 2 + 2), 16)); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; &#125; try &#123; s = new String(baKeyword, "utf-8");// UTF-16le:Not &#125; catch (Exception e1) &#123; e1.printStackTrace(); &#125; return s; &#125; /** * DES加密字符串，返回加密后的字符串 * * @param encryptString * 要加密的字符串 * @param strings * 不传此参数按默认生成密钥 参数数组，[0]=加密主体名称，[1]=key的密码 * @return 返回base64转码后的字符串 * @throws InvalidKeyException * @throws NoSuchAlgorithmException * @throws NoSuchPaddingException * @throws UnsupportedEncodingException * @throws IllegalBlockSizeException * @throws BadPaddingException */ public static String encrypt(String encryptString, String... strings) &#123; try &#123; Key key = createKey(strings); Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding"); byte[] by = encryptString.getBytes("utf8"); cipher.init(Cipher.ENCRYPT_MODE, key);// 使用私鈅加密 byte[] cipherText = cipher.doFinal(by); return Base64.encode(cipherText).replaceAll("\n", ""); &#125; catch (Exception e) &#123; //Log.error(e); return encryptString; &#125; &#125; /** * DES解密字符串 * * @param decryptString要解密的字符串 * @param strings生成密鑰的參數 * 不传此参数按默认生成密钥 参数数组，[0]=加密主体名称，[1]=key的密码 * @return * @throws NoSuchAlgorithmException * @throws NoSuchPaddingException * @throws UnsupportedEncodingException * @throws InvalidKeyException * @throws IllegalBlockSizeException * @throws BadPaddingException */ public static String decrypt(String decryptString, String... strings) &#123; try &#123; Key key = createKey(strings); Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding"); byte[] by = Base64.decode(decryptString); cipher.init(Cipher.DECRYPT_MODE, key);// 使用私鈅加密 byte[] cipherText = cipher.doFinal(by); return new String(cipherText, "utf-8"); &#125; catch (Exception e) &#123; return decryptString; &#125; &#125; /** * 创建指定的key，参数数组含义： strings[0]=生成key的主体名称 * strings[1]=key的密码（参考命名格式xxx@xx.xxx其他命名格式参考Java Cryptography Architecture * API Specification &amp; Reference 中的附录 A） strings[2]=算法名称如果不传参数按默认值 * * @param strings * @return */ public static Key createKey(String... strings) &#123; String algorithm = ALGORITHM_NAME; String name = PRINCIPAL_NAME; String password = KEY_PASSWORD; switch (strings.length) &#123; case 1: name = strings[0]; break; case 2: name = strings[0]; password = strings[1]; break; case 3: name = strings[0]; password = strings[1]; algorithm = strings[2]; break; &#125; KerberosPrincipal kerberosPrincipal = new KerberosPrincipal(name); Key key = new KerberosKey(kerberosPrincipal, password.toCharArray(), algorithm); return key; &#125; /** * 产生一个随机key，并保存到文件中 * * @param file */ public static void setPriveKey(String file) &#123; FileOutputStream fos; try &#123; fos = new FileOutputStream(file); KeyGenerator keyGen = KeyGenerator.getInstance("DES"); keyGen.init(56); Key key = keyGen.generateKey();// 生成私钥Key ObjectOutputStream oos = new ObjectOutputStream(fos); oos.writeObject(key); oos.close(); &#125; catch (Exception e1) &#123; e1.printStackTrace(); &#125; &#125; /** * 从文件中获取key * * @param file * @return * @throws Exception */ @SuppressWarnings("resource") public static Key getPriveKey(String file) throws Exception &#123; FileInputStream fis = new FileInputStream(file); ObjectInputStream ois = new ObjectInputStream(fis); Key key = (Key) ois.readObject(); return key; &#125;&#125; 使用加密类 1234567891011121314151617181920package com.yuchen352416.example;public class Test &#123; public static void main(String args[]) &#123; try &#123; // 需要加密的字符串 String str = "yuchen352416"; // 加密后的字符串 String eStr = EncryptData.encrypt(str); // 解密已经加密的字符串 String dStr = EncryptData.decrypt(eStr); System.out.println(eStr); System.out.println(dStr); &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>DES</tag>
       </tags>
   </entry>
   <entry>
