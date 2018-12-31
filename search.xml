@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2018年的最后一天]]></title>
+    <url>%2F2018%2F12%2F31%2Fdiary%2Fdiary_0013%2F</url>
+    <content type="text"><![CDATA[日子过的很快, 转眼间2018年, 还有两个小时, 就要结束了. 是应该写一写这一年的人和事. 生活方面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3月4号到的北京, 当天找到房子住了下来 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后就开始了面试的日子. 面试的日子持续的50多天, 直到4月24号正式入职. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在没有工作的这段日子, 生活很单调. 基本上就是早上醒了, 刷一遍简历, 然后起来洗漱后, 看一些技术相关的文章, 或者刷一刷面试题. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 开始是华祥和我一起住的. 一起住了三个月的时间, 这哥们找到工作转正后, 就搬出去了. 之后也见过几面, 随便聊聊, 也就分开了. 没了来北京前的那种亲昵. 华祥搬走后, 我自己住了一个月, 鬼鬼搬了过了和我一起住, 鬼鬼因为一直没有找到工作, 他那个室友(其实我们是高中同学的)也是发出了精神攻击的大招(^_^). 鬼鬼和我描述就是感觉到了压抑, 才搬过来的. 我当时也是想我自己住也是要交房租的么. 就和鬼鬼一起住了三个月. 这三个月交房租时, 鬼鬼也是不闻不问, 找工作也是不怎么积极…让我一度怀疑他家里是不是有矿? 这时, 我也得知了, 大学时的舍长也在北京, 联系上后, 也是说三个一起合租的事. 就在国庆节前我们三个找到了合适的房子. 趁国庆假期就搬了. 三个人一起住, 就是房租就不是那么简单了. 我们协商AA房租和水电. 就这样, 过了两个月. 舍长找到工作后, 因为单位提供住宿, 所以舍长也搬了出去.现在又剩下了我和鬼鬼两个人住. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我在过去的时间里, 总觉得鬼鬼太没有上进心, 不思进取. 想到这里, 我就会想到: “&lt;&lt;周敦颐的爱莲说&gt;&gt;: 出淤泥而不染, 濯清涟而不妖.”, 但是现在回想过去的日子, 很难做到’不染, 不妖’. 周六日两天, 本来是想看看书充充电的, 结果他在旁边游戏语音指挥副本, 晚上你要早睡会儿, 他还在游戏语音指挥副本…..出言相劝, 当是分贝降下去了, 过了一会儿, 分贝就又上去了. 简直无语…被逼无奈只能我带上耳机睡觉了… &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;外界因素说完了, 再来说说内部因素吧. 说到这个问题, 就让我想起高中是, VB老师说过的一个词: 慎独. 总起来说, 就是自我约束能力不强的表现.在听到游戏副本的声音后, 自己也想要放松娱乐. 然后就是小说, 漫画, 动漫接踵而至, 把时间浪费在这些没营养的东西上. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现在想, 我这一年,.看了&lt;&lt;富兰克林自传&gt;&gt;, &lt;&lt;乔布斯传&gt;&gt;, &lt;&gt;, &lt;&lt;设计模式之禅&gt;&gt;, &lt;&lt;图说HTTP&gt;&gt;…. 竟然连一本书都没看完…简直是废了..有人是虎头蛇尾, 而我确是, 虎头没尾….抓紧适应这种学习吧, 给你时间不多了….. 工作方面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这一年面了三四十家的样子, 有聊的好的, 有聊的不好了, 从起初的紧张, 到后来的麻木, 即便精神已经麻木了, 但是身体还是会莫名的紧张, 回来总结, 还是源于不自信, 感觉面试时聊的好的, 也是没有消息, 这就像一个死循环一样, 直到入职后, 与用人单位签了一份协议, 才大概明白之前那些公司的顾虑, 包括我的第一家公司….这份协议的内容大概意思, 就是在工作期间, 我身体出现任何问题, 都与公司无关….我可以理解的…毕竟….. 2019年的Flag 周六日去国图看书吧, 别在家里呆着了(去做一些有意义的事) 有意识的锻炼提高自我约束能力.]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[通用文件上传]]></title>
+    <url>%2F2018%2F12%2F27%2Fnode%2Fjava%2Fnode-j2ee_09%2F</url>
+    <content type="text"><![CDATA[解决AJAX 提交中文信息乱码 Java Code: 123456789101112131415161718192021StringBuffer annexs = new StringBuffer();if (request instanceof MultipartHttpServletRequest) &#123; MultipartHttpServletRequest multipart = (MultipartHttpServletRequest) request; Iterator&lt;String&gt; fileNames = multipart.getFileNames(); int flag = 0; while (fileNames.hasNext()) &#123; String path = UploadPath.getEmailAnnexPath() + File.separator + member.getId() + File.separator; MultipartFile file = multipart.getFile(fileNames.next()); String fileName = DateUtil.dateToStr(new Date(), DateUtil.YMDHMS) + (flag++) + "_" + file.getOriginalFilename(); File io = new File(path + File.separator + fileName); if (!io.exists()) &#123; File p = io.getParentFile(); if (!p.exists()) &#123; p.mkdirs(); &#125; io.createNewFile(); &#125; file.transferTo(io); annexs.append(path + File.separator + fileName).append(";"); &#125;&#125; HTML Code: 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;body&gt; &lt;div id="wrapper"&gt; &lt;div id="page-wrapper"&gt; &lt;form id="submit_form" action="/erp/email/save" method="post" enctype="multipart/form-data" &gt; &lt;div class="row"&gt; &lt;div class="col-lg-2 " style="text-align: right;padding-top: 9px;"&gt;&lt;label&gt;附件:&lt;/label&gt;&lt;/div&gt; &lt;div class="col-lg-4 "&gt; &lt;label class="form-inline"&gt; &lt;input type="button" id="openFile" class="btn btn-success" value="选择文件..." /&gt; &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;hr /&gt; &lt;div class="row" id="files"&gt;&lt;/div&gt; &lt;hr /&gt; &lt;/form&gt; &lt;/div&gt; &lt;/div&gt; &lt;script type="text/javascript"&gt; var index = 0; $("#openFile").on("click", function() &#123; index++; var files = document.getElementById("files"); var annex = document.createElement("input"); annex.id = "annex_" + index; annex.name = "annex_" + index; annex.type = "file"; annex.style = "display: none;"; annex.onchange = function() &#123; var filename = annex.value; filename = filename.substring(12); var div = document.createElement("div"); div.id = "file_div_" + index; div.style = "padding-left: 245px;" var span_filename = document.createElement("span"); span_filename.style = "font-size: large;"; span_filename.innerText = filename; var span_button = document.createElement("span"); span_button.style = "font-size: large; padding-left: 10px;"; var a = document.createElement("a"); a.setAttribute("class", "btn btn-link"); a.href = "javascript:deleteDiv(" + index + ")"; a.innerText = "删除"; span_button.appendChild(a); div.appendChild(span_filename); div.appendChild(span_button); div.appendChild(annex); files.appendChild(div); &#125; annex.click(); &#125;); function deleteDiv(id) &#123; var div = document.getElementById("file_div_" + id); div.remove(); &#125; &lt;/script&gt; &lt;/body&gt;&lt;/html&gt;]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Java</tag>
+        <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[缓存更新策略]]></title>
+    <url>%2F2018%2F12%2F20%2Fnode%2Fcache%2Fnode-cache_002%2F</url>
+    <content type="text"><![CDATA[最近面试被问到, DB与Cache数据同步问题. 当时感觉答得不好, 就回来科普一下, 结果就颠覆了认知. 正所谓: 学然后知不足…… 原来更新缓存的方法更新缓存数据代码时，先删除缓存，然后再更新数据库，而后续的操作会把数据再装载的缓存中。 试想一下, 现在有两个线程的并发操作, 线程A修改数据库中数据, 线程B读取数据. 线程A删除缓存后, 线程挂起, 线程B开始查询, 查询没有命中, 就去数据库Load并放到缓存中.]]></content>
+      <categories>
+        <category>Cache</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>DataBase</tag>
+        <tag>Cache</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决Redis缓存击穿]]></title>
+    <url>%2F2018%2F12%2F20%2Fnode%2Fcache%2Fnode-cache_001%2F</url>
+    <content type="text"><![CDATA[Redis缓存被击穿的原因与解决方案 造成Redis缓存击穿的原因缓存在某个时间点过期的时候，恰好在这个时间点对这个Key有大量的并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存，这个时候大并发的请求可能会瞬间把后端DB压垮。 解决方案业界比较常用的做法，是使用mutex。简单地来说，就是在缓存失效的时候（判断拿出来的值为空），不是立即去load db，而是先使用缓存工具的某些带成功操作返回值的操作（比如Redis的SETNX或者Memcache的ADD）去set一个mutex key，当操作返回成功时，再进行load db的操作并回设缓存；否则，就重试整个get缓存的方法。类似下面的伪代码： 12345678910111213141516public String get(key) &#123; String value = redis.get(key); if (value == null) &#123; //代表缓存值过期 //设置3min的超时，防止del操作失败的时候，下次缓存过期一直不能load db if (redis.setnx(key_mutex, 1, 3 * 60) == 1) &#123; //代表设置成功 value = db.get(key); redis.set(key, value, expire_secs); redis.del(key_mutex); &#125; else &#123; //这个时候代表同时候的其他线程已经load db并回设到缓存了，这时候重试获取缓存值即可 sleep(50); get(key); //重试 &#125; &#125; else &#123; return value; &#125;&#125;]]></content>
+      <categories>
+        <category>Cache</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>DataBase</tag>
+        <tag>Cache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[愧疚感...]]></title>
     <url>%2F2018%2F12%2F18%2Fdiary%2Fdiary_0010%2F</url>
-    <content type="text"><![CDATA[愧疚感….是因为今天虚度的时间…. 快跑, 不然会落后…]]></content>
+    <content type="text"><![CDATA[愧疚感….是因为每天虚度的时间…. 快跑, 不然会落后…]]></content>
       <categories>
         <category>Diary</category>
       </categories>
@@ -57,9 +107,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MySQL5.7 关闭 only_full_group_by]]></title>
-    <url>%2F2018%2F11%2F27%2Fnode%2Fdatabase%2Fmysql%2Fnode-mysql_08%2F</url>
-    <content type="text"><![CDATA[MySQL 5.7 之后, only_full_group_by 默认是打开的. 12345678# 导出RDS数据select @@version;SELECT @@sql_mode; # ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTIONSELECT @@GLOBAL.sql_mode; # ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTIONselect @@SESSION.sql_mode; # ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTIONSET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));]]></content>
+    <title><![CDATA[MySQL导出指定数据库]]></title>
+    <url>%2F2018%2F11%2F27%2Fnode%2Fdatabase%2Fmysql%2Fnode-mysql_07%2F</url>
+    <content type="text"><![CDATA[修改系统架构,需要挪一下数据库 1234# 导出RDS数据mysqldump -h yes517-erp.mysql.rds.aliyuncs.com -u yes517_erp -p yslx_erp &gt; yslx_erp.sqlmysqldump -h yes517-erp.mysql.rds.aliyuncs.com -u yes517_erp -p stgl &gt; stgl.sql 包括表结构(含索引)和数据]]></content>
       <categories>
         <category>MySQL</category>
       </categories>
@@ -68,9 +118,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MySQL导出指定数据库]]></title>
-    <url>%2F2018%2F11%2F27%2Fnode%2Fdatabase%2Fmysql%2Fnode-mysql_07%2F</url>
-    <content type="text"><![CDATA[修改系统架构,需要挪一下数据库 1234# 导出RDS数据mysqldump -h yes517-erp.mysql.rds.aliyuncs.com -u yes517_erp -p yslx_erp &gt; yslx_erp.sqlmysqldump -h yes517-erp.mysql.rds.aliyuncs.com -u yes517_erp -p stgl &gt; stgl.sql 包括表结构(含索引)和数据]]></content>
+    <title><![CDATA[MySQL5.7 关闭 only_full_group_by]]></title>
+    <url>%2F2018%2F11%2F27%2Fnode%2Fdatabase%2Fmysql%2Fnode-mysql_08%2F</url>
+    <content type="text"><![CDATA[MySQL 5.7 之后, only_full_group_by 默认是打开的. 12345678# 导出RDS数据select @@version;SELECT @@sql_mode; # ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTIONSELECT @@GLOBAL.sql_mode; # ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTIONselect @@SESSION.sql_mode; # ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTIONSET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));]]></content>
       <categories>
         <category>MySQL</category>
       </categories>
@@ -159,9 +209,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[面试时的自我介绍]]></title>
-    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_000%2F</url>
-    <content type="text"><![CDATA[面试时的自我介绍 我叫李述昱, 希望谋得一份Java开发的工作. 从入行到现在已经有3年多了. 在过去的时间里, 维护过旧项目, 也写过独立模块, 也独立设计并完成过一整个项目. 与前端同事做过对接, 也与其他公司对接过接口. 我的经历, 算不上丰富, 但也有对代码的一些理解. 觉得写过的代码, 是在给别人讲故事. 给与你协作的同事讲, 给你对接的同事讲, 给日后维护代码的人讲. 告诉他们, 我在解决的问题和我解决问题的思路和方法. 要把这个故事讲好, 讲的精彩, 需要解决问题的思路, 解决问题所需的技术. 思路与技术是相辅相成的. 技术不够会局限思路的发散, 思路不够会影响技术的使用. 当然技术会扩展思路, 思路会促进技术. 我技术还需要磨练, 还需要见识其他人的思路. 希望能在贵公司, 见识新的解决问题的思路, 磨练技术. 同样也希望我能给贵公司带来新鲜的活力.]]></content>
+    <title><![CDATA[靠谱点儿]]></title>
+    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_001%2F</url>
+    <content type="text"><![CDATA[靠谱点儿… 1. 数据库事务, 视图, 数据库建模, SQL语法事务:数据库事务(Transanction) 正确执行的四个基本要素。ACID,原子性(Atomicity)、一致性(Correspondence)、隔离性(Isolation)、持久性(Durability)。原子性:整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。一致性:在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。隔离性:隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请求，使得在同一时间仅有一个请求用于同一数据。持久性:在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。 视图视图:是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询；不包含任何列或数据。使用视图可以简化复杂的SQL操作，隐藏具体的细节，保护数据；视图创建后，可以使用与表相同的方式利用它们。 视图不能被索引，也不能有关联的触发器或默认值，如果视图本身内有order by 则对视图再次order by将被覆盖。 关于更新视图: 对于未使用联结子查询分组聚集函数Distinct Union等的视图, 是可以对其更新的. 但是视图主要用于简化检索, 保护数据, 并不用于更新. 数据库建模设计数据库时, 应尽可能遵循三范式设计 第一范式(1NF)：字段值具有原子性,不能再分(所有关系型数据库系统都满足第一范式);如：姓名字段,其中姓和名是一个整体,如果区分姓和名那么必须设立两个独立字段; 第二范式(2NF)：一个表必须有主键,即每行数据都能被唯一的区分;备注：必须先满足第一范式; 第三范式(3NF)：一个表中不能包涵其他相关表中非关键字段的信息,即数据表不能有沉余字段;备注：必须先满足第二范式;(可能会存在空间换时间的情况, 有些时候, 是不满足第三范式的) 2. MySQL特点, 正确使用索引MySQL特点 功能强大: MySQL支持事务、视图、存储过程和触发器等. 支持跨平台 运行速度快, 高速是MySQL的显著特性。 成本低: MySQL数据库是一种完全免费的产品 数据库存储容量大 MySQL, HBase, ElasticSearch 的区别互联网时代各种存储框架层出不穷, 传统的关系型数据库：Oracle、MySQL；新兴的NoSQL：HBase、Cassandra、Redis；全文检索框架：ElasticSearch、Solr等。 MySQL：关系型数据库，主要面向OLTP，支持事务，支持二级索引，支持sql，支持主从、Group Replication架构模型（本文全部以Innodb为例，不涉及别的存储引擎）。 HBase：基于HDFS，支持海量数据读写（尤其是写），支持上亿行、上百万列的，面向列的分布式NoSql数据库。天然分布式，主从架构，不支持事务，不支持二级索引，不支持sql。 ElasticSearch：ES是一款分布式的全文检索框架，底层基于Lucene实现，虽然ES也提供存储，检索功能，但我一直不认为ES是一款数据库，但是随着ES功能越来越强大，与数据库的界限也越来越模糊。天然分布式，p2p架构，不支持事务，采用倒排索引提供全文检索。 3. 常见SQL优化技巧我说一下从自己的一些优化SQL的经历, 总结的技巧. 拿到慢SQL后, 先改SQL中存在的问题. 比如条件里套件中存在的 &lt;&gt;, in, 过多的SQL嵌套, 修改后,拆分执行具体哪一句, 影响了速度. 根据具体情况, 加联合索引, 拆表, 加冗余表(空间换时间的手段). 技术论坛里, 很多用 EXPLAIN (查看索引是否起作用)语句的, 也是很好用的. 4. JDBC 使用步骤 加载驱动 创建连接 执行SQL语句 Statement 执行静态SQL语句。 PreparedStatement 执行动态SQL语句。 CallableStatement 执行数据库存储过程。 处理结果 关闭连接 5. Spring + SpringMVC, MyBatis(1). 什么是Spring? Spring 是 Java EE 的是一个轻量级的开源框架. 使 J2EE 开发更容易, 通过实现基于POJO的编程模型, Spring 的核心是 IOC (2)Spring框架支持以下五种bean的作用域： singleton : bean在每个Spring ioc 容器中只有一个实例。 prototype：一个bean的定义可以有多个实例。 request：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。 session：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 global-session：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 (3)使用Spring框架的好处是什么? 轻量：Spring 是轻量的，基本的版本大约2MB。 控制反转：Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们。 面向切面的编程(AOP)：Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。 容器：Spring 包含并管理应用中对象的生命周期和配置。 MVC框架：Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品。 事务管理：Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）。 异常处理：Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or JDO抛出的）转化为一致的unchecked 异常。 6. jQuery7. 理解Redis缓存8. MQ9. 任务调度(Worker)10. 单元测试11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知12. Git13. 设计和开发分布式, 支持热部署, 热备份, 热恢复]]></content>
       <categories>
         <category>Interview</category>
       </categories>
@@ -170,9 +220,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[靠谱点儿]]></title>
-    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_001%2F</url>
-    <content type="text"><![CDATA[靠谱点儿… 1. 数据库事务, 视图, 数据库建模, SQL语法事务:数据库事务(Transanction) 正确执行的四个基本要素。ACID,原子性(Atomicity)、一致性(Correspondence)、隔离性(Isolation)、持久性(Durability)。原子性:整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。一致性:在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。隔离性:隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请求，使得在同一时间仅有一个请求用于同一数据。持久性:在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。 视图视图:是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询；不包含任何列或数据。使用视图可以简化复杂的SQL操作，隐藏具体的细节，保护数据；视图创建后，可以使用与表相同的方式利用它们。 视图不能被索引，也不能有关联的触发器或默认值，如果视图本身内有order by 则对视图再次order by将被覆盖。 关于更新视图: 对于未使用联结子查询分组聚集函数Distinct Union等的视图, 是可以对其更新的. 但是视图主要用于简化检索, 保护数据, 并不用于更新. 数据库建模设计数据库时, 应尽可能遵循三范式设计 第一范式(1NF)：字段值具有原子性,不能再分(所有关系型数据库系统都满足第一范式);如：姓名字段,其中姓和名是一个整体,如果区分姓和名那么必须设立两个独立字段; 第二范式(2NF)：一个表必须有主键,即每行数据都能被唯一的区分;备注：必须先满足第一范式; 第三范式(3NF)：一个表中不能包涵其他相关表中非关键字段的信息,即数据表不能有沉余字段;备注：必须先满足第二范式;(可能会存在空间换时间的情况, 有些时候, 是不满足第三范式的) 2. MySQL特点, 正确使用索引MySQL特点 功能强大: MySQL支持事务、视图、存储过程和触发器等. 支持跨平台 运行速度快, 高速是MySQL的显著特性。 成本低: MySQL数据库是一种完全免费的产品 数据库存储容量大 MySQL, HBase, ElasticSearch 的区别互联网时代各种存储框架层出不穷, 传统的关系型数据库：Oracle、MySQL；新兴的NoSQL：HBase、Cassandra、Redis；全文检索框架：ElasticSearch、Solr等。 MySQL：关系型数据库，主要面向OLTP，支持事务，支持二级索引，支持sql，支持主从、Group Replication架构模型（本文全部以Innodb为例，不涉及别的存储引擎）。 HBase：基于HDFS，支持海量数据读写（尤其是写），支持上亿行、上百万列的，面向列的分布式NoSql数据库。天然分布式，主从架构，不支持事务，不支持二级索引，不支持sql。 ElasticSearch：ES是一款分布式的全文检索框架，底层基于Lucene实现，虽然ES也提供存储，检索功能，但我一直不认为ES是一款数据库，但是随着ES功能越来越强大，与数据库的界限也越来越模糊。天然分布式，p2p架构，不支持事务，采用倒排索引提供全文检索。 3. 常见SQL优化技巧我说一下从自己的一些优化SQL的经历, 总结的技巧. 拿到慢SQL后, 先改SQL中存在的问题. 比如条件里套件中存在的 &lt;&gt;, in, 过多的SQL嵌套, 修改后,拆分执行具体哪一句, 影响了速度. 根据具体情况, 加联合索引, 拆表, 加冗余表(空间换时间的手段). 技术论坛里, 很多用 EXPLAIN (查看索引是否起作用)语句的, 也是很好用的. 4. JDBC 使用步骤 加载驱动 创建连接 执行SQL语句 Statement 执行静态SQL语句。 PreparedStatement 执行动态SQL语句。 CallableStatement 执行数据库存储过程。 处理结果 关闭连接 5. Spring + SpringMVC, MyBatis(1). 什么是Spring? Spring 是 Java EE 的是一个轻量级的开源框架. 使 J2EE 开发更容易, 通过实现基于POJO的编程模型, Spring 的核心是 IOC (2)Spring框架支持以下五种bean的作用域： singleton : bean在每个Spring ioc 容器中只有一个实例。 prototype：一个bean的定义可以有多个实例。 request：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。 session：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 global-session：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。 (3)使用Spring框架的好处是什么? 轻量：Spring 是轻量的，基本的版本大约2MB。 控制反转：Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们。 面向切面的编程(AOP)：Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。 容器：Spring 包含并管理应用中对象的生命周期和配置。 MVC框架：Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品。 事务管理：Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）。 异常处理：Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or JDO抛出的）转化为一致的unchecked 异常。 6. jQuery7. 理解Redis缓存8. MQ9. 任务调度(Worker)10. 单元测试11. 常见设计模式, 理解面向对象设计思想, 数据结构, 算法有一定认知12. Git13. 设计和开发分布式, 支持热部署, 热备份, 热恢复]]></content>
+    <title><![CDATA[面试时的自我介绍]]></title>
+    <url>%2F2018%2F10%2F29%2Farticle%2FInterview%2Finterview_000%2F</url>
+    <content type="text"><![CDATA[面试时的自我介绍 我叫李述昱, 希望谋得一份Java开发的工作. 从入行到现在已经有3年多了. 在过去的时间里, 维护过旧项目, 也写过独立模块, 也独立设计并完成过一整个项目. 与前端同事做过对接, 也与其他公司对接过接口. 我的经历, 算不上丰富, 但也有对代码的一些理解. 觉得写过的代码, 是在给别人讲故事. 给与你协作的同事讲, 给你对接的同事讲, 给日后维护代码的人讲. 告诉他们, 我在解决的问题和我解决问题的思路和方法. 要把这个故事讲好, 讲的精彩, 需要解决问题的思路, 解决问题所需的技术. 思路与技术是相辅相成的. 技术不够会局限思路的发散, 思路不够会影响技术的使用. 当然技术会扩展思路, 思路会促进技术. 我技术还需要磨练, 还需要见识其他人的思路. 希望能在贵公司, 见识新的解决问题的思路, 磨练技术. 同样也希望我能给贵公司带来新鲜的活力.]]></content>
       <categories>
         <category>Interview</category>
       </categories>
@@ -251,9 +301,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[一些无人可说的话]]></title>
-    <url>%2F2018%2F10%2F13%2Fdiary%2Fdiary_0007%2F</url>
-    <content type="text"><![CDATA[当你发现, 身边没有一个可以说些心里话的人时, 是多么可悲的一件事情. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你可以说, 身边没有, 你可以打电话呀….. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有可以打电话的人, 我就不用键盘在这敲了….想想, 其实这样也没什么不好的, 起码还有个键盘, 供我宣泄情绪. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近工作里, 我的一些想法, 被否掉了, 这实际上是一件很正常的事, 问题就出在, 我在提出我的方案的时候, 通过评审会, 也是通过我这个方案的, 结果在我都快要实现这个方案时, 公司领导却说, 要换另一个方案. 理由就是, 他联系了其他同行, 得知了他们的解决方案. 我认为这个方案,不适合公司, 现在已有的系统, 所以公司领导说,方案定了, 就要改成和同行, 相同的方案. 换方案我能接受, 给我一个合理的理由呀, 就说人家是这样做的, 我们也要这么 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在方案这个方案里, 我有很多新的想法, 为实现这些想法, 也付诸了很多努力. 这方案, 就像自己的孩子, 去教他吃饭, 教他识字, 好不容易这个孩子就要长大成人了, 突然一起车祸, 带走了他的生命…………. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始的时候, 我甚至对这个行业产生了怀疑, 直至一个深夜, 我在想我为什么要进入这个行业时, 我所想得到的不正是, 我的想法, 我的代码, 为使用他的人带来便利么, 这是很有成就感的一件事呀, 一时的不如意, 就要退缩了, 那至的那份成就感, 于何地呢….. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 转变心态后, 执行着新的方案…..由于反倒重来, 难免的加班……. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在测试完成后, 系统上线…… &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 因为方案是要把系统 迁到其他服务器上, 所以上线后, 出现了系统变慢的情况, 查找问题, 发现问题出在了, SQL上, 我拿出了SQL, 在新的服务器上, 执行SQL, 竟然用了10s多, 我吐了口血….拿到原来的服务上执行了下, 84ms, 我第一个反应, 就是同步数据时, 索引没过去….就去看一下. 结果索引是都在的, 我就tm懵了…… &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一点一点的查问题, 我就发现新服务器, 的检索能力, 是可以的, 但是我一个用99ms检索出的结果集, 在进行CASE运算后, 就TM用了4s+, 我就跑去看了下数据库服务器的内存, 600MB 我瞬间石化在那了….. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 最后我还是妥协了, 我说把SQL拆了吧, 把SQL的逻辑, 挪到Java代码里吧….我测了一下, 这样改后的SQL 执行是 2s+….按着我的脾气, 一定是要控制到1s以内的….奈何那个服务器, 奈何那个数据库…. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我也知道带着负面情绪, 去工作肯定会事倍功半, 所以一会儿就要去买买买了……祝福我吧….买买买之后, 我就全觉得钱包空空了, 金钱的力量是无穷的, 也让我积极的准备换一份工作吧….关于这家公司的种种, 我会单独再写一篇文章来纪念的. 所以就不在这说了. 突然有一个想法, 就是把我所经历的公司, 都写一写, 一家公司一篇..嘿嘿,至今就在两家公司工作过的我, 写起来也不会太费力, 写写吧, 日后也有的看…….]]></content>
+    <title><![CDATA[香山之旅]]></title>
+    <url>%2F2018%2F10%2F13%2Fdiary%2Fdiary_0006%2F</url>
+    <content type="text"><![CDATA[一直都想去香山去看红叶的, 这次也算是得偿所愿了. 但终归还是有些小遗憾….世间事, 哪有那么多的尽如人意. 想到这, 感觉有些遗憾, 未尝也不是一种美. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 近来京都, 秋意正浓, 香山红叶, 心向往之. 顾择佳日, 约佳人共赴之. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佳日已至, 却佳人未至. 虽少佳人在旁, 景色入眸 却也美哉. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好吧, 我编不下去了. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自己一个人, 背着包, 兴致勃勃的就去了, 根本就没有妹子好吧. 前面的遗憾, 是真的有的. 不过不是妹子这个梗. 而是我TM去的早了点, 满山都还绿聪聪的呢, 我TM这是去看红叶去了吗? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俗话说: 既来之, 则安之. 好好享受美景吧. 从山脚开始爬…. 相机曝光度, 调的有点高….尴尬…(可以只看上半部分哈….) 一样的毛病, 瞻前不顾后, 想问题不够全面 手不点都, 画面有点糊….我为什么要走这条野路呢…. 当树叶, 随风落下, 捡起它, 放在手里, 端详… 神说要有光…. 半山腰 祈福…. 俯瞰… 许愿… 道出心声… 香炉峰… 不知为何, 看到这一处时, 让我想起了龙泉寺后, 也有这样一口井的…. 最后的彩蛋….]]></content>
       <categories>
         <category>Diary</category>
       </categories>
@@ -262,9 +312,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[香山之旅]]></title>
-    <url>%2F2018%2F10%2F13%2Fdiary%2Fdiary_0006%2F</url>
-    <content type="text"><![CDATA[一直都想去香山去看红叶的, 这次也算是得偿所愿了. 但终归还是有些小遗憾….世间事, 哪有那么多的尽如人意. 想到这, 感觉有些遗憾, 未尝也不是一种美. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 近来京都, 秋意正浓, 香山红叶, 心向往之. 顾择佳日, 约佳人共赴之. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佳日已至, 却佳人未至. 虽少佳人在旁, 景色入眸 却也美哉. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好吧, 我编不下去了. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自己一个人, 背着包, 兴致勃勃的就去了, 根本就没有妹子好吧. 前面的遗憾, 是真的有的. 不过不是妹子这个梗. 而是我TM去的早了点, 满山都还绿聪聪的呢, 我TM这是去看红叶去了吗? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俗话说: 既来之, 则安之. 好好享受美景吧. 从山脚开始爬…. 相机曝光度, 调的有点高….尴尬…(可以只看上半部分哈….) 一样的毛病, 瞻前不顾后, 想问题不够全面 手不点都, 画面有点糊….我为什么要走这条野路呢…. 当树叶, 随风落下, 捡起它, 放在手里, 端详… 神说要有光…. 半山腰 祈福…. 俯瞰… 许愿… 道出心声… 香炉峰… 不知为何, 看到这一处时, 让我想起了龙泉寺后, 也有这样一口井的…. 最后的彩蛋….]]></content>
+    <title><![CDATA[一些无人可说的话]]></title>
+    <url>%2F2018%2F10%2F13%2Fdiary%2Fdiary_0007%2F</url>
+    <content type="text"><![CDATA[当你发现, 身边没有一个可以说些心里话的人时, 是多么可悲的一件事情. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你可以说, 身边没有, 你可以打电话呀….. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有可以打电话的人, 我就不用键盘在这敲了….想想, 其实这样也没什么不好的, 起码还有个键盘, 供我宣泄情绪. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近工作里, 我的一些想法, 被否掉了, 这实际上是一件很正常的事, 问题就出在, 我在提出我的方案的时候, 通过评审会, 也是通过我这个方案的, 结果在我都快要实现这个方案时, 公司领导却说, 要换另一个方案. 理由就是, 他联系了其他同行, 得知了他们的解决方案. 我认为这个方案,不适合公司, 现在已有的系统, 所以公司领导说,方案定了, 就要改成和同行, 相同的方案. 换方案我能接受, 给我一个合理的理由呀, 就说人家是这样做的, 我们也要这么 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在方案这个方案里, 我有很多新的想法, 为实现这些想法, 也付诸了很多努力. 这方案, 就像自己的孩子, 去教他吃饭, 教他识字, 好不容易这个孩子就要长大成人了, 突然一起车祸, 带走了他的生命…………. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始的时候, 我甚至对这个行业产生了怀疑, 直至一个深夜, 我在想我为什么要进入这个行业时, 我所想得到的不正是, 我的想法, 我的代码, 为使用他的人带来便利么, 这是很有成就感的一件事呀, 一时的不如意, 就要退缩了, 那至的那份成就感, 于何地呢….. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 转变心态后, 执行着新的方案…..由于反倒重来, 难免的加班……. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在测试完成后, 系统上线…… &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 因为方案是要把系统 迁到其他服务器上, 所以上线后, 出现了系统变慢的情况, 查找问题, 发现问题出在了, SQL上, 我拿出了SQL, 在新的服务器上, 执行SQL, 竟然用了10s多, 我吐了口血….拿到原来的服务上执行了下, 84ms, 我第一个反应, 就是同步数据时, 索引没过去….就去看一下. 结果索引是都在的, 我就tm懵了…… &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一点一点的查问题, 我就发现新服务器, 的检索能力, 是可以的, 但是我一个用99ms检索出的结果集, 在进行CASE运算后, 就TM用了4s+, 我就跑去看了下数据库服务器的内存, 600MB 我瞬间石化在那了….. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 最后我还是妥协了, 我说把SQL拆了吧, 把SQL的逻辑, 挪到Java代码里吧….我测了一下, 这样改后的SQL 执行是 2s+….按着我的脾气, 一定是要控制到1s以内的….奈何那个服务器, 奈何那个数据库…. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我也知道带着负面情绪, 去工作肯定会事倍功半, 所以一会儿就要去买买买了……祝福我吧….买买买之后, 我就全觉得钱包空空了, 金钱的力量是无穷的, 也让我积极的准备换一份工作吧….关于这家公司的种种, 我会单独再写一篇文章来纪念的. 所以就不在这说了. 突然有一个想法, 就是把我所经历的公司, 都写一写, 一家公司一篇..嘿嘿,至今就在两家公司工作过的我, 写起来也不会太费力, 写写吧, 日后也有的看…….]]></content>
       <categories>
         <category>Diary</category>
       </categories>
@@ -426,6 +476,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
+    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
+    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一次SQL调优的经历]]></title>
     <url>%2F2018%2F09%2F07%2Fnode%2Fdatabase%2Fmysql%2Fnode-mysql_02%2F</url>
     <content type="text"><![CDATA[系统随着数据量的增长, 变得越来越慢. 慢到了不能忍受的地步, 故有了这次调优. 查找问题点 从日志里拿出SQL, 执行了一下 10.8s.有点惊呆 开始端详SQL… 将SQL拆开, 一部分一部分的执行. 找到慢的点 影响速度是是一个判断订单状态的子SQL. 执行耗时竟然占用了 7.8s. 处理慢SQL先创建关联条件的联合索引, 试试水. 从 7.8s 减到了 6.3s 又创建了判断条件的联合索引, 这次减到 0.24s. 大喜…. 整体执行 0.37s 创建索引1create index 索引名 on 表名(字段名,字段名);]]></content>
@@ -435,17 +496,6 @@
       <tags>
         <tag>SQL</tag>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[GitHub 提交不显示提交记录的解决方法]]></title>
-    <url>%2F2018%2F09%2F07%2Fnode%2Fnode-git_02%2F</url>
-    <content type="text"><![CDATA[GitHub 提交不显示提交记录的解决方法 电脑重装之后，提交代码到GitHub上之后，发现Contribute却没有记录，查看项目确实提交上去了。查资料发现是Git配置的原因。 配置 邮箱地址 git config --global user.email &quot;yuchen352416@163.com&quot; 配置 用户名 git config --global user.name &quot;Selfimpr&quot; 这样再提交代码时，就可以看到记录了。 还有一些常用配置：https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -634,17 +684,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MacOS上一些软件的激活]]></title>
-    <url>%2F2018%2F06%2F21%2Fnode%2Fnode-tools-crack%2F</url>
-    <content type="text"><![CDATA[MacOS上一些软件的激活 DataGrip:选择License server License service address: http://xidea.online (Lower of 2017.2), http://jetbrains.license.laucyun.com (Lower of 2017.3)]]></content>
-      <categories>
-        <category>ToolsCrack</category>
-      </categories>
-      <tags>
-        <tag>ToolsCrack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Edraw for Mac 注册码]]></title>
     <url>%2F2018%2F06%2F21%2Fnode%2Fnode-edraw-sn%2F</url>
     <content type="text"><![CDATA[Edraw9.1 for Mac 注册码 注意： 请断网情况下激活！选择 手动激活 ！ 用户名：GUANTAO2008 产品密钥：0711-8621-3000-8217-5433]]></content>
@@ -653,6 +692,17 @@
       </categories>
       <tags>
         <tag>Edraw</tag>
+        <tag>ToolsCrack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MacOS上一些软件的激活]]></title>
+    <url>%2F2018%2F06%2F21%2Fnode%2Fnode-tools-crack%2F</url>
+    <content type="text"><![CDATA[MacOS上一些软件的激活 DataGrip:选择License server License service address: http://xidea.online (Lower of 2017.2), http://jetbrains.license.laucyun.com (Lower of 2017.3)]]></content>
+      <categories>
+        <category>ToolsCrack</category>
+      </categories>
+      <tags>
         <tag>ToolsCrack</tag>
       </tags>
   </entry>
@@ -797,17 +847,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ProtoBuf 学习(一)]]></title>
-    <url>%2F2018%2F03%2F20%2Fnode%2Fnode-protobuf_1%2F</url>
-    <content type="text"><![CDATA[ProtoBuf 环境的安装与HelloWord 1. 安装 ProtoBuf brew install protobuf@2.5.0 2. 新建 person.proto 文件1234567891011121314151617181920212223242526272829syntax = "proto2";package tutorial;option java_package = "pro.yuchen.demo.spring_demo.proto";option java_outer_classname = "AddressBookProtos";message Person &#123; required string name = 1; // 非空属性 required int32 id = 2; // 非空属性 optional string email = 3; // 可空属性 enum PhoneType &#123; // 枚举类型 MOBILE = 0; HOME = 1; WORK = 2; &#125; message PhoneNumber &#123; // 子类(可多个, JSON表现为数组形式) required string number = 1; optional PhoneType type = 2 [default = HOME]; &#125; repeated PhoneNumber phones = 4;&#125;message AddressBook &#123; repeated Person people = 1;&#125; 3. 生成 Java源文件protoc --java_out . person.proto 4. 导入pom.xml依赖12345678910&lt;dependency&gt; &lt;groupId&gt;com.google.protobuf&lt;/groupId&gt; &lt;artifactId&gt;protobuf-java&lt;/artifactId&gt; &lt;version&gt;2.5.0&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;com.googlecode.protobuf-java-format&lt;/groupId&gt; &lt;artifactId&gt;protobuf-java-format&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt;&lt;/dependency&gt; ps: 将刚刚根据.proto生成的 java文件, 导入项目中 5. 测试123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124package pro.yuchen.demo.spring_demo.proto;import com.google.protobuf.ByteString;import com.google.protobuf.Descriptors;import com.google.protobuf.Descriptors.FieldDescriptor;import com.google.protobuf.Message;import com.googlecode.protobuf.format.JsonFormat;import org.junit.Test;import pro.yuchen.demo.spring_demo.proto.Protos.Person;import java.util.Iterator;import java.util.List;import java.util.Map;public class ProtoBufTest &#123; @Test public void testProtoBuf() throws Exception &#123; Person person = Person.newBuilder() .setId(1) .setName("Tom") .setEmail("yuchen352416@163.com") .addPhones(Person.PhoneNumber.newBuilder() .setNumber("18733775865") .setType(Person.PhoneType.MOBILE)) .build(); // ProtoBuf -&gt; JSON String jsonFormat = JsonFormat.printToString(person); System.out.println(jsonFormat); // JSON -&gt; ProtoBuf String json = "&#123;\"name\": \"Tom\", \"id\": 1, \"email\": \"yuchen352416@163.com\", \"phones\": [&#123;\"number\": \"18733775865\", \"type\": 1 &#125;, &#123;\"number\": \"13463170232\", \"type\": 0 &#125; ] &#125;"; Message.Builder message = Person.newBuilder(); JsonFormat.merge(json, message); System.out.println(message.build()); byte[] bytes = person.toByteArray(); // 序列化 Person result = Person.parseFrom(bytes); // 反序列化 // 遍历输出 for (Iterator&lt;Map.Entry&lt;FieldDescriptor, Object&gt;&gt; iter = result.getAllFields().entrySet().iterator(); iter.hasNext();) &#123; Map.Entry&lt;FieldDescriptor, Object&gt; field = iter.next(); System.out.println("Number: " + field.getKey().getNumber()); System.out.println("Type: " + field.getKey().getType()); System.out.println("Name: " + field.getKey().getName()); System.out.println("FullName: " + field.getKey().getFullName()); System.out.println("FileName: " + field.getKey().getFile().getName()); printFieldValue(field); System.out.println("-------------------------------------------"); System.out.println(); &#125; &#125; private void printFieldValue(Map.Entry&lt;FieldDescriptor, Object&gt; field) &#123; switch (field.getKey().getType())&#123; case INT32: case INT64: case SINT32: case SINT64: case SFIXED32: case SFIXED64: case FLOAT: case DOUBLE: case BOOL: // Good old toString() does what we want for these types. System.out.println("Value: " + field.getValue().toString()); break; case UINT32: case FIXED32: System.out.println("Value: " + (Integer) field.getValue()); break; case UINT64: case FIXED64: System.out.println("Value: " + (Long) field.getValue()); break; case STRING: &#123; System.out.println("Value: " + (String) field.getValue()); break; &#125; case BYTES: &#123; System.out.println("Value: " + (ByteString) field.getValue()); break; &#125; case ENUM: &#123; System.out.println("Value: " + ((Descriptors.EnumValueDescriptor) field.getValue()).getName()); break; &#125; case MESSAGE: case GROUP: System.out.println("Size: " + ((List&lt;?&gt;) field.getValue()).size()); System.out.println("Value: ["); List&lt;?&gt; list = (List&lt;?&gt;) field.getValue(); for (Object o : list) &#123; Message message = (Message) o; for (Iterator&lt;Map.Entry&lt;FieldDescriptor, Object&gt;&gt; iters = message.getAllFields().entrySet().iterator(); iters.hasNext();) &#123; Map.Entry&lt;FieldDescriptor, Object&gt; iter = iters.next(); System.out.println("\t-----Number: " + iter.getKey().getNumber()); System.out.println("\t-----Type: " + iter.getKey().getType()); System.out.println("\t-----Name: " + iter.getKey().getName()); System.out.println("\t-----FullName: " + iter.getKey().getFullName()); System.out.println("\t-----FileName: " + iter.getKey().getFile().getName()); System.out.print("\t-----"); printFieldValue(iter); System.out.println("\t--------------------------------------------"); &#125; System.out.println(); &#125; System.out.println("]"); break; &#125; &#125;&#125; 输出结果: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061&#123;&quot;name&quot;: &quot;Tom&quot;,&quot;id&quot;: 1,&quot;email&quot;: &quot;yuchen352416@163.com&quot;,&quot;phones&quot;: [&#123;&quot;number&quot;: &quot;18733775865&quot;,&quot;type&quot;: &quot;MOBILE&quot;&#125;]&#125;name: &quot;Tom&quot;id: 1email: &quot;yuchen352416@163.com&quot;phones &#123; number: &quot;18733775865&quot; type: HOME&#125;phones &#123; number: &quot;13463170232&quot; type: MOBILE&#125;Number: 1Type: STRINGName: nameFullName: Person.nameFileName: person.protoValue: Tom-------------------------------------------Number: 2Type: INT32Name: idFullName: Person.idFileName: person.protoValue: 1-------------------------------------------Number: 3Type: STRINGName: emailFullName: Person.emailFileName: person.protoValue: yuchen352416@163.com-------------------------------------------Number: 4Type: MESSAGEName: phonesFullName: Person.phonesFileName: person.protoSize: 1Value: [ -----Number: 1 -----Type: STRING -----Name: number -----FullName: Person.PhoneNumber.number -----FileName: person.proto -----Value: 18733775865 -------------------------------------------- -----Number: 2 -----Type: ENUM -----Name: type -----FullName: Person.PhoneNumber.type -----FileName: person.proto -----Value: MOBILE --------------------------------------------]-------------------------------------------]]></content>
-      <categories>
-        <category>ProtoBuf</category>
-      </categories>
-      <tags>
-        <tag>ProtoBuf</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Spring Boot Hibernate]]></title>
     <url>%2F2018%2F03%2F20%2Farticle%2FSpringBoot%2Farticle-spring-boot_09%2F</url>
     <content type="text"><![CDATA[SpringBoot 中使用 Hibernate操作数据库 1. 添加pom.xml依赖12345678&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&lt;/dependency&gt; 2. 修改配置文件application.yml123456789101112spring: datasource: # 数据库连接参数 driverClassName: com.mysql.jdbc.Driver url: jdbc:mysql://localhost:3306/base_db?useUnicode=true&amp;characterEncoding=utf-8 username: root password: root jpa: database: MYSQL hibernate: ddl-auto: update dialect: org.hibernate.dialect.MySQL5InnoDBDialect show-sql: true 3. 新建表1234567891011121314USE base_db;CREATE TABLE BLOG ( id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(30) NOT NULL, content VARCHAR(4000))ENGINE=InnoDB DEFAULT CHARSET=utf8;ALTER TABLE BLOG COMMENT = '博客表';CREATE TABLE COMMENT ( id BIGINT PRIMARY KEY AUTO_INCREMENT, content VARCHAR(4000), blog_id INT NOT NULL)ENGINE=InnoDB DEFAULT CHARSET=utf8;ALTER TABLE COMMENT COMMENT = '评论表'; 4. 添加Entity实体4.1. Blog 类123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263package pro.yuchen.demo.spring_demo.entity;import org.hibernate.annotations.Fetch;import org.hibernate.annotations.FetchMode;import java.io.Serializable;import java.util.List;import javax.persistence.*;@Entity@Table(name="blog")public class Blog implements Serializable &#123; @Id @GeneratedValue(strategy=GenerationType.AUTO) private Integer id; @Column private String title; @Column private String content; @OneToMany(targetEntity=Comment.class,cascade=CascadeType.ALL) @Fetch(FetchMode.JOIN) //updatable=false很关键，如果没有它，在级联删除的时候就会报错(反转的问题) @JoinColumn(name="blog_id",updatable=false) private List&lt;Comment&gt; comments; public Integer getId() &#123; return id; &#125; public void setId(Integer id) &#123; this.id = id; &#125; public String getTitle() &#123; return title; &#125; public void setTitle(String title) &#123; this.title = title; &#125; public String getContent() &#123; return content; &#125; public void setContent(String content) &#123; this.content = content; &#125; public List&lt;Comment&gt; getComments() &#123; return comments; &#125; public void setComments(List&lt;Comment&gt; comments) &#123; this.comments = comments; &#125;&#125; 4.2. Comment 类1234567891011121314151617181920212223242526272829303132333435363738394041424344package pro.yuchen.demo.spring_demo.entity;import javax.persistence.*;@Entity@Table(name="comment")public class Comment &#123; @Id @GeneratedValue(strategy= GenerationType.AUTO) private Integer id; @Column private String content; //多对一，@JoinColumn与@column类似，指定映射的数据库字段 @ManyToOne(targetEntity = Blog.class) @JoinColumn(name="blog_id",updatable=false) private Blog blog; public Integer getId() &#123; return id; &#125; public void setId(Integer id) &#123; this.id = id; &#125; public String getContent() &#123; return content; &#125; public void setContent(String content) &#123; this.content = content; &#125; public Blog getBlog() &#123; return blog; &#125; public void setBlog(Blog blog) &#123; this.blog = blog; &#125;&#125; 附: “一对多”, “多对一” 关系, 是针对两个实体说的 5. 新建 JPA操作类5.1. Blog 操作类12345678package pro.yuchen.demo.spring_demo.dao;import org.springframework.data.jpa.repository.JpaRepository;import pro.yuchen.demo.spring_demo.entity.Blog;public interface BlogRepository extends JpaRepository&lt;Blog, Integer&gt; &#123;&#125; 5.2.Comment 操作类12345678package pro.yuchen.demo.spring_demo.dao;import org.springframework.data.jpa.repository.JpaRepository;import pro.yuchen.demo.spring_demo.entity.Comment;public interface CommentRepository extends JpaRepository&lt;Comment, Integer&gt; &#123;&#125; 6. 测试用例6.1. 测试 BlogRepository12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667package pro.yuchen.demo.spring_demo.dao;import org.junit.Test;import org.junit.runner.RunWith;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.test.context.SpringBootTest;import org.springframework.data.domain.Page;import org.springframework.data.domain.PageRequest;import org.springframework.data.domain.Pageable;import org.springframework.data.domain.Sort;import org.springframework.mock.web.MockServletContext;import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;import org.springframework.test.context.web.WebAppConfiguration;import pro.yuchen.demo.spring_demo.Application;import pro.yuchen.demo.spring_demo.entity.Blog;import pro.yuchen.demo.spring_demo.entity.Comment;@RunWith(SpringJUnit4ClassRunner.class)@SpringBootTest(classes = &#123;MockServletContext.class, Application.class&#125;)@WebAppConfigurationpublic class BlogRepositoryTest &#123; @Autowired private BlogRepository repository; @Test public void insert() throws Exception &#123; Blog blog = new Blog(); String title = "TEST......."; blog.setTitle(title); blog.setContent("jjjjkkkkjjsfjseoijqksahbfgoyhujikldfghjklsdfgesdrtfgzxrdcfvgbnazesxdcfvgbhnjklaWzesxdcfvgbhjklazsdfghjkazesxdcfghj"); repository.save(blog); &#125; @Test public void delete() &#123; repository.delete(10); &#125; @Test public void update() &#123; Blog blog = repository.findOne(12); blog.setTitle("花一样的人生...."); repository.save(blog); System.out.println(repository.findOne(12).getTitle()); &#125; @Test public void findOne() &#123; Blog result = repository.findOne(45); System.out.println(result.getTitle()); for (Comment comment:result.getComments()) &#123; System.out.println(comment.getContent()); &#125; &#125; @Test public void findAllByPage() &#123; Sort sort = new Sort(Sort.Direction.DESC, "title"); Pageable pageable = new PageRequest(1,10, sort); Page&lt;Blog&gt; list = repository.findAll(pageable); for (Blog blog : list) &#123; System.out.println(blog.getTitle()); &#125; &#125;&#125; 6.2 测试 CommentRepository123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566package pro.yuchen.demo.spring_demo.dao;import org.junit.Test;import org.junit.runner.RunWith;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.boot.test.context.SpringBootTest;import org.springframework.data.domain.Page;import org.springframework.data.domain.PageRequest;import org.springframework.data.domain.Pageable;import org.springframework.data.domain.Sort;import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;import pro.yuchen.demo.spring_demo.Application;import pro.yuchen.demo.spring_demo.entity.Blog;import pro.yuchen.demo.spring_demo.entity.Comment;@RunWith(SpringJUnit4ClassRunner.class)@SpringBootTest(classes = &#123;Application.class&#125;)public class CommentRepositoryTest &#123; @Autowired private CommentRepository repository; @Test public void insert() &#123; Blog blog = new Blog(); for (int i = 30; i &lt; 100; i++) &#123; blog.setId(i); for(int j = 0; j &lt; 10; j++) &#123; Comment comment = new Comment(); comment.setBlog(blog); comment.setContent("评论...." + j); repository.save(comment); &#125; &#125; &#125; @Test public void delete() &#123; repository.delete(23); &#125; @Test public void update() &#123; Comment comment = repository.findOne(10); comment.setContent("lll"); repository.save(comment); &#125; @Test public void findOne() &#123; Comment comment = repository.findOne(10); System.out.println(comment.getContent()); &#125; @Test public void findAllByPage() &#123; Sort sort = new Sort(Sort.Direction.ASC, "blog_id", "id"); Pageable pageable = new PageRequest(23,10, sort); Page&lt;Comment&gt; list = repository.findAll(pageable); for (Comment comment : list) &#123; System.out.println(comment.getContent() + " " + comment.getId()); &#125; &#125;&#125;]]></content>
@@ -816,6 +855,17 @@
       </categories>
       <tags>
         <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ProtoBuf 学习(一)]]></title>
+    <url>%2F2018%2F03%2F20%2Fnode%2Fnode-protobuf_1%2F</url>
+    <content type="text"><![CDATA[ProtoBuf 环境的安装与HelloWord 1. 安装 ProtoBuf brew install protobuf@2.5.0 2. 新建 person.proto 文件1234567891011121314151617181920212223242526272829syntax = "proto2";package tutorial;option java_package = "pro.yuchen.demo.spring_demo.proto";option java_outer_classname = "AddressBookProtos";message Person &#123; required string name = 1; // 非空属性 required int32 id = 2; // 非空属性 optional string email = 3; // 可空属性 enum PhoneType &#123; // 枚举类型 MOBILE = 0; HOME = 1; WORK = 2; &#125; message PhoneNumber &#123; // 子类(可多个, JSON表现为数组形式) required string number = 1; optional PhoneType type = 2 [default = HOME]; &#125; repeated PhoneNumber phones = 4;&#125;message AddressBook &#123; repeated Person people = 1;&#125; 3. 生成 Java源文件protoc --java_out . person.proto 4. 导入pom.xml依赖12345678910&lt;dependency&gt; &lt;groupId&gt;com.google.protobuf&lt;/groupId&gt; &lt;artifactId&gt;protobuf-java&lt;/artifactId&gt; &lt;version&gt;2.5.0&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;com.googlecode.protobuf-java-format&lt;/groupId&gt; &lt;artifactId&gt;protobuf-java-format&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt;&lt;/dependency&gt; ps: 将刚刚根据.proto生成的 java文件, 导入项目中 5. 测试123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124package pro.yuchen.demo.spring_demo.proto;import com.google.protobuf.ByteString;import com.google.protobuf.Descriptors;import com.google.protobuf.Descriptors.FieldDescriptor;import com.google.protobuf.Message;import com.googlecode.protobuf.format.JsonFormat;import org.junit.Test;import pro.yuchen.demo.spring_demo.proto.Protos.Person;import java.util.Iterator;import java.util.List;import java.util.Map;public class ProtoBufTest &#123; @Test public void testProtoBuf() throws Exception &#123; Person person = Person.newBuilder() .setId(1) .setName("Tom") .setEmail("yuchen352416@163.com") .addPhones(Person.PhoneNumber.newBuilder() .setNumber("18733775865") .setType(Person.PhoneType.MOBILE)) .build(); // ProtoBuf -&gt; JSON String jsonFormat = JsonFormat.printToString(person); System.out.println(jsonFormat); // JSON -&gt; ProtoBuf String json = "&#123;\"name\": \"Tom\", \"id\": 1, \"email\": \"yuchen352416@163.com\", \"phones\": [&#123;\"number\": \"18733775865\", \"type\": 1 &#125;, &#123;\"number\": \"13463170232\", \"type\": 0 &#125; ] &#125;"; Message.Builder message = Person.newBuilder(); JsonFormat.merge(json, message); System.out.println(message.build()); byte[] bytes = person.toByteArray(); // 序列化 Person result = Person.parseFrom(bytes); // 反序列化 // 遍历输出 for (Iterator&lt;Map.Entry&lt;FieldDescriptor, Object&gt;&gt; iter = result.getAllFields().entrySet().iterator(); iter.hasNext();) &#123; Map.Entry&lt;FieldDescriptor, Object&gt; field = iter.next(); System.out.println("Number: " + field.getKey().getNumber()); System.out.println("Type: " + field.getKey().getType()); System.out.println("Name: " + field.getKey().getName()); System.out.println("FullName: " + field.getKey().getFullName()); System.out.println("FileName: " + field.getKey().getFile().getName()); printFieldValue(field); System.out.println("-------------------------------------------"); System.out.println(); &#125; &#125; private void printFieldValue(Map.Entry&lt;FieldDescriptor, Object&gt; field) &#123; switch (field.getKey().getType())&#123; case INT32: case INT64: case SINT32: case SINT64: case SFIXED32: case SFIXED64: case FLOAT: case DOUBLE: case BOOL: // Good old toString() does what we want for these types. System.out.println("Value: " + field.getValue().toString()); break; case UINT32: case FIXED32: System.out.println("Value: " + (Integer) field.getValue()); break; case UINT64: case FIXED64: System.out.println("Value: " + (Long) field.getValue()); break; case STRING: &#123; System.out.println("Value: " + (String) field.getValue()); break; &#125; case BYTES: &#123; System.out.println("Value: " + (ByteString) field.getValue()); break; &#125; case ENUM: &#123; System.out.println("Value: " + ((Descriptors.EnumValueDescriptor) field.getValue()).getName()); break; &#125; case MESSAGE: case GROUP: System.out.println("Size: " + ((List&lt;?&gt;) field.getValue()).size()); System.out.println("Value: ["); List&lt;?&gt; list = (List&lt;?&gt;) field.getValue(); for (Object o : list) &#123; Message message = (Message) o; for (Iterator&lt;Map.Entry&lt;FieldDescriptor, Object&gt;&gt; iters = message.getAllFields().entrySet().iterator(); iters.hasNext();) &#123; Map.Entry&lt;FieldDescriptor, Object&gt; iter = iters.next(); System.out.println("\t-----Number: " + iter.getKey().getNumber()); System.out.println("\t-----Type: " + iter.getKey().getType()); System.out.println("\t-----Name: " + iter.getKey().getName()); System.out.println("\t-----FullName: " + iter.getKey().getFullName()); System.out.println("\t-----FileName: " + iter.getKey().getFile().getName()); System.out.print("\t-----"); printFieldValue(iter); System.out.println("\t--------------------------------------------"); &#125; System.out.println(); &#125; System.out.println("]"); break; &#125; &#125;&#125; 输出结果: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061&#123;&quot;name&quot;: &quot;Tom&quot;,&quot;id&quot;: 1,&quot;email&quot;: &quot;yuchen352416@163.com&quot;,&quot;phones&quot;: [&#123;&quot;number&quot;: &quot;18733775865&quot;,&quot;type&quot;: &quot;MOBILE&quot;&#125;]&#125;name: &quot;Tom&quot;id: 1email: &quot;yuchen352416@163.com&quot;phones &#123; number: &quot;18733775865&quot; type: HOME&#125;phones &#123; number: &quot;13463170232&quot; type: MOBILE&#125;Number: 1Type: STRINGName: nameFullName: Person.nameFileName: person.protoValue: Tom-------------------------------------------Number: 2Type: INT32Name: idFullName: Person.idFileName: person.protoValue: 1-------------------------------------------Number: 3Type: STRINGName: emailFullName: Person.emailFileName: person.protoValue: yuchen352416@163.com-------------------------------------------Number: 4Type: MESSAGEName: phonesFullName: Person.phonesFileName: person.protoSize: 1Value: [ -----Number: 1 -----Type: STRING -----Name: number -----FullName: Person.PhoneNumber.number -----FileName: person.proto -----Value: 18733775865 -------------------------------------------- -----Number: 2 -----Type: ENUM -----Name: type -----FullName: Person.PhoneNumber.type -----FileName: person.proto -----Value: MOBILE --------------------------------------------]-------------------------------------------]]></content>
+      <categories>
+        <category>ProtoBuf</category>
+      </categories>
+      <tags>
+        <tag>ProtoBuf</tag>
       </tags>
   </entry>
   <entry>
@@ -951,17 +1001,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Docker 笔记]]></title>
-    <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
-    <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[HBase 常用命令]]></title>
     <url>%2F2018%2F02%2F13%2Fnode%2Fdatabase%2Fhbase%2Fnode-hbase_2%2F</url>
     <content type="text"><![CDATA[HBase 日常使用命令 查看所在组 whoami 查看所在组中的表list 判断表是否存在exists &#39;lishuyu&#39; 将表设为失效状态disable &#39;lishuyu&#39; 判断表的状态is_enabled &#39;lishuyu&#39; 将表设为正常状态 enable &#39;lishuyu&#39; 删除表drop &#39;lishuyu&#39; 创建表(lishuyu –&gt; 表名, cluster1,cluster2 –&gt; 簇名, 没有具体的列名)create &#39;lishuyu&#39;,{NAME =&gt; &#39;cluster1&#39;, VERSIONS =&gt; 2},{NAME =&gt; &#39;cluster2&#39;, VERSIONS =&gt; 2} 查看表结构 describe &#39;lishuyu&#39; 插入数据(一次只可以插入一个单元格的值)put &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster1:col1&#39;,&#39;col1-value-001&#39; 查询数据(lishuyu –&gt; 表名, cluster2 –&gt; 簇名, col2 –&gt; 列名), 查询 rowkey001 行, cluster2 簇, col2 列 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39;, &#39;cluster2:col2&#39; 查询 rowkey001 行 的数据get &#39;lishuyu&#39;,&#39;rowkey001&#39; 扫描表scan &#39;lishuyu&#39;,{LIMIT=&gt;1}scan &#39;lishuyu&#39;, {COLUMNS=&#39;cluster2:col1&#39;, LIMIT = 1} 计算lishuyu表合计count &#39;lishuyu&#39; 显示RowKeycount &#39;lishuyu&#39;, {INTERVAL =&gt; 1, CACHE =&gt; 5} 删除表中单元格中的内容delete &#39;lishuyu&#39;,&#39;rowkey001&#39;,&#39;cluster2:col1&#39;]]></content>
@@ -970,6 +1009,17 @@
       </categories>
       <tags>
         <tag>HBase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker 笔记]]></title>
+    <url>%2F2018%2F02%2F13%2Fnode%2Flinux%2Fnode-docker_01%2F</url>
+    <content type="text"><![CDATA[Docker 日常使用命令 Docker 常用命令下载镜像 docker pull centos 查看镜像 docker images 删除镜像 docker rmi 备份镜像 docker commit -p 36b7b593a0e2 hbase-backup 36b7b593a0e2 为容器id, hbase-backup 为 备份名 备份镜像到文件 docker save -o ~/hbase-backup.tar hbase-backup 恢复镜像文件 docker load -i ~/Downloads/hbase-backup.tar 创建并启动交互型容器 docker run -ti –name=docker_centos centos:latest /bin/bash t: 告诉docker为容器建立一个命令行终端 i: 打开容器的标准输入 name: 指定容器名称，可以不填(随机)，建议根据具体使用功能命名，便于管理 /bin/bash:告诉docker要在容器里面执行此命令 创建并启动后台型容器 docker run –name linux -d centos /bin/bash -c “while true; do echo hello; sleep 1; done” d:使用-d参数，使容器在后台运行 c: 通过-c可以调整容器的CPU优先级 -c后的命令是循环，从而保持容器的运行 进入容器 docker exec -ti CentOS /bin/bash 退出容器 先按，ctrl+p; 再按，ctrl+q 平时进入HBase的命令 $ docker start hbase $ docker exec -ti hbase /bin/bash]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
