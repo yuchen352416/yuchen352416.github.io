@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="何时, 枫叶红">
 <meta property="og:description" content="这几天我在Linux下安装邮件服务器, 百试不通, 最后25端口, 直接崩掉了. 无奈只有重装系统, 这也是一个小白的悲哀吧.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-12T05:31:22.000Z">
+<meta property="og:updated_time" content="2019-03-02T11:26:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的VPS重装之路">
 <meta name="twitter:description" content="这几天我在Linux下安装邮件服务器, 百试不通, 最后25端口, 直接崩掉了. 无奈只有重装系统, 这也是一个小白的悲哀吧.">
@@ -386,8 +386,32 @@
 <h3 id="2-安装上传下载文件的工具"><a href="#2-安装上传下载文件的工具" class="headerlink" title="2. 安装上传下载文件的工具"></a>2. 安装上传下载文件的工具</h3><p>   <code>yum -y install lrzsz</code></p>
 <p>   ​</p>
 <h3 id="3-安装-Shadowsocks"><a href="#3-安装-Shadowsocks" class="headerlink" title="3. 安装 Shadowsocks"></a>3. 安装 Shadowsocks</h3>   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
-<p>   参考: <a href="https://teddysun.com/486.html" target="_blank" rel="noopener">https://teddysun.com/486.html</a></p>
-<p>   ​</p>
+<blockquote>
+<p>参考: <a href="https://teddysun.com/486.html" target="_blank" rel="noopener">https://teddysun.com/486.html</a></p>
+</blockquote>
+<ol>
+<li>启动脚本<blockquote>
+<p>启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>Shadowsocks-Python 版：<br><code>/etc/init.d/shadowsocks-python start | stop | restart | status</code></p>
+<p>ShadowsocksR 版：<br><code>/etc/init.d/shadowsocks-r start | stop | restart | status</code></p>
+<p>Shadowsocks-Go 版：<br><code>/etc/init.d/shadowsocks-go start | stop | restart | status</code></p>
+<p>Shadowsocks-libev 版：<br><code>/etc/init.d/shadowsocks-libev start | stop | restart | status</code></p>
+</blockquote>
+<ol>
+<li>各版本默认配置文件<blockquote>
+<p>Shadowsocks-Python 版：<code>/etc/shadowsocks-python/config.json</code></p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>ShadowsocksR 版： <code>/etc/shadowsocks-r/config.json</code></p>
+<p>Shadowsocks-Go 版： <code>/etc/shadowsocks-go/config.json</code></p>
+<p>Shadowsocks-libev 版： <code>/etc/shadowsocks-libev/config.json</code></p>
+</blockquote>
 <h3 id="4-安装EwoMail"><a href="#4-安装EwoMail" class="headerlink" title="4. 安装EwoMail"></a>4. 安装EwoMail</h3><h5 id="1-关闭selinux"><a href="#1-关闭selinux" class="headerlink" title="1. 关闭selinux"></a>1. 关闭selinux</h5><p><code>vim /etc/sysconfig/selinux</code> 将<code>SELINUX=enforcing</code> 改为 <code>SELINUX=disabled</code></p>
 <h5 id="2-创建swap"><a href="#2-创建swap" class="headerlink" title="2. 创建swap"></a>2. 创建swap</h5><p><code>free -m</code> 查看swap</p>
 <p><code>dd if=/dev/zero of=/mnt/swap bs=1M count=1024</code>  创建1G的swap</p>
@@ -522,7 +546,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">151</span>
+                  <span class="site-state-item-count">153</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
