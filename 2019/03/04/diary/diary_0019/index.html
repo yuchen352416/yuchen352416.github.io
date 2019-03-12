@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Oracle," />
+  <meta name="keywords" content="Diary," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Oracle 临时表">
-<meta name="keywords" content="Oracle">
+<meta name="description" content="本博文已加密, 输入密码方可查看.">
+<meta name="keywords" content="Diary">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Oracle 临时表">
-<meta property="og:url" content="http://yoursite.com/2016/09/19/node/database/oarcle/node-oracle_06/index.html">
+<meta property="og:title" content="所爱隔山海，山海不可平">
+<meta property="og:url" content="http://yoursite.com/2019/03/04/diary/diary_0019/index.html">
 <meta property="og:site_name" content="何时, 枫叶红">
-<meta property="og:description" content="Oracle 临时表">
+<meta property="og:description" content="本博文已加密, 输入密码方可查看.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T23:28:22.000Z">
+<meta property="og:updated_time" content="2019-03-12T01:53:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oracle 临时表">
-<meta name="twitter:description" content="Oracle 临时表">
+<meta name="twitter:title" content="所爱隔山海，山海不可平">
+<meta name="twitter:description" content="本博文已加密, 输入密码方可查看.">
 
 
 
@@ -120,14 +120,14 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/19/node/database/oarcle/node-oracle_06/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/03/04/diary/diary_0019/"/>
 
 
 
 
 
 
-  <title>Oracle 临时表 | 何时, 枫叶红</title>
+  <title>所爱隔山海，山海不可平 | 何时, 枫叶红</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/19/node/database/oarcle/node-oracle_06/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/04/diary/diary_0019/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Li">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Oracle 临时表</h1>
+          <h1 class="post-title" itemprop="name headline">所爱隔山海，山海不可平</h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-19T20:23:45+08:00">
-                2016-09-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T00:00:00+08:00">
+                2019-03-04
               </time>
             
 
@@ -340,8 +340,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SQL/" itemprop="url" rel="index">
-                    <span itemprop="name">SQL</span>
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
                   </a>
                 </span>
 
@@ -377,29 +377,7 @@
       
 
       
-        <p>Oracle 临时表</p>
-<a id="more"></a>
-<h4 id="Oracle-临时表"><a href="#Oracle-临时表" class="headerlink" title="Oracle 临时表"></a>Oracle 临时表</h4><p>临时表空间分配一块内存空间。也就是说只有向临时表中插入数据时，才会给临时表分配存储空间。<br>临时表分事务级临时表和会话级临时表。<br>事务级临时表只对当前事务有效，通过语句：ON COMMIT DELETE ROWS 语句指定。<br>会话级临时表对当前会话有效，通过语句：ON COMMIT PRESERVE ROWS语句指定。</p>
-<p>会话级: 只有该会话可以访问临时表中的内容, 其他Session 无法访问</p>
-<h4 id="Oracle-删除其他Session中的临时表"><a href="#Oracle-删除其他Session中的临时表" class="headerlink" title="Oracle 删除其他Session中的临时表"></a>Oracle 删除其他Session中的临时表</h4><p>因为表KOL_XX_FIN050_TEMP 为临时表，而且有其他session正在使用。</p>
-<p>处理步骤：</p>
-<ol>
-<li>先从 dba_objects / user_objects中查询到该表的object_id:</li>
-</ol>
-<p><code>select object_id from dba_objects where object_name=upper(‘KOL_XX_FIN050_TEMP’);</code></p>
-<ol>
-<li>根据查到的object_id知道使用该表的session：</li>
-</ol>
-<p><code>select * from v$lock where id1=&amp;object_id;</code></p>
-<ol>
-<li>在从v$session视图中查到该session的SID和SERIAL#：</li>
-</ol>
-<p><code>select * from v$session where sid=331;</code></p>
-<ol>
-<li>杀掉这些进程:</li>
-</ol>
-<p><code>alter system kill session ‘SID,SERIAL#’;</code></p>
-
+        <script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入文章密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> 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 </div>
       
     </div>
     
@@ -416,7 +394,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Oracle/" rel="tag"># Oracle</a>
+            <a href="/tags/Diary/" rel="tag"># Diary</a>
           
         </div>
       
@@ -429,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/19/node/javascript/node-javascript_01/" rel="next" title="初识 JavaScript 闭包">
-                <i class="fa fa-chevron-left"></i> 初识 JavaScript 闭包
+              <a href="/2019/03/04/diary/diary_0017/" rel="next" title="在北京的一年">
+                <i class="fa fa-chevron-left"></i> 在北京的一年
               </a>
             
           </div>
@@ -439,8 +417,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/22/node/node-vba_1/" rel="prev" title="VBA 操作 Excel 数据筛查">
-                VBA 操作 Excel 数据筛查 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/04/diary/diary_0018/" rel="prev" title="买了部单反">
+                买了部单反 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Oracle-临时表"><span class="nav-number">1.</span> <span class="nav-text">Oracle 临时表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Oracle-删除其他Session中的临时表"><span class="nav-number">2.</span> <span class="nav-text">Oracle 删除其他Session中的临时表</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#encrypt-message"><span class="nav-number">1.</span> <span class="nav-text">请输入文章密码</span></a></li></ol></div>
             
 
           </div>
