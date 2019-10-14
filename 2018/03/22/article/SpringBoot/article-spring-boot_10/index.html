@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="何时, 枫叶红">
 <meta property="og:description" content="SpringBoot 中使用 消息队列">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/yuchen352416/blog/master/_posts/assets/springboot_10_1.png">
-<meta property="og:updated_time" content="2018-05-03T14:28:14.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/yuchen352416/blog_images/master/springboot_10_1.png">
+<meta property="og:updated_time" content="2019-06-18T03:14:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot RabbitMQ">
 <meta name="twitter:description" content="SpringBoot 中使用 消息队列">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/yuchen352416/blog/master/_posts/assets/springboot_10_1.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yuchen352416/blog_images/master/springboot_10_1.png">
 
 
 
@@ -410,7 +410,7 @@
 <p><strong>TopicReceiverQueuesHBase</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pro.yuchen.demo.spring_demo.mq.topic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitHandler;</span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@RabbitListener</span>(queues = <span class="string">"hbase"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicReceiverQueuesHBase</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RabbitHandler</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">process</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Topic HBase : "</span> + message);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>TopicReceiverQueuesMySQL</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pro.yuchen.demo.spring_demo.mq.topic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitHandler;</span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@RabbitListener</span>(queues = <span class="string">"mysql"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicReceiverQueuesMySQL</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RabbitHandler</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">process</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Topic MySQL : "</span> + message);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://raw.githubusercontent.com/yuchen352416/blog/master/_posts/assets/springboot_10_1.png" alt="springboot_10_1"></p>
+<p><img src="https://raw.githubusercontent.com/yuchen352416/blog_images/master/springboot_10_1.png" alt="springboot_10_1"></p>
 <p>一个队列, 可以绑定多个 <strong>Routing Key</strong> , 在开发过程中, 若修改了匹配关系(Routing Key), Spring 默认是增加一条Routing Key,   原来的Routing Key还会被保留. 所以这里一定要谨慎</p>
 <h5 id="4-2-使用-Fanout-广播"><a href="#4-2-使用-Fanout-广播" class="headerlink" title="4.2. 使用 Fanout(广播)"></a>4.2. 使用 Fanout(广播)</h5>
       
@@ -533,7 +533,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">160</span>
+                  <span class="site-state-item-count">184</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -544,7 +544,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -555,7 +555,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
