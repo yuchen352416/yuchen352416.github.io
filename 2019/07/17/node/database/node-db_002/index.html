@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="关于 MongoDB 做数据仓库的调查报告">
+<meta name="description" content="关于 MongoDB 做数据仓库数据库的分析报告">
 <meta name="keywords" content="MongoDB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于 MongoDB 做数据仓库的调查报告">
+<meta property="og:title" content="关于 MongoDB 做数据仓库数据库的分析报告">
 <meta property="og:url" content="http://yoursite.com/2019/07/17/node/database/node-db_002/index.html">
 <meta property="og:site_name" content="何时, 枫叶红">
-<meta property="og:description" content="关于 MongoDB 做数据仓库的调查报告">
+<meta property="og:description" content="关于 MongoDB 做数据仓库数据库的分析报告">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-18T03:02:53.000Z">
+<meta property="og:updated_time" content="2019-07-19T08:58:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于 MongoDB 做数据仓库的调查报告">
-<meta name="twitter:description" content="关于 MongoDB 做数据仓库的调查报告">
+<meta name="twitter:title" content="关于 MongoDB 做数据仓库数据库的分析报告">
+<meta name="twitter:description" content="关于 MongoDB 做数据仓库数据库的分析报告">
 
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title>关于 MongoDB 做数据仓库的调查报告 | 何时, 枫叶红</title>
+  <title>关于 MongoDB 做数据仓库数据库的分析报告 | 何时, 枫叶红</title>
   
 
 
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于 MongoDB 做数据仓库的调查报告</h1>
+          <h1 class="post-title" itemprop="name headline">关于 MongoDB 做数据仓库数据库的分析报告</h1>
         
 
         <div class="post-meta">
@@ -377,12 +377,20 @@
       
 
       
-        <p>关于 MongoDB 做数据仓库的调查报告</p>
+        <p>关于 MongoDB 做数据仓库数据库的分析报告</p>
 <a id="more"></a>
-<ol>
-<li>数据多样性</li>
-<li></li>
-</ol>
+<h3 id="数据仓库数据库"><a href="#数据仓库数据库" class="headerlink" title="数据仓库数据库"></a>数据仓库数据库</h3><p>是整个数据仓库环境的核心, 是数据存放的地方和提供对数据检索的支持. 相对于业务型数据库来说, 其突出的特点是 <strong>对海量数据的支持</strong> 和 <strong>快速检索技术</strong>.</p>
+<p>MongoDB做为分布式文档型数据库:</p>
+<ul>
+<li>单文档查询效率高</li>
+<li>松散的数据结构 </li>
+<li>灵活动态的文档模型</li>
+<li>支持水平扩展</li>
+<li>支持表的分片</li>
+<li>支持全文索引</li>
+</ul>
+<p>但是做为数据仓库的数据库, 还需要具有<code>快速检索能力</code>. 而数据仓库中的数据, 多是存在<code>纬表</code>与<code>事实表</code>间的关联关系. </p>
+<p>虽然使用<code>MongoDB Connector for BI</code>组件后, 可以使用<code>SQL语句</code>进行类似关系数据库的<code>JOIN</code>,<code>GROUP BY</code> 与<code>聚合</code>等操作 , 但执行的速度太慢了, 不符合数据仓库所要求的.</p>
 
       
     </div>
@@ -423,8 +431,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/18/node/database/node-db_001/" rel="prev" title="关于 MongoDB BI Connector 性能测试">
-                关于 MongoDB BI Connector 性能测试 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/18/node/database/kylin/node-kylin_001/" rel="prev" title="Kylin 数据源">
+                Kylin 数据源 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -477,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">184</span>
+                  <span class="site-state-item-count">196</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -504,7 +521,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -515,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -554,6 +571,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据仓库数据库"><span class="nav-number">1.</span> <span class="nav-text">数据仓库数据库</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
