@@ -1,5351 +1,1094 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-    <!-- title -->
 
 
 
-
-<!-- keywords -->
-
+  
 
 
-
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="Mr.Lee">
-    <meta name="renderer" content="webkit">
-    <meta name="copyright" content="Mr.Lee">
-    
-    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
-    
-    <meta name="description" content="">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>2018年的最后一天 · Selfimpr</title>
-    <style type="text/css">
-    @font-face {
-        font-family: 'Oswald-Regular';
-        src: url("/font/Oswald-Regular.ttf");
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Diary," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本博文已加密, 输入密码方可查看.">
+<meta name="keywords" content="Diary">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018年的最后一天">
+<meta property="og:url" content="http://yoursite.com/2018/12/31/diary/diary_0013/index.html">
+<meta property="og:site_name" content="Selfimpr">
+<meta property="og:description" content="本博文已加密, 输入密码方可查看.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-22T02:45:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2018年的最后一天">
+<meta name="twitter:description" content="本博文已加密, 输入密码方可查看.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-
-    body {
-        margin: 0;
-    }
-
-    header,
-    footer,
-    .back-top,
-    .sidebar,
-    .container,
-    .site-intro-meta,
-    .toc-wrapper {
-        display: none;
-    }
-
-    .site-intro {
-        position: relative;
-        z-index: 3;
-        width: 100%;
-        /* height: 50vh; */
-        overflow: hidden;
-    }
-
-    .site-intro-placeholder {
-        position: absolute;
-        z-index: -2;
-        top: 0;
-        left: 0;
-        width: calc(100% + 300px);
-        height: 100%;
-        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-        background-position: center center;
-        transform: translate3d(-226px, 0, 0);
-        animation: gradient-move 2.5s ease-out 0s infinite;
-    }
-
-    @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-</style>
-
-    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    
-    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-/* This file is meant as a standalone workflow for
-- testing support for link[rel=preload]
-- enabling async CSS loading in browsers that do not support rel=preload
-- applying rel preload css once loaded, whether supported or not.
-*/ -->
-<script>
-(function( w ){
-	"use strict";
-	// rel=preload support test
-	if( !w.loadCSS ){
-		w.loadCSS = function(){};
-	}
-	// define on the loadCSS obj
-	var rp = loadCSS.relpreload = {};
-	// rel=preload feature support test
-	// runs once and returns a function for compat purposes
-	rp.support = (function(){
-		var ret;
-		try {
-			ret = w.document.createElement( "link" ).relList.supports( "preload" );
-		} catch (e) {
-			ret = false;
-		}
-		return function(){
-			return ret;
-		};
-	})();
-
-	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-	// then change that media back to its intended value on load
-	rp.bindMediaToggle = function( link ){
-		// remember existing media attr for ultimate state, or default to 'all'
-		var finalMedia = link.media || "all";
-
-		function enableStylesheet(){
-			link.media = finalMedia;
-		}
-
-		// bind load handlers to enable media
-		if( link.addEventListener ){
-			link.addEventListener( "load", enableStylesheet );
-		} else if( link.attachEvent ){
-			link.attachEvent( "onload", enableStylesheet );
-		}
-
-		// Set rel and non-applicable media type to start an async request
-		// note: timeout allows this to happen async to let rendering continue in IE
-		setTimeout(function(){
-			link.rel = "stylesheet";
-			link.media = "only x";
-		});
-		// also enable media after 3 seconds,
-		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-		setTimeout( enableStylesheet, 3000 );
-	};
-
-	// loop through link elements in DOM
-	rp.poly = function(){
-		// double check this to prevent external calls from running
-		if( rp.support() ){
-			return;
-		}
-		var links = w.document.getElementsByTagName( "link" );
-		for( var i = 0; i < links.length; i++ ){
-			var link = links[ i ];
-			// qualify links to those with rel=preload and as=style attrs
-			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
-				// prevent rerunning on link
-				link.setAttribute( "data-loadcss", true );
-				// bind listeners to toggle media back
-				rp.bindMediaToggle( link );
-			}
-		}
-	};
-
-	// if unsupported, run the polyfill
-	if( !rp.support() ){
-		// run once at least
-		rp.poly();
-
-		// rerun poly on an interval until onload
-		var run = w.setInterval( rp.poly, 500 );
-		if( w.addEventListener ){
-			w.addEventListener( "load", function(){
-				rp.poly();
-				w.clearInterval( run );
-			} );
-		} else if( w.attachEvent ){
-			w.attachEvent( "onload", function(){
-				rp.poly();
-				w.clearInterval( run );
-			} );
-		}
-	}
-
-
-	// commonjs
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ) );
+  };
 </script>
 
-    <link rel="icon" href= "/assets/favicon.ico" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
-    <link rel="preload" href="/scripts/main.js" as="script" />
-    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
-    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
-    
-    <!-- fancybox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
-    <!-- 百度统计  -->
-    
-    <!-- 谷歌统计  -->
-    
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/31/diary/diary_0013/"/>
+
+
+
+
+
+
+  <title>2018年的最后一天 | Selfimpr</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
-    
-        <body class="post-body">
-    
-    
-<header class="header">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
+  
+  
     
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >Selfimpr</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">2018年的最后一天</a>
-            </div>
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Selfimpr</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    
-    <a class="home-link" href=/>Selfimpr</a>
-</header>
-    <div class="wrapper">
-        <div class="site-intro" style="
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
 
-
-
-
-
-
-
-height:50vh;
-">
-    
-    <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
-            
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(https://source.unsplash.com/random/1920x1080)"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-            2018年的最后一天
-            <!-- 404 -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-            
-            <!-- 404 -->
-            
-        </p>
-        <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Diary">Diary</a>
-    
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">469</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/12/31</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-    </div>
-</div>
-        <script>
- 
-  // get user agent
-  var browser = {
-    versions: function () {
-      var u = window.navigator.userAgent;
-      return {
-        userAgent: u,
-        trident: u.indexOf('Trident') > -1, //IE内核
-        presto: u.indexOf('Presto') > -1, //opera内核
-        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-        iPad: u.indexOf('iPad') > -1, //是否为iPad
-        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
-      };
-    }()
-  }
-  console.log("userAgent:" + browser.versions.userAgent);
-
-  // callback
-  function fontLoaded() {
-    console.log('font loaded');
-    if (document.getElementsByClassName('site-intro-meta')) {
-      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
-      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
-      var postIntros = document.getElementsByClassName('post-intros')[0]
-      if (postIntros) {
-        postIntros.classList.add('post-fade-in');
-      }
-    }
-  }
-
-  // UC不支持跨域，所以直接显示
-  function asyncCb(){
-    if (browser.versions.uc) {
-      console.log("UCBrowser");
-      fontLoaded();
-    } else {
-      WebFont.load({
-        custom: {
-          families: ['Oswald-Regular']
-        },
-        loading: function () {  //所有字体开始加载
-          // console.log('loading');
-        },
-        active: function () {  //所有字体已渲染
-          fontLoaded();
-        },
-        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
-          console.log('inactive: timeout');
-          fontLoaded();
-        },
-        timeout: 5000 // Set the timeout to two seconds
-      });
-    }
-  }
-
-  function asyncErr(){
-    console.warn('script load from CDN failed, will load local script')
-  }
-
-  // load webfont-loader async, and add callback function
-  function async(u, cb, err) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
-    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-
-  var asyncLoadWithFallBack = function(arr, success, reject) {
-      var currReject = function(){
-        reject()
-        arr.shift()
-        if(arr.length)
-          async(arr[0], success, currReject)
-        }
-
-      async(arr[0], success, currReject)
-  }
-
-  asyncLoadWithFallBack([
-    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
-    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
-    "/lib/webfontloader.min.js"
-  ], asyncCb, asyncErr)
-</script>        
-        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
-        <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入文章密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> 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 </div>
-    </article>
-    <!-- license  -->
-    
-        <div class="license-wrapper">
-            <p>原文作者：<a href="http://yoursite.com">Mr.Lee</a>
-            <p>原文链接：<a href="http://yoursite.com/2018/12/31/diary/diary_0013/">http://yoursite.com/2018/12/31/diary/diary_0013/</a>
-        </div>
-    
-    <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/01/07/diary/diary_0014/" title= "《未来世界的幸存者》读后感">
-                    <div class="nextTitle">《未来世界的幸存者》读后感</div>
-                </a>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
+            首页
+          </a>
         </li>
-        <li class="previous">
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
             
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/12/27/node/java/node-j2ee_09/" title= "通用文件上传">
-                    <div class="prevTitle">通用文件上传</div>
-                </a>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
+            标签
+          </a>
         </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
+  
 
-<!-- City版安装代码已完成 -->
-    
-    
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
-</main>
-            <!-- profile -->
-            
-        </div>
-        <footer class="footer footer-unloaded">
-    
-    <!-- social  -->
-    <!--
-    
-    <div class="social">
-        
-    
-        
-            
-                <a href="mailto:yuchen352416@163.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/yuchen352416" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    -->
-    <!-- powered by Hexo  -->
-    <!--
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
-    </div>
-    -->
-    <!-- 不蒜子  -->
-    <!--
-    
-    <div class="busuanzi-container">
-    
-     
-    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
-    
-    </div>
-    
-    -->
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#encrypt-message"><span class="toc-number">1.</span> <span class="toc-text">请输入文章密码</span></a></li></ol>
-    </div>
-    
-    <div class="back-top iconfont-archer">&#xe639;</div>
-    <div class="sidebar sidebar-hide">
-    <ul class="sidebar-tabs sidebar-tabs-active-0">
-        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
-        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
-        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
-    </ul>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-panel-archives">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-and-search">
-        <div class="total-archive">
-        Total : 197
-        </div>
-        <!-- search  -->
-        
-    </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2019/10/13/node/node-tools-sublime/" >解决MacOS系统下SublimeText3中文乱码的问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/10</span><a class="archive-post-title" href= "/2019/10/10/node/java/node-j2se_14/" >Sofa-ark 轻量级jar包隔离</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2019/10/08/node/java/node-j2se_13/" >Kylin使用HikariCP JDBC连接池</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/19</span><a class="archive-post-title" href= "/2019/09/19/diary/diary_0032/" >拼天赋?</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2019/09/09/diary/diary_0031/" >孤独</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2019/09/09/node/java/node-j2se_12/" >一个分词的Bug</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2019/08/29/diary/diary_0030/" >学习者宣言</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/23</span><a class="archive-post-title" href= "/2019/08/23/node/database/elasticsearch/node-elasticsearch_02/" >ElasticSearch 数据源设计</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2019/08/02/article/library/part-word/" >分词工具</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2019/07/31/diary/diary_0029/" >渴望被爱?</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/2019/07/29/node/database/elasticsearch/node-elasticsearch_01/" >ElasticSearch Rest API</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/18</span><a class="archive-post-title" href= "/2019/07/18/node/database/node-db_001/" >关于 MongoDB BI Connector 性能测试</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/18</span><a class="archive-post-title" href= "/2019/07/18/node/database/kylin/node-kylin_001/" >Kylin 数据源</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/17</span><a class="archive-post-title" href= "/2019/07/17/node/database/node-db_002/" >关于 MongoDB 做数据仓库数据库的分析报告</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/04</span><a class="archive-post-title" href= "/2019/07/04/node/linux/node-linux_17/" >CentOS7 安装 ElacticSearch</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/04</span><a class="archive-post-title" href= "/2019/07/04/node/linux/node-linux_16/" >CentOS7 安装MongoDB</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span><a class="archive-post-title" href= "/2019/07/03/article/SpringBoot/article-spring-boot_21/" >Spring Boot 使用 MongoDB</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span><a class="archive-post-title" href= "/2019/07/01/article/SpringBoot/article-spring-boot_20/" >Spring Boot 内置组件介绍</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/20</span><a class="archive-post-title" href= "/2019/06/20/node/java/node-j2se_11/" >Java中的浮点数计算</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/node/linux/node-mac_02/" >MacOS下重新授权SVN与初始化项目</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/node/linux/node-mac_01/" >MacOS下安装puppeteer</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/18</span><a class="archive-post-title" href= "/2019/06/18/node/linux/node-docker_03/" >利用Docker安装Maven私服</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2019/06/12/article/SpringBoot/article-spring-boot_19/" >Spring Boot 动态注册 Bean</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/10</span><a class="archive-post-title" href= "/2019/06/10/node/linux/node-linux_15/" >MacOS 解压jar包</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/06</span><a class="archive-post-title" href= "/2019/06/06/diary/diary_0028/" >对一组聊天记录的深思</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/05</span><a class="archive-post-title" href= "/2019/06/05/diary/diary_0025/" >愿你</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/05</span><a class="archive-post-title" href= "/2019/06/05/diary/diary_0027/" >早些时候留下的</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/05</span><a class="archive-post-title" href= "/2019/06/05/diary/diary_0026/" >这世间，唯有青春与梦想不可辜负</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/04</span><a class="archive-post-title" href= "/2019/06/04/node/linux/node-linux_14/" >CentOS 7 关闭防火墙</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/03</span><a class="archive-post-title" href= "/2019/06/03/node/database/mysql/node-mysql_10/" >MySQL for Mac 开启外网访问权限</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/03</span><a class="archive-post-title" href= "/2019/06/03/diary/diary_0024/" >今天遇到的一个Bug</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/31</span><a class="archive-post-title" href= "/2019/05/31/node/database/oarcle/node-oracle_15/" >Oracle 常见授权与回收权限</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2019/05/29/node/java/node-j2se_09/" >Java8中的函数式接口</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2019/05/29/node/java/node-j2se_10/" >Java8 接口静态方法与默认方法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/28</span><a class="archive-post-title" href= "/2019/05/28/diary/diary_0023/" >最近的遇到一些事和看的一些书</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/04</span><a class="archive-post-title" href= "/2019/05/04/article/SpringBoot/article-spring-boot_18/" >Spring Batch 批处理框架的技术调研</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/15</span><a class="archive-post-title" href= "/2019/04/15/article/SpringBoot/article-spring-boot_17/" >使用Docker部署Spring Boot</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2019/04/04/diary/diary_0022/" >今天中午下的一盘棋</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2019/03/30/article/library/google-aviator/" >Aviator 表达式求值引擎</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2019/03/18/diary/diary_0021/" >最近一些想说的话</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/12</span><a class="archive-post-title" href= "/2019/03/12/diary/diary_0019/" >所爱隔山海，山海不可平</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/12</span><a class="archive-post-title" href= "/2019/03/12/diary/diary_0020/" >云村, 一个温暖的地方</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/08</span><a class="archive-post-title" href= "/2019/03/08/article/Interview/interview_003/" >最近拿到了满意的Offer</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/04</span><a class="archive-post-title" href= "/2019/03/04/diary/diary_0017/" >在北京的一年</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/04</span><a class="archive-post-title" href= "/2019/03/04/diary/diary_0018/" >买了部单反</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/28</span><a class="archive-post-title" href= "/2019/02/28/diary/diary_0033/" >[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2019/02/24/node/java/node-j2ee_10/" >Maven项目版本号</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2019/02/21/diary/diary_0015/" >在JD买《尼古拉 特斯拉 自传》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2019/02/21/diary/diary_0016/" >再见，黄淮。</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/21</span><a class="archive-post-title" href= "/2019/01/21/node/linux/node-linux_13/" >Linux使用 yum 安装MySQL</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/07</span><a class="archive-post-title" href= "/2019/01/07/diary/diary_0014/" >《未来世界的幸存者》读后感</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/31</span><a class="archive-post-title" href= "/2018/12/31/diary/diary_0013/" >2018年的最后一天</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2018/12/27/node/java/node-j2ee_09/" >通用文件上传</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2018/12/20/node/cache/node-cache_002/" >缓存更新策略</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2018/12/20/node/cache/node-cache_001/" >解决Redis缓存击穿</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/18</span><a class="archive-post-title" href= "/2018/12/18/diary/diary_0010/" >愧疚感...</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/18</span><a class="archive-post-title" href= "/2018/12/18/diary/diary_0012/" >忘了...</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/18</span><a class="archive-post-title" href= "/2018/12/18/diary/diary_0011/" >哈佛图书馆墙上的训言</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/18</span><a class="archive-post-title" href= "/2018/12/18/node/database/mysql/node-mysql_09/" >数据库连接池</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/12</span><a class="archive-post-title" href= "/2018/12/12/diary/diary_0009/" >18年的双12呀</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/27</span><a class="archive-post-title" href= "/2018/11/27/node/database/mysql/node-mysql_07/" >MySQL导出指定数据库</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/27</span><a class="archive-post-title" href= "/2018/11/27/node/database/mysql/node-mysql_08/" >MySQL5.7 关闭 only_full_group_by</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/27</span><a class="archive-post-title" href= "/2018/11/27/article/DesignPattern/design-pattern_02/" >设计模式(策略模式)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/26</span><a class="archive-post-title" href= "/2018/11/26/node/java/node-j2se_07/" >Java中 ArrayList, Vector, LinkedList</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/26</span><a class="archive-post-title" href= "/2018/11/26/node/java/node-j2se_08/" >Java 复制文件</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2018/11/20/node/linux/node-linux_12/" >给我的MacBook找些小伙伴</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/08</span><a class="archive-post-title" href= "/2018/11/08/article/python/article-python_14/" >Python 函数指定入参和出参类型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/08</span><a class="archive-post-title" href= "/2018/11/08/node/database/mysql/node-mysql_06/" >MySQL更新语句</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/02</span><a class="archive-post-title" href= "/2018/11/02/article/Interview/interview_002/" >今天面试了四家</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2018/10/31/diary/diary_0008/" >无意中, 看到的一句话</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/29</span><a class="archive-post-title" href= "/2018/10/29/article/Interview/interview_000/" >面试时的自我介绍</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/29</span><a class="archive-post-title" href= "/2018/10/29/article/Interview/interview_001/" >靠谱点儿</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/27</span><a class="archive-post-title" href= "/2018/10/27/article/python/article-python_13/" >写个爬虫</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/24</span><a class="archive-post-title" href= "/2018/10/24/node/database/mysql/node-mysql_05/" >MySQL表数据的备份与恢复</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/19</span><a class="archive-post-title" href= "/2018/10/19/node/linux/node-linux_10/" >Linux 源码安装Nginx</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/19</span><a class="archive-post-title" href= "/2018/10/19/node/database/mysql/node-mysql_04/" >MySQL中的字符转数字</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/18</span><a class="archive-post-title" href= "/2018/10/18/node/linux/node-linux_11/" >Linux两台服务器间复制文件</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/16</span><a class="archive-post-title" href= "/2018/10/16/node/linux/node-linux_09/" >Linux用Shell登录MySQL</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2018/10/13/diary/diary_0007/" >一些无人可说的话</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2018/10/13/diary/diary_0006/" >香山之旅</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/12</span><a class="archive-post-title" href= "/2018/10/12/node/linux/node-linux_08/" >Linux 下安装Redis</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/11</span><a class="archive-post-title" href= "/2018/10/11/diary/diary_0005/" >一些惆怅</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/11</span><a class="archive-post-title" href= "/2018/10/11/node/linux/node-linux_07/" >自定义命令与命令别名</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/11</span><a class="archive-post-title" href= "/2018/10/11/node/linux/node-linux_06/" >使用 tar 压缩与解压</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2018/10/05/article/SpringBoot/article-spring-boot_14/" >Spring Boot 过滤器中统一处理错误信息</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2018/10/05/article/SpringBoot/article-spring-boot_15/" >Spring Boot Jackson Date Format</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2018/10/05/article/SpringBoot/article-spring-boot_16/" >Spring Boot JPA 执行原生 SQL</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/17</span><a class="archive-post-title" href= "/2018/09/17/diary/diary_0004/" >退房</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/17</span><a class="archive-post-title" href= "/2018/09/17/node/java/node-j2se_06/" >当 Gson 遇到字段不匹配</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/14</span><a class="archive-post-title" href= "/2018/09/14/node/java/node-j2se_05/" >一道常见的面试题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/13</span><a class="archive-post-title" href= "/2018/09/13/article/SpringBoot/article-spring-boot_13/" >Spring Boot 日志输出</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2018/09/12/node/database/mysql/node-mysql_03/" >忽然不会写删除语句了</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2018/09/07/diary/diary_0003/" >值得思考的一些东西</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2018/09/07/node/node-git_02/" >GitHub 提交不显示提交记录的解决方法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2018/09/07/node/database/mysql/node-mysql_02/" >一次SQL调优的经历</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2018/09/06/node/java/node-j2se_04/" >IDEA 的一些快捷键</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2018/09/06/diary/diary_0002/" >看刘若英的电影——《后来的我们》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/01</span><a class="archive-post-title" href= "/2018/09/01/diary/diary_0001/" >最近的一些事</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2018/08/29/node/linux/node-linux_04/" >我的百度云服务器上的Docker</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2018/08/29/node/linux/node-linux_05/" >Linux 上安装个小工具</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/27</span><a class="archive-post-title" href= "/2018/08/27/node/linux/node-linux_03/" >我的百度云服务器</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/node/mq/node-rabbitmq_01/" >RabbitMQ 之 HelloWord</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/19</span><a class="archive-post-title" href= "/2018/08/19/article/DesignPattern/design-pattern_01/" >设计模式(单例模式)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/article/DesignPattern/design-pattern_00/" >设计模式(初窥)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2018/08/08/node/java/node-j2ee_08/" >解决AJAX提交中文信息乱码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/24</span><a class="archive-post-title" href= "/2018/07/24/node/java/node-j2ee_07/" >AJAX 上传JSON数组</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span><a class="archive-post-title" href= "/2018/07/23/node/javascript/node-javascript_18/" >Bootstrap 插件(DataTables, DatePicker)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/21</span><a class="archive-post-title" href= "/2018/07/21/node/java/node-j2ee_06/" >使用 SpringMVC 实现文件的上传和下载</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2018/06/26/node/java/node-j2ee_05/" >Hibernate 执行原始SQL语句</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2018/06/26/node/node-navicat-sn/" >激活 Navicat Premium for Mac</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/26</span><a class="archive-post-title" href= "/2018/06/26/node/database/mysql/node-mysql_01/" >远程测试mysql数据库3306端口报错</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2018/06/21/node/node-edraw-sn/" >Edraw for Mac 注册码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2018/06/21/node/node-tools-crack/" >MacOS上一些软件的激活</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/20</span><a class="archive-post-title" href= "/2018/06/20/node/database/oarcle/node-oracle_14/" >Oracle 批量插入数据</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2018/06/19/node/node-sso_1/" >单点登录</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/27</span><a class="archive-post-title" href= "/2018/05/27/node/database/redis/node-redis_2/" >修改Docker下安装的Redis</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/22</span><a class="archive-post-title" href= "/2018/05/22/node/node-html_3/" >HTML 禁止缩放</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/22</span><a class="archive-post-title" href= "/2018/05/22/node/node-nginx_2/" >MacOS 安装与配置 Nginx</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/22</span><a class="archive-post-title" href= "/2018/05/22/node/javascript/node-javascript_17/" >JavaScript Image To Base64</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/21</span><a class="archive-post-title" href= "/2018/05/21/node/java/node-j2se_03/" >Base64 转 图片</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/07</span><a class="archive-post-title" href= "/2018/05/07/article/SpringBoot/article-spring-boot_12/" >Spring Boot 中生成二维码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href= "/2018/04/22/article/SpringBoot/article-spring-boot_11/" >Spring Boot 发送Email</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/17</span><a class="archive-post-title" href= "/2018/04/17/node/node-nginx_1/" >Nginx 安装与配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/31</span><a class="archive-post-title" href= "/2018/03/31/node/linux/node-docker_02/" >Docker 安装 MySQL容器</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2018/03/22/article/SpringBoot/article-spring-boot_10/" >Spring Boot RabbitMQ</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/20</span><a class="archive-post-title" href= "/2018/03/20/node/node-protobuf_1/" >ProtoBuf 学习(一)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/20</span><a class="archive-post-title" href= "/2018/03/20/article/SpringBoot/article-spring-boot_09/" >Spring Boot Hibernate</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/19</span><a class="archive-post-title" href= "/2018/03/19/article/SpringBoot/article-spring-boot_08/" >Spring Boot AOP</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href= "/2018/03/18/article/SpringBoot/article-spring-boot_07/" >Spring Boot MyBatis</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/17</span><a class="archive-post-title" href= "/2018/03/17/article/SpringBoot/article-spring-boot_06/" >Spring Boot IDEA中实现热部署</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/15</span><a class="archive-post-title" href= "/2018/03/15/article/SpringBoot/article-spring-boot_05/" >Spring Boot Redis</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/13</span><a class="archive-post-title" href= "/2018/03/13/article/SpringBoot/article-spring-boot_04/" >Spring Boot 统一处理错误</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/10</span><a class="archive-post-title" href= "/2018/03/10/article/SpringBoot/article-spring-boot_03/" >Spring Boot Thymeleaf</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/06</span><a class="archive-post-title" href= "/2018/03/06/node/database/redis/node-redis_1/" >Redis 初体验</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/05</span><a class="archive-post-title" href= "/2018/03/05/article/SpringBoot/article-spring-boot_02/" >Spring Boot 配置自定义属性与多环境开发</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2018/02/25/article/SpringBoot/article-spring-boot_01/" >Spring Boot HelloWorld以及单元测试</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2018/02/24/node/node-httpcode_1/" >HTTP 中常用的状态码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/23</span><a class="archive-post-title" href= "/2018/02/23/node/node-maven_1/" >Maven 初体验</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/22</span><a class="archive-post-title" href= "/2018/02/22/node/node-git_01/" >Git 初体验</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2018/02/13/node/linux/node-docker_01/" >Docker 笔记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2018/02/13/node/database/hbase/node-hbase_2/" >HBase 常用命令</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/12</span><a class="archive-post-title" href= "/2018/02/12/node/database/hbase/node-hbase_1/" >HBase 笔记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2018/01/25/article/python/article-python_12/" >Python 操作XML</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/24</span><a class="archive-post-title" href= "/2018/01/24/article/python/article-python_11/" >Python 数据库操作(MySQL, HBase)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2018/01/23/article/python/article-python_10/" >Python I/O</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/31</span><a class="archive-post-title" href= "/2017/12/31/article/python/article-python_09/" >Python 异常处理</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2017/12/30/article/python/article-python_08/" >Python 面向对象</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/29</span><a class="archive-post-title" href= "/2017/12/29/article/python/article-python_07/" >Python 高级函数</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/28</span><a class="archive-post-title" href= "/2017/12/28/article/python/article-python_06/" >Python 自定义函数</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2017/12/27/article/python/article-python_05/" >Python 内置函数</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/26</span><a class="archive-post-title" href= "/2017/12/26/article/python/article-python_04/" >Python 控制语句</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/25</span><a class="archive-post-title" href= "/2017/12/25/article/python/article-python_03/" >Python 各种运算符</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/24</span><a class="archive-post-title" href= "/2017/12/24/article/python/article-python_02/" >Python 变量与数据类型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/23</span><a class="archive-post-title" href= "/2017/12/23/article/python/article-python_01/" >Python 环境的安装与HelloWord</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/25</span><a class="archive-post-title" href= "/2017/04/25/node/node-cookie-session-token/" >Cookie, Session, Token</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2016 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2016/12/30/node/database/oarcle/node-oracle_04/" >关于Oracle 的NULL</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/04</span><a class="archive-post-title" href= "/2016/12/04/node/database/oarcle/node-oracle_05/" >简单的 Oracle Function</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/24</span><a class="archive-post-title" href= "/2016/09/24/node/java/node-j2se_02/" >循环引用 to JSON</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2016/09/22/node/node-vba_1/" >VBA 操作 Excel 数据筛查</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/19</span><a class="archive-post-title" href= "/2016/09/19/node/database/oarcle/node-oracle_06/" >Oracle 临时表</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/19</span><a class="archive-post-title" href= "/2016/09/19/node/javascript/node-javascript_01/" >初识 JavaScript 闭包</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/19</span><a class="archive-post-title" href= "/2016/09/19/node/javascript/node-javascript_02/" >初识 JavaScript 命名空间</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/13</span><a class="archive-post-title" href= "/2016/09/13/node/database/oarcle/node-oracle_07/" >Oracle 字段内容转行</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2016/09/11/node/javascript/node-javascript_03/" >自定义对象, 绑定get, set 方法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2016/09/11/node/javascript/node-javascript_04/" >JavaScript 格式化时间类型</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2016/09/11/node/javascript/node-javascript_05/" >JavaScript 定义对象的两种方式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2016/09/11/node/javascript/node-javascript_16/" >JavaScript 定义对象的两种方式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2016/09/09/node/database/oarcle/node-oracle_08/" >SQL语句 查看Oracle版本</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/05</span><a class="archive-post-title" href= "/2016/09/05/node/javascript/node-javascript_06/" >jQuery 不使用 $</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2016/08/02/node/database/oarcle/node-oracle_09/" >初认 Oracle 存储过程</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/20</span><a class="archive-post-title" href= "/2016/07/20/node/java/node-j2ee_03/" >一次 WebService 的调错经历</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/13</span><a class="archive-post-title" href= "/2016/06/13/node/javascript/node-javascript_07/" >JavaScript 禁止Backspace 键</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span><a class="archive-post-title" href= "/2016/05/25/node/java/node-j2ee_01/" >自定义JSTL标签</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/19</span><a class="archive-post-title" href= "/2016/04/19/node/database/oarcle/node-oracle_11/" >Oracle 查看表对应注释</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2016/04/01/node/javascript/node-javascript_08/" >自定义 Dialog</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/08</span><a class="archive-post-title" href= "/2016/03/08/node/javascript/node-javascript_09/" >CSS 内使用 JavaScript</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/08</span><a class="archive-post-title" href= "/2016/03/08/node/javascript/node-javascript_11/" >Div嵌套 内层取消外层事件</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2016/03/07/node/node-html_1/" >HTML5 data-* 自定义属性</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/04</span><a class="archive-post-title" href= "/2016/03/04/node/database/oarcle/node-oracle_03/" >Oracle 字段 增删改</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/27</span><a class="archive-post-title" href= "/2016/02/27/node/database/oarcle/node-oracle_10/" >Oracle 查询结果列转行</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2016/01/31/node/javascript/node-javascript_10/" >JavaScript 树</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/27</span><a class="archive-post-title" href= "/2016/01/27/node/javascript/node-javascript_12/" >下拉列表 读写操作</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/27</span><a class="archive-post-title" href= "/2016/01/27/node/javascript/node-javascript_13/" >JavaScript 关于Select和CheckBox的一些操作</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2015 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/02</span><a class="archive-post-title" href= "/2015/12/02/node/javascript/node-javascript_14/" >iframe 的js变量值</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/10</span><a class="archive-post-title" href= "/2015/11/10/node/database/oarcle/node-oracle_02/" >Oracle 创建序列</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/10</span><a class="archive-post-title" href= "/2015/11/10/node/database/oarcle/node-oracle_01/" >Oracle 替换字段中的内容</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/03</span><a class="archive-post-title" href= "/2015/11/03/node/database/oarcle/node-oracle_12/" >Oracle &符号如何插入（转义）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2015/10/13/node/java/node-j2se_01/" >Java 对称加密算法(DES)</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2015/10/13/node/java/node-jdbc_01/" >关于 JDBC 自动提交</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2015/09/11/node/database/oarcle/node-oracle_13/" >解决 Oracle 描述乱码问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/30</span><a class="archive-post-title" href= "/2015/08/30/node/java/node-j2ee_04/" >SpringMVC 重定向 携带参数</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/07</span><a class="archive-post-title" href= "/2015/06/07/node/linux/node-linux_02/" >我的VPS重装之路</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/30</span><a class="archive-post-title" href= "/2015/04/30/node/java/node-j2ee_02/" >AJAX 调用</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/27</span><a class="archive-post-title" href= "/2015/04/27/node/node-ajax_1/" >Ajax 语法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/02</span><a class="archive-post-title" href= "/2015/03/02/node/linux/node-linux_01/" >Linux 笔记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2015/03/01/node/javascript/node-javascript_15/" >jQuery 拼图实例</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/11</span><a class="archive-post-title" href= "/2015/02/11/node/node-html_2/" >HTML5 标签</a>
-        </li>
-    
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
-        <div class="sidebar-panel-tags">
-    <div class="sidebar-tags-name">
-    
-        <span class="sidebar-tag-name" data-tags="Diary"><span class="iconfont-archer">&#xe606;</span>Diary</span>
-    
-        <span class="sidebar-tag-name" data-tags="Ajax"><span class="iconfont-archer">&#xe606;</span>Ajax</span>
-    
-        <span class="sidebar-tag-name" data-tags="JQuery"><span class="iconfont-archer">&#xe606;</span>JQuery</span>
-    
-        <span class="sidebar-tag-name" data-tags="Edraw"><span class="iconfont-archer">&#xe606;</span>Edraw</span>
-    
-        <span class="sidebar-tag-name" data-tags="ToolsCrack"><span class="iconfont-archer">&#xe606;</span>ToolsCrack</span>
-    
-        <span class="sidebar-tag-name" data-tags="Git"><span class="iconfont-archer">&#xe606;</span>Git</span>
-    
-        <span class="sidebar-tag-name" data-tags="Cookie"><span class="iconfont-archer">&#xe606;</span>Cookie</span>
-    
-        <span class="sidebar-tag-name" data-tags="Session"><span class="iconfont-archer">&#xe606;</span>Session</span>
-    
-        <span class="sidebar-tag-name" data-tags="Token"><span class="iconfont-archer">&#xe606;</span>Token</span>
-    
-        <span class="sidebar-tag-name" data-tags="HTML"><span class="iconfont-archer">&#xe606;</span>HTML</span>
-    
-        <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
-    
-        <span class="sidebar-tag-name" data-tags="Maven"><span class="iconfont-archer">&#xe606;</span>Maven</span>
-    
-        <span class="sidebar-tag-name" data-tags="HTTP"><span class="iconfont-archer">&#xe606;</span>HTTP</span>
-    
-        <span class="sidebar-tag-name" data-tags="Nginx"><span class="iconfont-archer">&#xe606;</span>Nginx</span>
-    
-        <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
-    
-        <span class="sidebar-tag-name" data-tags="SSO"><span class="iconfont-archer">&#xe606;</span>SSO</span>
-    
-        <span class="sidebar-tag-name" data-tags="ProtoBuf"><span class="iconfont-archer">&#xe606;</span>ProtoBuf</span>
-    
-        <span class="sidebar-tag-name" data-tags="VBA"><span class="iconfont-archer">&#xe606;</span>VBA</span>
-    
-        <span class="sidebar-tag-name" data-tags="Excel"><span class="iconfont-archer">&#xe606;</span>Excel</span>
-    
-        <span class="sidebar-tag-name" data-tags="Tools"><span class="iconfont-archer">&#xe606;</span>Tools</span>
-    
-        <span class="sidebar-tag-name" data-tags="DesignPattern"><span class="iconfont-archer">&#xe606;</span>DesignPattern</span>
-    
-        <span class="sidebar-tag-name" data-tags="SpringBoot"><span class="iconfont-archer">&#xe606;</span>SpringBoot</span>
-    
-        <span class="sidebar-tag-name" data-tags="RabbitMQ"><span class="iconfont-archer">&#xe606;</span>RabbitMQ</span>
-    
-        <span class="sidebar-tag-name" data-tags="Jackson"><span class="iconfont-archer">&#xe606;</span>Jackson</span>
-    
-        <span class="sidebar-tag-name" data-tags="Slf4j"><span class="iconfont-archer">&#xe606;</span>Slf4j</span>
-    
-        <span class="sidebar-tag-name" data-tags="JPA"><span class="iconfont-archer">&#xe606;</span>JPA</span>
-    
-        <span class="sidebar-tag-name" data-tags="SQL"><span class="iconfont-archer">&#xe606;</span>SQL</span>
-    
-        <span class="sidebar-tag-name" data-tags="Docker"><span class="iconfont-archer">&#xe606;</span>Docker</span>
-    
-        <span class="sidebar-tag-name" data-tags="QrCode"><span class="iconfont-archer">&#xe606;</span>QrCode</span>
-    
-        <span class="sidebar-tag-name" data-tags="SpringBatch"><span class="iconfont-archer">&#xe606;</span>SpringBatch</span>
-    
-        <span class="sidebar-tag-name" data-tags="SpringBoot MongoDB Docker"><span class="iconfont-archer">&#xe606;</span>SpringBoot MongoDB Docker</span>
-    
-        <span class="sidebar-tag-name" data-tags="Interview"><span class="iconfont-archer">&#xe606;</span>Interview</span>
-    
-        <span class="sidebar-tag-name" data-tags="Java"><span class="iconfont-archer">&#xe606;</span>Java</span>
-    
-        <span class="sidebar-tag-name" data-tags="Library"><span class="iconfont-archer">&#xe606;</span>Library</span>
-    
-        <span class="sidebar-tag-name" data-tags="Aviator"><span class="iconfont-archer">&#xe606;</span>Aviator</span>
-    
-        <span class="sidebar-tag-name" data-tags="PartWord"><span class="iconfont-archer">&#xe606;</span>PartWord</span>
-    
-        <span class="sidebar-tag-name" data-tags="Python"><span class="iconfont-archer">&#xe606;</span>Python</span>
-    
-        <span class="sidebar-tag-name" data-tags="DataBase"><span class="iconfont-archer">&#xe606;</span>DataBase</span>
-    
-        <span class="sidebar-tag-name" data-tags="Cache"><span class="iconfont-archer">&#xe606;</span>Cache</span>
-    
-        <span class="sidebar-tag-name" data-tags="Redis"><span class="iconfont-archer">&#xe606;</span>Redis</span>
-    
-        <span class="sidebar-tag-name" data-tags="MySQL"><span class="iconfont-archer">&#xe606;</span>MySQL</span>
-    
-        <span class="sidebar-tag-name" data-tags="Nexus"><span class="iconfont-archer">&#xe606;</span>Nexus</span>
-    
-        <span class="sidebar-tag-name" data-tags="MongoDB"><span class="iconfont-archer">&#xe606;</span>MongoDB</span>
-    
-        <span class="sidebar-tag-name" data-tags="MacOS"><span class="iconfont-archer">&#xe606;</span>MacOS</span>
-    
-        <span class="sidebar-tag-name" data-tags="CentOS"><span class="iconfont-archer">&#xe606;</span>CentOS</span>
-    
-        <span class="sidebar-tag-name" data-tags="SVN"><span class="iconfont-archer">&#xe606;</span>SVN</span>
-    
-        <span class="sidebar-tag-name" data-tags="Node"><span class="iconfont-archer">&#xe606;</span>Node</span>
-    
-        <span class="sidebar-tag-name" data-tags="Puppeteer"><span class="iconfont-archer">&#xe606;</span>Puppeteer</span>
-    
-        <span class="sidebar-tag-name" data-tags="ElacticSearch"><span class="iconfont-archer">&#xe606;</span>ElacticSearch</span>
-    
-        <span class="sidebar-tag-name" data-tags="JSTL"><span class="iconfont-archer">&#xe606;</span>JSTL</span>
-    
-        <span class="sidebar-tag-name" data-tags="JavaWeb"><span class="iconfont-archer">&#xe606;</span>JavaWeb</span>
-    
-        <span class="sidebar-tag-name" data-tags="Hibernate"><span class="iconfont-archer">&#xe606;</span>Hibernate</span>
-    
-        <span class="sidebar-tag-name" data-tags="WebService"><span class="iconfont-archer">&#xe606;</span>WebService</span>
-    
-        <span class="sidebar-tag-name" data-tags="SpingMVC"><span class="iconfont-archer">&#xe606;</span>SpingMVC</span>
-    
-        <span class="sidebar-tag-name" data-tags="SpringMVC"><span class="iconfont-archer">&#xe606;</span>SpringMVC</span>
-    
-        <span class="sidebar-tag-name" data-tags="JSON"><span class="iconfont-archer">&#xe606;</span>JSON</span>
-    
-        <span class="sidebar-tag-name" data-tags="Base64"><span class="iconfont-archer">&#xe606;</span>Base64</span>
-    
-        <span class="sidebar-tag-name" data-tags="DES"><span class="iconfont-archer">&#xe606;</span>DES</span>
-    
-        <span class="sidebar-tag-name" data-tags="Gson"><span class="iconfont-archer">&#xe606;</span>Gson</span>
-    
-        <span class="sidebar-tag-name" data-tags="JDBC"><span class="iconfont-archer">&#xe606;</span>JDBC</span>
-    
-        <span class="sidebar-tag-name" data-tags="jar"><span class="iconfont-archer">&#xe606;</span>jar</span>
-    
-        <span class="sidebar-tag-name" data-tags="Bug"><span class="iconfont-archer">&#xe606;</span>Bug</span>
-    
-        <span class="sidebar-tag-name" data-tags="Kylin"><span class="iconfont-archer">&#xe606;</span>Kylin</span>
-    
-        <span class="sidebar-tag-name" data-tags="HikariCP"><span class="iconfont-archer">&#xe606;</span>HikariCP</span>
-    
-        <span class="sidebar-tag-name" data-tags="Bootstrap"><span class="iconfont-archer">&#xe606;</span>Bootstrap</span>
-    
-        <span class="sidebar-tag-name" data-tags="ElasticSearch"><span class="iconfont-archer">&#xe606;</span>ElasticSearch</span>
-    
-        <span class="sidebar-tag-name" data-tags="HBase"><span class="iconfont-archer">&#xe606;</span>HBase</span>
-    
-        <span class="sidebar-tag-name" data-tags="Oracle"><span class="iconfont-archer">&#xe606;</span>Oracle</span>
-    
-        <span class="sidebar-tag-name" data-tags="Procedure"><span class="iconfont-archer">&#xe606;</span>Procedure</span>
-    
-    </div>
-    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br/>
-    1、请确保node版本大于6.2<br/>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #787878; font-size: 0.6rem;">
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: true
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tags-list"></div>
+  <div id="local-search-result"></div>
 </div>
-        <div class="sidebar-panel-categories">
-    <div class="sidebar-categories-name">
-    
-        <span class="sidebar-category-name" data-categories="Diary"><span class="iconfont-archer">&#xe60a;</span>Diary</span>
-    
-        <span class="sidebar-category-name" data-categories="JavaScript"><span class="iconfont-archer">&#xe60a;</span>JavaScript</span>
-    
-        <span class="sidebar-category-name" data-categories="ToolsCrack"><span class="iconfont-archer">&#xe60a;</span>ToolsCrack</span>
-    
-        <span class="sidebar-category-name" data-categories="Git"><span class="iconfont-archer">&#xe60a;</span>Git</span>
-    
-        <span class="sidebar-category-name" data-categories="JavaWeb"><span class="iconfont-archer">&#xe60a;</span>JavaWeb</span>
-    
-        <span class="sidebar-category-name" data-categories="HTML"><span class="iconfont-archer">&#xe60a;</span>HTML</span>
-    
-        <span class="sidebar-category-name" data-categories="Maven"><span class="iconfont-archer">&#xe60a;</span>Maven</span>
-    
-        <span class="sidebar-category-name" data-categories="HTTP"><span class="iconfont-archer">&#xe60a;</span>HTTP</span>
-    
-        <span class="sidebar-category-name" data-categories="Linux"><span class="iconfont-archer">&#xe60a;</span>Linux</span>
-    
-        <span class="sidebar-category-name" data-categories="SSO"><span class="iconfont-archer">&#xe60a;</span>SSO</span>
-    
-        <span class="sidebar-category-name" data-categories="ProtoBuf"><span class="iconfont-archer">&#xe60a;</span>ProtoBuf</span>
-    
-        <span class="sidebar-category-name" data-categories="VBA"><span class="iconfont-archer">&#xe60a;</span>VBA</span>
-    
-        <span class="sidebar-category-name" data-categories="Tools"><span class="iconfont-archer">&#xe60a;</span>Tools</span>
-    
-        <span class="sidebar-category-name" data-categories="DesignPattern"><span class="iconfont-archer">&#xe60a;</span>DesignPattern</span>
-    
-        <span class="sidebar-category-name" data-categories="SpringBoot"><span class="iconfont-archer">&#xe60a;</span>SpringBoot</span>
-    
-        <span class="sidebar-category-name" data-categories="Interview"><span class="iconfont-archer">&#xe60a;</span>Interview</span>
-    
-        <span class="sidebar-category-name" data-categories="Library"><span class="iconfont-archer">&#xe60a;</span>Library</span>
-    
-        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer">&#xe60a;</span>Python</span>
-    
-        <span class="sidebar-category-name" data-categories="Cache"><span class="iconfont-archer">&#xe60a;</span>Cache</span>
-    
-        <span class="sidebar-category-name" data-categories="Docker"><span class="iconfont-archer">&#xe60a;</span>Docker</span>
-    
-        <span class="sidebar-category-name" data-categories="MongoDB"><span class="iconfont-archer">&#xe60a;</span>MongoDB</span>
-    
-        <span class="sidebar-category-name" data-categories="MacOS"><span class="iconfont-archer">&#xe60a;</span>MacOS</span>
-    
-        <span class="sidebar-category-name" data-categories="RabbitMQ"><span class="iconfont-archer">&#xe60a;</span>RabbitMQ</span>
-    
-        <span class="sidebar-category-name" data-categories="Java"><span class="iconfont-archer">&#xe60a;</span>Java</span>
-    
-        <span class="sidebar-category-name" data-categories="ElasticSearch"><span class="iconfont-archer">&#xe60a;</span>ElasticSearch</span>
-    
-        <span class="sidebar-category-name" data-categories="HBase"><span class="iconfont-archer">&#xe60a;</span>HBase</span>
-    
-        <span class="sidebar-category-name" data-categories="SQL"><span class="iconfont-archer">&#xe60a;</span>SQL</span>
-    
-        <span class="sidebar-category-name" data-categories="Redis"><span class="iconfont-archer">&#xe60a;</span>Redis</span>
-    
-        <span class="sidebar-category-name" data-categories="MySQL"><span class="iconfont-archer">&#xe60a;</span>MySQL</span>
-    
-        <span class="sidebar-category-name" data-categories="Kylin"><span class="iconfont-archer">&#xe60a;</span>Kylin</span>
-    
+
+
+
     </div>
-    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
-    <div class="sidebar-categories-list"></div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/31/diary/diary_0013/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Selfimpr">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2018年的最后一天</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-31T22:00:00+08:00">
+                2018-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">请输入文章密码</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> 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 </div>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Diary/" rel="tag"># Diary</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/27/node/java/node-j2ee_09/" rel="next" title="通用文件上传">
+                <i class="fa fa-chevron-left"></i> 通用文件上传
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/07/diary/diary_0014/" rel="prev" title="《未来世界的幸存者》读后感">
+                《未来世界的幸存者》读后感 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mr.Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">202</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuchen352416" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-Github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yuchen352416@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#encrypt-message"><span class="nav-number">1.</span> <span class="nav-text">请输入文章密码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Lee</span>
+
+  
 </div>
-    </div>
-</div> 
-    <script>
-    var siteMeta = {
-        root: "/",
-        author: "Mr.Lee"
-    }
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+-->
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
-    <!-- CDN failover -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        if (typeof window.$ === 'undefined')
-        {
-            console.warn('jquery load from jsdelivr failed, will load local script')
-            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
         }
-    </script>
-    <script src="/scripts/main.js"></script>
-    <!-- algolia -->
-    
-    <!-- busuanzi  -->
-    
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-    <!-- CNZZ  -->
-    
-    </div>
-    <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
-     
-    </body>
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
 </html>
-
-
